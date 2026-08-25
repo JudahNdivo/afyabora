@@ -1,0 +1,2905 @@
+Guidelines for the
+management of
+asymptomatic sexually
+transmitted infections
+Guidelines for the
+management of
+asymptomatic sexually
+transmitted infections
+Guidelines for the management of asymptomatic sexually transmitted infections
+ISBN 978-92-4-010490-7 (electronic version)
+ISBN 978-92-4-010491-4 (print version)
+© World Health Organization 2025
+Some rights reserved. This work is available under the Creative Commons Attribution-NonCommercial-
+ShareAlike 3.0 IGO licence (CC BY-NC-SA 3.0 IGO; https://creativecommons.org/licenses/by-nc-sa/3.0/igo).
+Under the terms of this licence, you may copy, redistribute and adapt the work for non-commercial purposes,
+provided the work is appropriately cited, as indicated below. In any use of this work, there should be no
+suggestion that WHO endorses any specific organization, products or services. The use of the WHO logo is
+not permitted. If you adapt the work, then you must license your work under the same or equivalent Creative
+Commons licence. If you create a translation of this work, you should add the following disclaimer along with
+the suggested citation: “This translation was not created by the World Health Organization (WHO). WHO is not
+responsible for the content or accuracy of this translation. The original English edition shall be the binding and
+authentic edition”.
+Any mediation relating to disputes arising under the licence shall be conducted in accordance with the
+mediation rules of the World Intellectual Property Organization (http://www.wipo.int/amc/en/mediation/
+rules/).
+Suggested citation. Guidelines for the management of asymptomatic sexually transmitted infections. Geneva:
+World Health Organization; 2025. Licence: CC BY-NC-SA 3.0 IGO.
+Cataloguing-in-Publication (CIP) data. CIP data are available at https://iris.who.int/.
+Sales, rights and licensing. To purchase WHO publications, see https://www.who.int/publications/book-
+orders. To submit requests for commercial use and queries on rights and licensing, see https://www.who.int/
+copyright.
+Third-party materials. If you wish to reuse material from this work that is attributed to a third party, such as
+tables, figures or images, it is your responsibility to determine whether permission is needed for that reuse and
+to obtain permission from the copyright holder. The risk of claims resulting from infringement of any third-
+party-owned component in the work rests solely with the user.
+General disclaimers. The designations employed and the presentation of the material in this publication
+do not imply the expression of any opinion whatsoever on the part of WHO concerning the legal status of any
+country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries.
+Dotted and dashed lines on maps represent approximate border lines for which there may not yet be full
+agreement.
+The mention of specific companies or of certain manufacturers’ products does not imply that they are
+endorsed or recommended by WHO in preference to others of a similar nature that are not mentioned. Errors
+and omissions excepted, the names of proprietary products are distinguished by initial capital letters.
+All reasonable precautions have been taken by WHO to verify the information contained in this publication.
+However, the published material is being distributed without warranty of any kind, either expressed or
+implied. The responsibility for the interpretation and use of the material lies with the reader. In no event shall
+WHO be liable for damages arising from its use.
+Design and layout: Studio FFFOG.
+iii
+Acknowledgements
+
+v
+Executive summary
+
+vii
+Summary of recommendations
+
+viii
+1. Introduction	
+1
+1.1 Epidemiology and global targets
+
+2
+1.2 Rationale for new and updated recommendations
+
+3
+1.3 Objectives
+
+3
+1.4 Target audience
+
+4
+1.5 Guiding principles
+
+4
+1.6 Structure of the guidelines
+
+5
+2. Methods
+
+6
+2.1 Overview
+
+7
+2.2 Roles of groups involved in developing the guidelines
+
+7
+2.3 Scope and questions	 
+8
+2.4 Reviews of the evidence and modelling to inform guidelines
+
+9
+2.5 Assessment and presentation of the evidence
+
+9
+2.6 Making recommendations
+
+10
+2.7 Managing conflicts of interest	 
+11
+3. Updated and new recommendations
+
+12
+3.1 Pregnant women
+
+13
+3.2 Adolescents and young people	
+14
+3.3 Sex workers	 
+15
+3.4 Men who have sex with men
+
+16
+3.5 Research needs
+
+17
+4 Other recommendations related to asymptomatic screening of STIs	
+18
+4.1 Syphilis
+
+19
+Contents
+iv
+Guidelines for the management of asymptomatic sexually transmitted infections
+5. Implementation considerations for the management of asymptomatic STIs
+
+20
+5.1 Definition of screening
+
+21
+5.2 Rationale and objectives for establishing screening programmes for asymptomatic STIs
+
+21
+5.3 Ethical considerations	
+22
+5.4 Selecting diagnostic tests for screening asymptomatic STIs
+
+23
+5.5 Acceptable performance characteristics of a screening test
+
+23
+5.6 Treatment, antibiotic consumption and preparedness for the screening programme
+
+24
+5.7 Screening as an integrated prevention intervention
+
+24
+5.8 Ensuring early and effective treatment	 
+25
+5.9 STI services for key populations, adolescents and young people
+
+25
+5.10 Antenatal screening for pregnant women
+
+26
+6. Disseminating and updating the guidelines	
+27
+6.1 Dissemination
+
+28
+6.2 Updating the STI guidelines and user feedback	 
+28
+References
+
+29
+Annex 1. Contributors to the guidelines
+
+35
+Annex 2. Declarations of conflicts of interest	 
+40
+Web annexes: Evidence-to-decision framework and systematic review for the management of
+asymptomatic sexually transmitted infections, https://doi.org/10.2471/B09199.
+Web Annex A. Evidence-to-decision framework for the asymptomatic screening of pregnant women
+Web Annex B. Evidence-to-decision framework for the asymptomatic screening of sexually active
+adolescents and young people
+Web Annex C. Evidence-to-decision framework for the asymptomatic screening of sex workers
+Web Annex D. Evidence-to-decision framework for the asymptomatic screening of men who have sex
+with men
+Web Annex E. Systematic review of screening approaches for the management of asymptomatic
+sexually transmitted infections
+Web Annex F. Modelling of screening approaches for the management of asymptomatic sexually
+transmitted infections
+v
+The WHO Department of Global HIV, Hepatitis and Sexually Transmitted Infections Programmes is grateful
+to and thanks all the individuals and organizations that contributed to developing these guidelines. WHO
+appreciates the support of the Secretariat of the WHO Guidelines Review Committee during the guideline
+development process.
+Methodologist and systematic reviewers
+GRADE methodologist: Farid Foroutan (Ted Rogers Centre for Health Research, Canada).
+Systematic reviewers and modelers: Mary Ashley Keene, Krishnan Puri-Sudhir and Katy Turner (Aquarius
+Public Health, United Kingdom of Great Britain and Northern Ireland) and Nancy Santesso (Michael G.
+DeGroote Cochrane Canada Centre, McMaster University, Canada).
+Guideline Development Group
+The members of the Guideline Development Group (Annex 1) provided invaluable guidance and comments
+during the development of these guidelines through virtual meetings and comments by correspondence. Their
+meticulous attention to detail, expert comments and feedback ensured the consistency and relevance of these
+guidelines.
+Members: Laith Abu-Raddad (Weill Cornell Medical College, Qatar), Yaw Adu-Sarkodie (Kwame Nkrumah
+University of Science and Technology, Ghana), Jamila Al-Abri (Ministry of Health, Oman), Zeyana Al-Habsi
+(Ministry of Health, Oman), Mircea Betiu (Nicolae Testimitanu State University of Medicine and Pharmacy,
+Republic of Moldova), Catriona Bradshaw (Monash University, Australia), Xiang-Sheng Chen (National Center
+for AIDS/STD Control and Prevention, China), Irith De Baetselier (Institute of Tropical Medicine, Belgium),
+Chido Dziva Chikwari (Biomedical Research and Training Institute, Zimbabwe), Amina El Kettani (Ministry
+of Health, Morocco), Patricia Garcia (Cayetano Heredia University, Peru), William M. Geisler (University of
+Alabama at Birmingham, United States of America), Kimberly Green (PATH, Viet Nam), Somesh Gupta (All India
+Institute of Medical Sciences, India), Edward W. Hook III (University of Alabama at Birmingham, USA), Rena
+Janamnuaysook (Institute of HIV Research and Innovation, Thailand), Nathalie Kapp (International Planned
+Parenthood Federation, United Kingdom), Hamida Khattabi (independent consultant, Morocco), Rossaphorn
+Kittyaowamarn (Ministry of Public Health, Thailand), Jeffrey D. Klausner (University of Southern California,
+USA), Ranmini Kularatne (Awanui Labs, New Zealand), Peter Kyambadde (Ministry of Health, Uganda), David
+Lewis (Western Sydney Sexual Health Centre, Australia), Philippe Mayaud (London School of Hygiene and
+Tropical Medicine, United Kingdom), Saiqa Mullick (Wits RHI, University of the Witwatersrand, South Africa),
+Francis Ndowa (Skin and Genito-Urinary Medicine Clinic, Zimbabwe), Lilani Rajapaksa (Ministry of Health,
+Sri Lanka), Kees Rietmeijer (Denver Public Health Department, USA), Danvic Rosadiño (LoveYourself Inc.,
+Philippines), Jonathan Ross (Birmingham University Hospitals NHS Trust, United Kingdom), Lon Sayheng
+(National Center for HIV/AIDS, Dermatology and STD, Cambodia), Anna Shapiro (Global Network of Sex Work
+Projects, United Kingdom), Daniel Simões (Coalition Plus, Portugal), Jane Thiomi (LVCT Health, Kenya), Jane
+Tomnay (University of Melbourne, Australia), Magnus Unemo (Örebro University Hospital, Sweden) and Judith
+Wasserheit (University of Washington, USA).
+External Review Group
+Members: Henry J.C. de Vries (Amsterdam Sexual Health Clinic, Netherlands [Kingdom of the]), Kristina
+Grabbe (Jhpiego, USA), Hans Benjamin Hampel (University of Zurich, Switzerland), Kausar Jabeen (Aga Khan
+Foundation, Pakistan), Monica Lahra (Prince of Wales Hospital, Australia), Pham Thi Lan (National Hospital of
+Dermatology and Venerology, Viet Nam), Ahmed Latif (public health consultant, Australia), Ioannis Mameletzis
+(consultant, Ukraine), Angelica Espinosa Miranda (Ministry of Health, Brazil), Koleka Mlisana (National Health
+Laboratory Service, South Africa), Lori Newman (Gates Foundation, USA), Catherine Ngugui (Ministry of Health,
+Kenya), Reshmie Ramautarsing (Institute of HIV Research and Innovation, Thailand), Pachara Sirivongrangson
+(Ministry of Public Health, Thailand) and Janet Wilson (International Union against Sexually Transmitted
+Infections, United Kingdom).
+Acknowledgments
+vi
+Guidelines for the management of asymptomatic sexually transmitted infections
+Observers
+Francis Kakooza (Makerere University, Uganda), Otilia Mardh (European Centre for Disease Prevention and
+Control, Sweden), Fernando Pascal Martinez (Global Antibiotic Research and Development Partnership, Spain)
+and Tim Sladden (United Nations Population Fund, USA).
+WHO Secretariat and consultants
+Overall coordination
+Teodora Wi led the development of these guideline with support from Ismail Maatouk and Daniel McCartney
+(Department of Global HIV, Hepatitis and Sexually Transmitted Infections Programmes) under the leadership of
+Meg Doherty (Director, Department of Global HIV, Hepatitis and Sexually Transmitted Infection Programmes).
+WHO Steering Committee
+Department of Global HIV, Hepatitis and Sexually Transmitted Infections Programmes: Maeve Brito de
+Mello, Cheryl Johnson, Ismail Maatouk, Antons Mozalevskis, Morkor Newman, Remco Peters, Jane Rowley,
+Annette Verster, Marco Vitoria and Teodora Wi.
+Other WHO headquarters staff members: Benedikt Huttner (Department of Access to Medicines and
+Health Products), Ozge Tunçalp (Department of Maternal, Child and Adolescent Health), Anne-Laure Page
+(Department of Regulation and Prequalification), Avni Amin, Sami Gottlieb, James Kiarie, Gitau Mburu and Igor
+Toskin (Department of Sexual and Reproductive Health and Research) and Arif Al-Hamad and Daniel Marcano-
+Zamora (Department of Surveillance, Prevention and Control).
+WHO regional offices: Akudo Ezinne Ikpeazu (Regional Office for Africa), Monica Alonso (Regional Office
+for the Americas), Polin Chan (Regional Office for South-East Asia), Stela Bivol (Regional Office for Europe),
+Joumana Hermez (Regional Office for the Eastern Mediterranean) and Kiyohiko Izumi (Regional Office for the
+Western Pacific).
+Funding source
+The WHO Department of Global HIV, Hepatitis and Sexually Transmitted Infections Programmes provided
+funding for these guidelines.
+vii
+The global burden of sexually transmitted infections (STIs) is high, with more than 30 pathogens, including
+bacteria, viruses and parasites, known to be transmitted through sexual contact. WHO estimates for
+2020 indicate that there were 374 million new cases of curable STIs (gonorrhoea, chlamydia, syphilis and
+trichomoniasis) among people 15–49 years old. This includes 156 million new cases of trichomoniasis, 128.5
+million new cases of chlamydia, 82.4 million new cases of gonorrhoea and 7.1 million new cases of syphilis,
+amounting to about 1 million new curable STIs every day. In 2022, the number of new syphilis cases increased
+to 8.0 million.1
+Chlamydia, caused by Chlamydia trachomatis, and gonorrhoea, caused by Neisseria gonorrhoeae, are the
+most common bacterial STIs worldwide and result in substantial morbidity and economic costs. Syphilis is a
+bacterial STI caused by Treponema pallidum that results in substantial morbidity and mortality. In addition,
+congenital syphilis can be devastating to a fetus if infection during pregnancy is not detected and treated
+sufficiently early in pregnancy.
+WHO has set ambitious targets in the recent global health sector strategies for HIV, viral hepatitis and STIs. To
+achieve these targets, such as a 90% reduction in both gonorrhoea and syphilis infections by 2030, the strategy
+emphasizes the importance of improving access to prevention, diagnostic and treatment services for people
+with STIs. These guidelines support the management of asymptomatic STIs.
+One challenge to responding to the burden of STIs is that these infections can be asymptomatic to a large and
+variable extent. In some individuals, such as biological women, gonococcal and chlamydial infections of the
+cervix can be asymptomatic in about 50–97% of cases. In anatomical sites other than the urethra and cervix,
+such as the anorectal and oropharyngeal sites, symptoms are usually minimal to absent in up to about 85% of
+cases.
+Further, the treatment of people with STIs is complicated by the rapidly changing antimicrobial susceptibility
+patterns of various sexually transmitted pathogens, such as N. gonorrhoeae and Mycoplasma genitalium, to
+available antibiotics, with concerns about the eventual development of untreatable infections with serious
+sexual and reproductive health consequences. Asymptomatic STIs, especially in the pharynx or rectum, may
+be a reservoir for the selection of antimicrobial resistance when antimicrobial agents are given for other
+conditions but are below the minimal inhibitory concentration of the pre-existing STI pathogens.
+Antimicrobial resistance in N. gonorrhoeae has emerged for every drug available for empirical first-line
+treatment, with the extended-spectrum cephalosporin, ceftriaxone, currently being the last option in most
+countries. Certain antibiotics, including azithromycin, are at relatively high risk of selection of bacterial
+resistance, and use needs to be reserved for certain pathogens, including M. genitalium.
+These guidelines focus on the management of people with asymptomatic STIs by providing evidence-informed
+recommendations to screen for N. gonorrhoeae and C. trachomatis. These recommendations complement the
+WHO guidelines on syphilis screening among pregnant women, sex workers and men who have sex with men,
+syphilis self-testing and treponemal and non-treponemal testing; guidelines on STI partner services; guidelines
+on treatment of people with specific STIs (N. gonorrhoeae, C. trachomatis, M. genitalium, T. pallidum,
+Trichomonas vaginalis, bacterial vaginosis, Candida albicans, herpes simplex virus, human papillomavirus
+[genital warts]) and guidelines for the management of symptomatic STIs. All these guidelines will be included
+in the forthcoming WHO consolidated guidelines on STI prevention and care.
+The objectives of these guidelines are:
+•
+to provide evidence-informed recommendations on the screening of people with asymptomatic STIs;
+and
+•
+to support countries and national programmes in developing national guidelines for the management
+of STIs towards reaching the 2030 global sector strategy targets on STIs.
+These guidelines are intended for policy-makers, programme managers, health-care workers and any other
+public health professionals responsible for planning or implementing STI services (stand-alone or integrated
+with other health services). These guidelines will also be a resource for donor and development agencies,
+1 The most up-to-date STI estimates are always available at this page of the WHO Global Sexually Transmitted Infections Programme’s
+website: https://www.who.int/teams/global-hiv-hepatitis-and-stis-programmes/stis/strategic-information.
+Executive summary
+viii
+Guidelines for the management of asymptomatic sexually transmitted infections
+international, nongovernmental, civil society and community-based organizations as well as those working
+with or led by key populations and the communities affected the most by STIs, including HIV.
+These guidelines were developed following the methods outlined in the 2014 WHO handbook for guideline
+development. Systematic reviews and modelling were conducted to address the guideline objectives.
+The Guideline Development Group reviewed the evidence and made recommendations. The Grading of
+Recommendations Assessment, Development and Evaluation (GRADE) approach was used to assess the
+evidence and formulate the recommendations. The External Review Group reviewed the guidelines before
+they were submitted to the WHO Guidelines Review Committee.
+Summary of recommendations
+These guidelines provide recommendations for the asymptomatic screening of Neisseria gonorrhoeae and
+Chlamydia trachomatis. The recommendations apply to pregnant women, sexually active adolescents and
+young people, sex workers and men who have sex with men (Table 1).
+The recommendations are based on the combined prevalence of N. gonorrhoeae and C. trachomatis at a
+population level. For sexually active adolescents and young people, a high prevalence in a setting is suggested
+to be about 15–20% combined for both infections. For pregnant women, due to the adverse health effects
+on infants, a combined prevalence of 10% in a setting may be considered high. Decision-makers may have
+access to prevalence data from countries, programmes or clinics, which can be used to determine whether
+screening should be implemented for the population addressed in the recommendation. Note that the
+recommendations are intended to be applied based on population-level prevalence and do not involve an
+assessment of an individual’s risk of infection.
+The frequency of screening should depend on sexual exposure, rates of partner exchange and transmission
+and the cost of the test. It should be balanced against the cost, the number of cases detected and the
+consequences of not screening. For sex workers and men who have sex with men, screening is advised at least
+annually or every six months.
+Recommendations
+Strength of recommendation and
+certainty of evidence
+Pregnant women
+WHO suggests that pregnant women who have no symptoms of a
+sexually transmitted infection and are accessing health-care services for
+antenatal visits be screened for N. gonorrhoeae and/or C. trachomatis
+in settings where prevalence is high and resources and capacity are
+available. Recommendations for the management of symptomatic
+sexually transmitted infections should continue to be followed.a
+Remarks:
+•
+This recommendation applies to population-level prevalence
+rather than individual risk assessments, which have been shown
+to lack accuracy. This recommendation also applies to screening
+with either a quality-assured molecular assay, such as nucleic-acid
+amplification testing or a rapid test with a minimum sensitivity of
+80% and specificity of 90%, where treatment is available.
+•
+Screening should be voluntary with informed consent. Treat for
+N. gonorrhoeae and/or C. trachomatis based on the results of
+the quality-assured test using the national treatment guidelines.
+Sexual partners of people testing positive should also be tested and
+treated, if positive.
+Conditional recommendation,
+low certainty in evidence of effects
+(new 2024)
+Table 1. Summary of the new and updated recommendations on screening asymptomatic sexually
+transmitted infections (see further detail in Chapter 3)
+ix
+Recommendations
+Strength of recommendation
+and certainty of evidence
+Adolescents and young people
+WHO suggests that sexually active adolescents and young people (10–24
+years old) who have no symptoms of a sexually transmitted infection
+and are accessing health-care services be screened for N. gonorrhoeae
+and/or C. trachomatis in settings where prevalence is high and resources
+and capacity are available. Recommendations for the management
+of symptomatic sexually transmitted infections should continue to be
+followed.a
+Remarks:
+•
+When balancing resources and benefits of screening, adolescent
+girls and young women may be prioritized. This recommendation
+applies to population-level prevalence rather than individual risk
+assessments, which have been shown to lack accuracy. However,
+exploring sexual activity in the past 12 months prior to screening
+is essential. This recommendation also applies to screening with
+either a quality-assured molecular assay, such as nucleic-acid
+amplification testing, or a rapid test with a minimum sensitivity of
+80% and specificity of 90%, where treatment is available.
+•
+Screening should be voluntary with informed consent. Treat for
+N. gonorrhoeae and/or C. trachomatis based on the results of the
+quality-assured test using the national treatment guidelines. Sexual
+partners of people testing positive should also be tested and treated,
+if positive.
+Conditional recommendation,
+low certainty in evidence of effects
+(new 2024)
+Sex workers
+WHO suggests that sex workers accessing health-care services who
+have no symptoms of a sexually transmitted infection be screened
+for N. gonorrhoeae and/or C. trachomatis. Recommendations for the
+management of symptomatic sexually transmitted infections should
+continue to be followed.a
+Remarks:
+•
+This recommendation applies to screening with either a quality-
+assured molecular assay, such as nucleic-acid amplification testing,
+or a rapid test with a minimum sensitivity of 80% and specificity of
+90%, where treatment is available. The anatomical site depends on
+sexual behaviour, and pooling samples can reduce cost and increase
+yield, depending on the resources available.
+•
+Screening should be voluntary with informed consent. Treat for
+N. gonorrhoeae and/or C. trachomatis based on the results of the
+quality-assured test using the national treatment guidelines. Sexual
+partners of people testing positive should also be tested and treated,
+if positive.
+Conditional recommendation,
+low certainty in evidence of effects
+(updated 2024)
+x
+Guidelines for the management of asymptomatic sexually transmitted infections
+Recommendations
+Strength of recommendation and
+certainty of evidence
+Men who have sex with men
+WHO suggests that men who have sex with men accessing health-care
+services who have no symptoms of a sexually transmitted infection be
+screened for N. gonorrhoeae and/or C. trachomatis. Recommendations
+for the management of symptomatic sexually transmitted infections
+should continue to be followed.a
+Remarks:
+•
+This recommendation applies to screening with either a quality-
+assured molecular assay, such as nucleic-acid amplification testing,
+or a rapid test with a minimum sensitivity of 80% and specificity of
+90%, where treatment is available. The anatomical site depends on
+sexual behaviour, and pooling samples can reduce cost and increase
+yield, depending on the resources available.
+•
+Screening should be voluntary with informed consent. Treat for
+N. gonorrhoeae and/or C. trachomatis based on the results of
+the quality-assured test using the national treatment guidelines.
+Sexual partners of people testing positive should also be tested and
+treated, if positive.
+Conditional recommendation,
+low certainty in evidence of effects
+(updated 2024)
+a Guidelines for the management of symptomatic sexually transmitted infections. Geneva: World Health Organization; 2021 (https://iris.
+who.int/handle/10665/342523). Licence: CC BY-NC-SA 3.0 IGO.
+1. Introduction
+2
+Guidelines for the management of asymptomatic sexually transmitted infections
+1.1 Epidemiology and global targets
+Sexually transmitted infections (STIs) are a major public health problem worldwide, reducing quality of
+life and causing serious morbidity and mortality. STIs directly affect reproductive and child health by
+causing infertility, cancer and pregnancy complications, and they further indirectly facilitate the sexual
+transmission of HIV; therefore, in addition to affecting health, STIs also affect national economies and
+individual finances.
+Chlamydia, caused by Chlamydia trachomatis, and gonorrhoea, caused by Neisseria gonorrhoeae, are
+the two most common bacterial STIs and result in substantial morbidity and economic cost worldwide.
+WHO estimates that, in 2020, 128.5 million (90.0 million–173.8 million) new cases of chlamydia and 82.4
+million (47.7 million–130.4 million) new cases of gonorrhoea occurred among people 15–49 years old
+worldwide (1). The burden of chlamydia falls primarily on women, who have higher rates of this disease
+than men and among whom it causes pelvic inflammatory disease, tubal factor infertility and poor birth
+outcomes (2,3). The three biovars of C. trachomatis, each consisting of several serovars or genotypes,
+cause genital infections, lymphogranuloma venereum (LGV) and trachoma (eye infection). Men have higher
+rates of gonococcal infection, but the complications disproportionally affect women and include pelvic
+inflammatory disease, ectopic pregnancy, infertility and increased HIV acquisition (4–6).
+Syphilis is a bacterial STI caused by Treponema pallidum that leads to significant morbidity and mortality.
+WHO estimates that in 2022, 8.0 million (5.6 million–10.4 million) new cases occurred among adolescents
+and adults aged 15–49 years worldwide (7). Syphilis is transmitted through sexual contact with infectious
+lesions of the mucous membranes or abraded skin, blood transfusion or across the placenta during
+pregnancy. Without treatment, syphilis can cause serious health complications, including neurological
+problems. Congenital syphilis results in a wide range of adverse birth outcomes. Global estimates from
+2022 indicate 150 000 early fetal deaths and stillbirths, 70 000 neonatal deaths and 55 000 preterm or
+low-birthweight births (8). However, syphilis can be easily cured with treatment, and the risk of adverse
+outcomes is minimal if infection is detected and treated sufficiently early in pregnancy.
+Population groups that are especially vulnerable to STIs include sex workers and their clients, men who
+have sex with men, trans and gender-diverse people, people who inject drugs, people in prisons, young
+people, mobile populations and people affected by conflict and civil unrest (1).
+WHO has set ambitious targets within the Global health sector strategies on HIV, viral hepatitis and sexual
+transmitted infections for the period 2022–2030, including a 90% reduction in both gonorrhoea and syphilis
+infections and the elimination of congenital syphilis as a public health problem (defined as less than 50
+cases per 100 000 live births) by 2030 (9). To achieve these targets, the strategy on STIs highlights the
+importance of enabling people with STIs or at risk of STIs to more easily access prevention, diagnostics,
+treatment and care.
+1. Introduction
+3
+1.2 Rationale for new and updated recommendations
+To reduce STIs and prevent complications, high-quality STI prevention and care services are essential.
+Many STIs are transmitted from people who are unaware of their infections, either from lack of knowledge
+or awareness of the symptoms and signs of STIs or from lack of any symptoms. This requires developing
+evidence-informed guidelines on STI treatment and comprehensive case management, including
+screening, diagnosis, treatment and care. Correct and effective treatment of people with STIs, ideally given
+and taken on the same day at the first contact between patients and health-care providers, is an important
+public health measure in controlling STIs since it endeavours to break the chain of transmission of the
+infection without delay.
+Since the publication of the WHO Guidelines for the management of sexually transmitted infections in 2003
+(10), changes in the epidemiology of STIs and progress in prevention, diagnosis and treatment of STIs and
+HIV have necessitated changes in approaches to STI prevention and management.
+In 2021, WHO published Guidelines for the management of symptomatic sexually transmitted infections
+with evidence-informed recommendations to improve the quality of STI case management of people with
+symptomatic STIs, including aetiological diagnosis and syndromic management (11).
+Syndromic management is widely used to manage symptomatic people with STIs. In most resource-
+limited settings, the syndromic management flowcharts are still the standard of care, where laboratory
+diagnosis is not available or where available but results are not available on the same day. Although there
+are some shortcomings related to the STI syndromic approach, it remains an essential component of the
+management of symptomatic STIs. These guidelines aim to raise the quality of STI case management of
+symptomatic people with STIs by providing evidence-informed recommendations to address symptomatic
+STIs.
+Many STIs, such as gonococcal infection, chlamydial infection, syphilis and HIV may be asymptomatic for
+many infected people, who therefore may not be aware that they are infected. The accurate identification
+of asymptomatic and symptomatic STIs depends on the availability of diagnostic tests and a screening
+strategy. Although high-quality diagnostic tests for STIs are available, they are often expensive, frequently
+labour intensive and, at this stage, often not suitable for use as rapid point-of-care tests.
+Traditionally, diagnostic tests for STIs have been used to address STI prevention and control in the
+following areas:
+•
+to provide a definitive diagnosis for aetiology-guided treatment;
+•
+to provide screening services for asymptomatic individuals at risk of infection;
+•
+to provide statistical information on the prevalence of various infections;
+•
+to determine the antimicrobial susceptibility of causative organisms; and
+•
+to assist with the management of sexual partners.
+These areas remain important in supporting national programmes to know the burden of infections in their
+settings, to set evidence-informed targets for control of infections in their communities and to determine
+trends over time. To this end, WHO updated the manual on Laboratory and point-of-care diagnostic testing
+for sexually transmitted infections, including HIV (12).
+1.3 Objectives
+The objectives of these guidelines are:
+•
+to provide evidence-informed recommendations on the screening of people with asymptomatic
+STIs, specifically N. gonorrhoeae and C. trachomatis; and
+•
+to support countries and national programmes in developing national guidelines for the
+management of STIs towards reaching the 2030 global health sector strategy targets on STIs.
+1. Introduction
+4
+Guidelines for the management of asymptomatic sexually transmitted infections
+1.4 Target audience
+These guidelines are intended for STI prevention and control programme managers at the national level
+and for frontline health-care providers in primary, secondary and tertiary health-care facilities involved
+in treating and managing people with STIs. The recommendations and guidance are also important for
+health-care workers, including lay providers and community health workers, responsible for offering and
+performing STI services. These guidelines will be relevant for implementers of STI services, including HIV,
+sexual and reproductive health services and maternal and child health services. They will also be relevant
+to nongovernmental and community-based organizations, including those working with or led by key
+populations for the HIV epidemic, and service providers and users of pre-exposure prophylaxis (PrEP) for
+HIV. The guidelines will be able to support the planning, implementation and monitoring and evaluation of
+such services, and be used as an advocacy tool in seeking the financial and human resources required to
+deliver adequate, acceptable and equitable STI care for everyone who needs STI services.
+The recommendations are also important for people with or at greater risk of acquiring STIs, including HIV,
+such as members of key populations, people who use HIV PrEP and other vulnerable population groups,
+such as pregnant women, adolescents in settings with a high HIV or STI burden, indigenous populations
+and migrants.
+1.5 Guiding principles
+The following principles have informed the development of these guidelines and should guide the
+implementation of the recommendations.
+•
+These guidelines will contribute to the achievement of key global goals, including the Sustainable
+Development Goals, and relevant national-level goals and targets.
+•
+The guidelines are based on a public health approach to scaling up the provision of services and
+care for people with STIs, with the aim of reaching everyone, including vulnerable populations
+and key populations, with relevant interventions, including, for example, targeted screening for N.
+gonorrhoeae and antimicrobial resistance monitoring (in accordance with WHO guidance).
+•
+The adaptation and implementation of the guidelines should be accompanied by efforts to promote
+and protect the human rights of people receiving STI services, including preventing stigma and
+discrimination, promoting gender equity and ensuring that the use of services is always voluntary
+and never mandatory or coerced.
+•
+The implementation of the recommendations in these guidelines should be informed by the
+local context, including the epidemiology of STIs, the availability of resources and commodities
+for diagnosis and treatment of STIs, the capacity of the health system and anticipated cost–
+effectiveness of the various interventions.
+•
+The adaptability built into these guidelines is intended to promote the accessibility, acceptability
+and effectiveness of STI services through public and private health-care systems, including at
+community health centres and other primary care facilities providing services for STIs, such
+as clinics for maternal and child health, antenatal care, family planning and other sexual and
+reproductive health services. As such, these guidelines should form part of a broader package of
+service delivery approaches, including linkage to prevention, testing, treatment and care services.
+•
+The guidelines provide direction for acceptable and effective STI services for populations identified
+as being especially vulnerable to or at higher risk of STIs, including those living with HIV infection,
+and aim to improve health outcomes at the population level.
+•
+The guidelines follow the guideline principles of the WHO Model List of Essential Medicines,
+including to prevent the emergence and spread of antibiotic resistance, parsimony, feasibility and
+alignment with the WHO List of Critically Important Antimicrobials for Human Medicine, including
+the WHO AWaRe (access, watch, reserve) categorization of antibiotics (13,14).
+5
+1. Introduction
+1.6 Structure of the guidelines
+These guidelines provide evidence-informed recommendations for screening for asymptomatic STIs and are
+intended to become subsections of the forthcoming consolidated guidelines for the prevention, diagnosis,
+treatment and care of STIs.
+Chapter 3 presents the new and updated recommendations for the screening of asymptomatic N. gonorrhoeae
+and C. trachomatis among pregnant women, sexually active adolescents and young people, sex workers and
+men who have sex with men. The recommendations are based on the most recent evidence. These guidelines
+provide direction for countries as they develop national recommendations; however, national guidelines
+should also consider the local prevalence and health service capacity and resources.
+Chapter 4 presents other existing recommendations related to the asymptomatic screening of T. pallidum
+(syphilis) along with implementation considerations for the management of asymptomatic STIs in Chapter 5.
+2. Methods
+7
+2.1 Overview
+These guidelines were developed in accordance with procedures in the WHO handbook for guideline
+development (15).
+The Guideline Development Group identified key questions about screening for asymptomatic STIs in 2020.
+A systematic review was conducted and modelling work completed. Evidence summaries were developed
+for each question and evidence assessed according to the Grading of Recommendations Assessment,
+Development and Evaluation (GRADE) approach.
+The Guideline Development Group developed the recommendations by considering the certainty of evidence
+for the effects, the balance between desirable and undesirable effects, values and preferences, acceptability,
+feasibility and resource needs across a variety of settings. Information on each of these aspects was included
+in evidence-to-decision tables, which were shared in advance electronically via the GRADEpro application with
+the Guideline Development Group for their feedback and used in meetings to support the judgements of the
+Guideline Development Group to make recommendations. Consistent with previous WHO guidelines, these
+guidelines are based on a public health approach.
+The following sections provide further details on each aspect of the guideline development process.
+2.2 Roles of groups involved in developing the guidelines
+Five main groups were formed to guide and implement the guideline development process, coordinated by
+WHO. Each group played a specific role, as described below. Annex 1 lists the members of these groups and
+other contributors and their affiliations.
+1.	 WHO Steering Committee. This group, which is responsible for the overall coordination of the
+guideline development process, was led by the Department of Global HIV, Hepatitis and Sexually
+Transmitted Infections Programmes. Participants included other units and WHO staff members from the
+Department of Global HIV, Hepatitis and Sexually Transmitted Infections Programmes, the Department
+of Sexual and Reproductive Health and Research, the Department of Surveillance, Prevention and
+Control and the Department of Access to Medicines and Health Products. The WHO Steering Committee
+also included WHO technical staff members from every WHO region.
+2.	 Guideline Development Group. This group comprised non-United Nation and non-WHO experts,
+health professionals and representatives of groups most affected by the recommendations in the
+guidelines. The 37 Guideline Development Group members formulated the WHO recommendations
+and good practice statements, including any implementation and service delivery considerations.
+They also reviewed and approved the final content of these guidelines. The composition of the
+Guideline Development Group represented all six WHO regions and was balanced across gender
+and backgrounds, including academia and research, programme implementation and policy and
+community organizations and networks. The members were selected in coordination with the
+WHO Steering Committee and WHO country and regional offices. The WHO Steering Committee
+reviewed curricula vitae, declaration-of-interest forms and confidentiality agreements. The proposed
+membership list was posted for public review and comment and then finalized.
+3.	 External Review Group. The members were responsible for peer reviewing these guidelines, including
+the updated and new recommendations. This group was selected in consultation with the WHO
+Steering Committee to assure geographical and gender balance. It comprised 15 peer reviewers from
+academia, policy and research institutions, programme implementation and community organizations
+and representatives of networks of key and vulnerable populations.
+2. Methods
+8
+Guidelines for the management of asymptomatic sexually transmitted infections
+4.	 External evidence reviewers and modellers, led by a methodologist. An independent team of
+external experts conducted systematic reviews of the effects of interventions based on the selected
+key questions for the guidelines. In addition, evidence on values and preferences, feasibility and cost–
+effectiveness was compiled and summarized for each question.
+5.	 External observers. Representatives of the European Centre for Disease Prevention and Control
+(ECDC), the Global Antibiotic Research and Development Partnership (GARDP), and the United Nations
+Population Fund (UNFPA) attended the Guideline Development Group meeting as observers. These
+organizations have a long history of collaboration with the WHO Department of Global HIV, Hepatitis
+and Sexually Transmitted Infections Programmes.
+All members of the Guideline Development Group, External Review Group and other non-WHO staff
+participating in the meetings and/or other guideline development processes submitted declaration-of-
+interests forms and confidentiality statements to WHO. WHO reviewed all declarations, and no conflicts
+of interest sufficient to preclude any Guideline Development Group member from participating fully in
+the development of the guidelines were found. Annex 2 provides a full compilation and a summary of the
+declarations of interests.
+2.3 Scope and questions
+In December 2013, the first Guideline Development Group meeting was held to agree on the scope of the STI
+guidelines and to identify the different phases for developing the various components of the guidelines. In
+December 2020, Guideline Development Group met to determine the population, intervention, comparison,
+outcome (PICO) questions for the management of asymptomatic STIs. The populations identified included
+adults and other special populations: adolescents, pregnant women, people living with HIV and populations
+disproportionately affected by STIs, such as men who have sex with men and sex workers.
+Specific questions were developed using the PICO elements outlined in Table 2.1, in the following format:
+•
+Should screening [using strategy] versus no screening for N. gonorrhoeae and C. trachomatis infections
+be used for [population] with no symptoms of an STI who are accessing health-care services?
+Population
+Intervention and comparator
+Outcomes (in order of
+importance)
+Screening
+Treatment based on
+diagnosis
+Women and men without
+STI symptoms and high risk
+of infection
+•
+Sexually active
+•
+People living with HIV
+•
+Sex workers
+•
+Men who have sex
+with men
+•
+Adolescents and
+young people
+•
+Pregnant women
+•
+Family planning
+attendees
+Settings:
+•
+Low prevalence
+•
+High prevalence
+•
+Primary health care or
+health-care facility
+•
+Community centre
+STIs: chlamydial infection
+and gonorrhoea
+With laboratory test
+•
+Nucleic acid
+amplification test
+for gonorrhoea,
+chlamydia and
+trichomoniasis
+•
+Culture and sensitivity
+(gonorrhoea)
+•
+Rapid syphilis test
+•
+Microscopy
+•
+Risk assessment,
+genital examination
+•
+No screening
+Frequency of screening
+Diagnosis and treatment
+based on specific aetiology
+•
+Gonorrhoea
+•
+Chlamydial infection
+•
+STI incidence and
+prevalence
+•
+Adverse birth
+outcomes for pregnant
+women (miscarriage,
+stillborn, preterm, low
+birthweight
+•
+Pelvic inflammatory
+disease, chronic pelvic
+pain or infertility
+•
+Antimicrobial
+resistance
+•
+Adverse drug or
+treatment effect
+•
+Stigma
+•
+Treatment of infected
+partner
+•
+Microbiological cure
+•
+HIV transmission or
+acquisition
+Table 2.1 Population, intervention, comparator and outcome (PICO) components prioritized for these
+guidelines
+9
+2.4 Reviews of the evidence and modelling to inform guidelines
+2.4.1. Reviews of the evidence
+A systematic review of screening approaches for the management of asymptomatic STIs was conducted in
+PubMed up to July 2022 for studies published in English (Web Annex E). Studies of any study design reporting
+on outcomes (including acceptability, feasibility, resources and equity indicators) when screening people with
+no symptoms or unknown symptom status for an STI in low- and middle-income countries were included. The
+search for primary studies was updated in April 2024 in Ovid Medline and Embase for low- and middle-income
+countries and high-income countries in any language. Targeted searches for key guidelines published in high-
+income countries were also conducted to determine the evidence supporting the recommendations.
+Very few studies were found measuring important outcomes, and data were not pooled statistically across
+studies. Individual studies were summarized narratively, and if more than one study contributed data to an
+outcome the results were pooled as a range. Studies that reported the prevalence of an STI (not measured at
+follow-up) were used as input for a decision-tree model.
+2.4.2. Modelling
+A decision-tree model was used to explore the health-care outcomes and costs of screening asymptomatic
+individuals for N. gonorrhoeae and C. trachomatis. The model provided a framework for considering the
+clinical and economic impact of alternative screening approaches for asymptomatic individuals in different
+populations. This is based on a model commissioned by WHO to inform the WHO symptomatic STI case
+management guidelines (see Web Annex F).
+The model was used to explore different scenarios that included combinations of approaches for managing
+asymptomatic infections. This included no screening or treatment, screening with a laboratory-based nucleic-
+acid amplification test (sensitivity 95% and specificity 98%), screening with a high-performance point-of-care
+test (90% and 95%), screening with a lower-performance point-of-care test (80% and 90%), screening with
+Gram stain and use of risk assessment before test. The impact of each scenario was assessed using several
+outcome indicators in nine populations. Web Annex B describes the assumptions in and structure of the model
+in detail . Briefly, the model operates in a static manner and therefore does not assess the evolving impact
+of screening initiatives over time at the population level. N. gonorrhoeae and C. trachomatis are treated as a
+single entity in infection for testing purposes. The model assumes uniformity in the probability of symptom
+development and between infections. The probability of clinical outcomes between men and women,
+regardless of the infecting pathogen, is equivalent. Additionally, the model assumes that all people screened
+are treated and that treatment is successful.
+2.5 Assessment and presentation of the evidence
+The certainty of the evidence for each outcome from the review of primary studies and from the model
+were assessed separately using the GRADE approach based on the domains for risk of bias, inconsistency,
+indirectness, imprecision, publication bias, effect size, dose response and opposing confounding (15,16).
+Certainty of the evidence for effects was assigned to one of the four grades of evidence defined by the GRADE
+Working Group:
+•
+high certainty: we are very confident that the true effect lies close to that of the estimate of the effect;
+•
+moderate certainty: we are moderately confident in the effect estimate; the true effect is likely to be
+close to the estimate of the effect, but there is a possibility that it is substantially different;
+•
+low certainty: our confidence in the effect estimate is limited; the true effect may be substantially
+different from the estimate of the effect; and
+•
+very low certainty: we have very little confidence in the effect estimate; the true effect is likely to be
+substantially different from the estimate of effect.
+Evidence summary-of-findings tables (also called evidence profiles) and the evidence-to-decision
+frameworks (tables to facilitate decision-making for the updated recommendations) were drafted before
+the Guideline Development Group meeting using the GRADEpro software (17) (see Web Annexes A–D for the
+evidence-to-decision frameworks for each recommendation).
+2. Methods
+10
+Guidelines for the management of asymptomatic sexually transmitted infections
+2.6 Making recommendations
+Because of the complexity of developing these recommendations, several subgroup virtual meetings were
+initiated in 2022 to review the evidence. The Guideline Development Group subgroup proposed collecting
+additional evidence, including risk factors for N. gonorrhoeae and C. trachomatis infections and asymptomatic
+and symptomatic gonococcal and chlamydial infections and to model the cost and effectiveness of different
+strategies of diagnosing N. gonorrhoeae and C. trachomatis infections in 2023. A series of virtual meetings
+followed to discuss the evidence and propose draft recommendations for the various syndromes.
+A virtual Guideline Development Group meeting was organized in April 2024 to support the development of
+the recommendations. Before this meeting, the draft recommendations and evidence-to-decision tables were
+circulated to the Guideline Development Group via the GRADEpro application to obtain feedback. In April
+2024, the Guideline Development Group reviewed feedback, the evidence-to-decision tables and summaries of
+the evidence again to make judgements about the effects of the screening strategies in different populations
+and decide on whether to make strong or conditional recommendations for or against screening. The
+Guideline Development Group agreed by consensus, and there were no disagreements requiring voting. The
+recommendations and evidence-to-decision tables were finalized electronically via GRADEpro in June 2024.
+According to the GRADE approach, the strength of each recommendation was rated as either strong or
+conditional. The strength of the recommendations reflects the degree of confidence of the Guideline
+Development Group that the desirable consequences (such as beneficial health outcomes) of the
+recommendations outweigh the undesirable consequences (such as adverse effects) and considers other
+criteria, such as resources, acceptability, equity and feasibility. According to this assessment, the strength of
+recommendations is graded into two categories.
+1.
+A strong recommendation is one for which the Guideline Development Group is confident that the
+desirable consequences of adhering to the recommendation outweigh the undesirable consequences.
+2.
+A conditional recommendation is one for which the Guideline Development Group concluded that
+the desirable consequences of adhering to the recommendation probably outweigh the undesirable
+consequences but is not confident about these trade-offs (15).
+Table 2.2 explains the implications of the differing strengths of recommendations for patients, clinicians and
+policy-makers. Remarks were added to the recommendations to explain the recommendation and/or describe
+any relevant conditions. Implementation considerations were added to provide further information for the
+possible application of the recommendation.
+WHO then drafted the full guidelines and circulated them electronically to the WHO Steering Committee, the
+Guideline Development Group and the External Review Group for comments and feedback. All input was
+considered and the guidelines were revised. External peer review was completed in June 2024, and the text
+was edited, but neither of these processes affected the recommendations that had been formulated.
+11
+2.7 Managing conflicts of interest
+Managing conflicts of interest was a key priority throughout the process of developing the guidelines. WHO
+guidelines for declaration of interests by WHO experts were implemented. Declaration of interests statements
+were obtained from all members of the Guideline Development Group and the External Review Group before
+they assumed their roles. At the beginning of the Guideline Development Group meetings, including subgroup
+meetings, the members disclosed their declared interests and any new ones. Annex 2 summarizes the
+declaration of interests statements.
+Eleven members of the Guideline Development Group declared interests. All were deemed to be able to fully
+participate since conflict was not related to diagnostics or screening of asymptomatic infections.
+2. Methods
+Implications
+Strong recommendation
+WHO recommends…
+Conditional recommendation
+WHO suggests…
+For patients
+Most individuals in this situation would
+want the recommended course of action,
+and only a small proportion would not.
+Most individuals in this situation would
+want the suggested course of action, but
+some would not.
+For clinicians
+Most individuals should receive the
+recommended course of action.
+Adherence to this recommendation
+according to the guidelines could be used
+as a quality criterion or performance
+indicator.
+Formal decision aids are not likely to
+be needed to help individuals make
+decisions consistent with their values and
+preferences.
+Clinicians should recognize that different
+choices will be appropriate for each
+individual and that clinicians must help
+each individual arrive at a management
+decision consistent with the individual’s
+values and preferences.
+Decision aids may be useful to help
+individuals make decisions consistent with
+their values and preferences.
+For policy-
+makers
+The recommendation can be adopted as
+policy in most situations.
+Policy-making will require substantial
+debate and the involvement of various
+stakeholders.
+Table 2.2. Implications of differing strengths of GRADE recommendations
+Source: WHO handbook for guideline development (15).
+3. Updated and new recommendations
+13
+3. Updated and new recommendations
+This section provides recommendations for screening for N. gonorrhoeae and C. trachomatis for pregnant
+women, adolescents and young people, sex workers and men who have sex with men, with no symptoms of an
+STI who are accessing a health-care service.
+The recommendations are based on the combined prevalence of N. gonorrhoeae and C. trachomatis at
+the population level. For sexually active adolescents and young people, a high prevalence in a setting is
+suggested to be about 15–20% combined for both infections. For pregnant women, because of the adverse
+health effects on infants, a combined prevalence of 10% in a setting may be considered high. Decision-makers
+may have access to prevalence data from countries, programmes or clinics, which can be used to determine
+whether screening should be implemented for the population addressed in the recommendation. Note that
+the recommendations are intended to be applied based on population-level prevalence and do not involve
+assessment of an individual’s risk of infection.
+3.1 Pregnant women
+Summary of the evidence
+Overall, the certainty in the evidence is low for small or moderate benefits and trivial harm of different
+screening strategies to screen pregnant women who have no symptoms of an STI and are accessing health-
+care services for antenatal visits (see the evidence-to-decision table in Web Annex A). The evidence for benefits
+and harm was based on a search for evidence up to April 2024 (see Web Annex E for the systematic review of
+the literature) and the results from the decision model (see Web Annex F). We found a randomized controlled
+trial (18) and a non-randomized study (19,20) and used results from the decision model. Both primary studies
+occurred in low- and middle-income countries, where the prevalence of the STIs was 23% and 25%. The
+Guideline Development Group judged that there is likely little to no difference in premature birth and/or low
+birthweight between screening with a point-of-care test and no screening. Based on the modelled results,
+the critical benefit of screening (and where the greatest value was placed) is reducing the transmission of
+N. gonorrhoeae and C. trachomatis to infants, which can lead to conjunctivitis or pneumonia. In settings where
+prevalence is high (such as greater than 20%), screening could lead to a significant reduction in infections
+3. Updated and new recommendations
+Recommendation (new 2024)
+WHO suggests that pregnant women who have no symptoms of a sexually transmitted infection and are
+accessing health-care services for antenatal visits be screened for N. gonorrhoeae and/or C. trachomatis
+in settings where prevalence is high and resources and capacity are available. Recommendations for the
+management of symptomatic sexually transmitted infections should continue to be followed.a
+Conditional recommendation, low certainty in evidence of effects
+Remarks: This recommendation applies to population-level prevalence rather than individual risk
+assessments, which have been shown to lack accuracy. This recommendation also applies to screening
+with either a quality-assured molecular assay, such as nucleic-acid amplification testing or a rapid test
+with a minimum sensitivity of 80% and specificity of 90%, where treatment is available.
+Screening should be voluntary with informed consent. Treat for N. gonorrhoeae and/or C. trachomatis
+based on the results of the quality-assured test using the national treatment guidelines. Sexual partners
+of people testing positive should also be tested and treated, if positive.
+aGuidelines for the management of symptomatic sexually transmitted infections (11).
+14
+Guidelines for the management of asymptomatic sexually transmitted infections
+(about 25 per 1000 fewer). However, the reduction is smaller where prevalence is lower (about 12 per 1000
+fewer). There remains uncertainty about whether antimicrobial resistance may slightly increase (due to higher
+antibiotic consumption) and the long-term consequences of asymptomatic infections.
+A review of the acceptability and feasibility of rapid screening and treatment of pregnant women with STIs in
+six low- and middle-income countries found that acceptability ranged from 85% to 99% and feasibility from
+91% to 100% (21). Barriers to access and acceptability include logistical barriers and knowledge about STIs
+and stigma (22). The Guideline Development Group agreed that screening is probably acceptable to pregnant
+women and feasible. However, the resources and costs of nucleic-acid amplification tests or point-of-care tests
+to screen are moderate, and these tests may not be available in some settings. The Guideline Development
+Group therefore agreed that there may be greater benefits over undesirable consequences in settings where
+the prevalence is greater than 20%, but where prevalence is lower, the benefits may not outweigh the costs
+and required resources.
+Summary of the evidence
+Overall, the certainty in the evidence is low for moderate benefits and small harm of screening strategies to
+screen sexually active adolescent girls and young women and young people who have no symptoms of an STI
+and low for trivial benefits and small harm for adolescent boys and young men (see the evidence-to-decision
+table in Web Annex B). The evidence for benefits and harm was based on a search for evidence up to April
+2024 (see Web Annex E for the systematic review of the literature) and the results from the decision model
+(see Web Annex F). We found a systematic review (23) of four randomized controlled trials and two recently
+published studies, one case series in a low- and middle-income country (24) and one randomized controlled
+trial (25). The prevalence of N. gonorrhoeae and C. trachomatis combined was 10.4% for males, and 20.5% for
+females in the case series in a low- and middle-income country and 20% in the model. The benefits for both
+males and females could include reducing transmission of STIs which could reduce their incidence, but there
+was no evidence reporting this outcome. For males, the Guideline Development Group agreed that infection
+may cause little to no difference in the incidence of epididymitis based on the modelled evidence (8 fewer per
+1000). For females, the model estimated that the risk of pelvic inflammatory disease may be reduced by about
+20 people per 1000, but the review of randomized controlled trials found about 2 fewer. The estimate from
+the model found that infertility may be reduced by 5 per 1000. The recently published randomized controlled
+trial found that prevalence may be slightly reduced (0.5%). The Guideline Development Group agreed that
+stigma and its consequences may be a small harm for both males and females. There is also uncertainty about
+the long-term consequences of asymptomatic infection or whether antibiotic resistance caused by greater
+3.2 Adolescents and young people
+Recommendation (new 2024)
+WHO suggests that sexually active adolescents and young people (10–24 years old) who have no
+symptoms of a sexually transmitted infection and are accessing health-care services be screened for N.
+gonorrhoeae and/or C. trachomatis in settings where prevalence is high and resources and capacity are
+available. Recommendations for management of symptomatic sexually transmitted infections should
+continue to be followed.a
+Conditional recommendation, low certainty in evidence of effects
+Remarks: When balancing resources and benefits of screening, adolescent girls and young women may
+be prioritized. This recommendation applies to population-level prevalence rather than individual risk
+assessments, which have been shown to lack accuracy. However, exploring sexual activity in the past
+12 months prior to screening is essential. This recommendation also applies to screening with either
+a quality-assured molecular assay, such as nucleic-acid amplification testing, or a rapid test with a
+minimum sensitivity of 80% and specificity of 90%, where treatment is available.
+Screening should be voluntary with informed consent. Treat for N. gonorrhoeae and/or C. trachomatis
+based on the results of the quality-assured test using the national treatment guidelines. Sexual partners
+of people testing positive should also be tested and treated, if positive.
+aGuidelines for the management of symptomatic sexually transmitted infections (11).
+15
+3. Updated and new recommendations
+antibiotic consumption may be slightly increased with screening. The Guideline Development Group placed
+greatest value on the potential for reducing the transmission of STIs and adverse outcomes and therefore
+agreed that the benefits would outweigh the harm, especially for females.
+A review of four studies reporting acceptability found that testing is probably acceptable, but there are
+barriers, such as cost, lack of knowledge about risk and embarrassment (24,26,27). The resources and costs
+of nucleic-acid amplification tests or point-of-care tests to screen are large, especially considering the large
+number of adolescents and young people that would need to be screened. Screening tests (molecular assay
+such as nucleic-acid amplification testing or rapid tests) may not be available in some countries, potentially
+reducing equity. Consequently, screening may not be feasible in many countries. The Guideline Development
+Group agreed that there may be greater benefits over undesirable effects in settings where prevalence
+is greater than 20%, and more so in adolescent girls and young women, who should be given priority for
+screening when resources and capacity could be available.
+3.3 Sex workers
+Recommendation (updated 2024)
+WHO suggests that sex workers accessing health-care services who have no symptoms of a sexually
+transmitted infection be screened for N. gonorrhoeae and/or C. trachomatis. Recommendations for the
+management of symptomatic sexually transmitted infections should continue to be followed.a
+Conditional recommendation, low certainty in evidence effects
+Remarks: This recommendation also applies to screening with either a quality-assured molecular
+assay, such as nucleic-acid amplification testing, or a rapid test with a minimum sensitivity of 80% and
+specificity of 90%, where treatment is available. The anatomical site depends on sexual behaviour and
+pooling samples can reduce cost and increase yield, depending on the resources available.
+Screening should be voluntary with informed consent. Treat for N. gonorrhoeae and/or C. trachomatis
+based on the results of the quality-assured test using the national treatment guidelines. Sexual partners
+of people testing positive should also be tested and treated, if positive.
+aGuidelines for the management of symptomatic sexually transmitted infections (11).
+Summary of the evidence
+Overall, the certainty in the evidence is low for moderate benefits (such as reduction in STI transmission) and
+trivial harm of screening strategies to screen sex workers who have no symptoms of an STI (see the evidence-
+to-decision table in Web Annex C). This evidence was assessed as applicable to sex workers defined as female,
+male, trans and gender-diverse adults (18 years of age and older) who receive money or goods in exchange
+for sexual services, either regularly or occasionally. The evidence for benefits and harm was based on a search
+for evidence up to April 2024 (see Web Annex E for the systematic review of the literature) and results from the
+decision model (see Web Annex F). We found a recent randomized controlled trial (28) and a review of evidence
+from previously published WHO guidelines in 2012 (29). Evidence from the 2012 guidelines included eight non-
+comparative studies and one randomized controlled trial that reported HIV, N. gonorrhoeae and C. trachomatis
+acquisition with screening provided in combination with other interventions (such as condom promotion,
+education and STI treatment). Most studies found reductions in the prevalence of infections over time. The
+more recent randomized controlled trial in a low- and middle-income country found that the prevalence of
+C. trachomatis was lower by 3.7% and N. gonorrhoeae by 0.7% with screening versus no screening. Other
+benefits for female sex workers estimated in the model included reduction in pelvic inflammatory disease (20
+fewer per 1000) and infertility (5 fewer per 1000). The Guideline Development Group placed the greatest value
+on the potential to reduce onward transmission of STIs, although this was not measured in studies. There
+is uncertainty about the harm (such as whether antibiotic resistance may be slightly increased because of
+greater antibiotic consumption or about the long-term consequences of asymptomatic infection). Overall, the
+health benefits of screening outweighed harm for sex workers.
+16
+Guidelines for the management of asymptomatic sexually transmitted infections
+Other factors did not change favouring screening in this population. We found a systematic review of 14
+studies in low- and middle-income countries and high-income countries assessing the facilitators and
+barriers to screening by female sex workers (30). It found that a greater number of sex clients or partners,
+awareness of STIs, trained peers and emotional support may increase the uptake of testing. Barriers may
+be lack of awareness of risk of STIs or of the availability of testing, time constraints and long waiting lists,
+cost, judgemental attitudes of health-care providers, stigma and criminalization of sex work. The Guideline
+Development Group agreed that screening is probably acceptable to female sex workers, but they may
+experience multiple barriers. The Guideline Development Group also agreed that the resources and costs
+of nucleic-acid amplification tests or point-of-care tests to screen are moderate, and screening may not be
+feasible in many countries that currently do not have these tests.
+3.4 Men who have sex with men
+Recommendation (updated 2024)
+WHO suggests that men who have sex with men accessing health-care services who have no
+symptoms of a sexually transmitted infection be screened for N. gonorrhoeae and/or C. trachomatis.
+Recommendations for the management of symptomatic sexually transmitted infections should continue
+to be followed.a
+Conditional recommendation, low certainty in evidence of effects
+Remarks: This recommendation applies to screening with either a quality-assured molecular assay, such
+as nucleic-acid amplification testing, or a rapid test with a minimum sensitivity of 80% and specificity
+of 90%, where treatment is available. The anatomical site depends on sexual behaviour, and pooling
+samples can reduce cost and increase yield, depending on the resources available.
+Screening should be voluntary with informed consent. Treat for N. gonorrhoeae and/or C. trachomatis
+based on the results of the quality-assured test using the national treatment guidelines. Sexual partners
+of people testing positive should also be tested and treated, if positive.
+aGuidelines for the management of symptomatic sexually transmitted infections (11).
+Summary of the evidence
+Overall, the certainty in the evidence is low for small benefits and trivial harm of screening strategies to
+screen men who have sex with men who have no symptoms of an STI (see the evidence-to-decision table in
+Web Annex D). The evidence for benefits and harm was based on a search for evidence up to April 2024 (see
+Web Annex E for the systematic review of the literature) and results from the decision model (see Web Annex
+F). We found a systematic review of 12 non-randomized studies (31), a recently published study of men who
+have sex with men using HIV PrEP in high-income countries (32) and evidence from a previously published
+WHO guideline (33). Evidence from the guideline included five observational studies in low- and middle-
+income countries providing data for sensitivity and specificity of different tests and prevalence of urethral
+and rectal N. gonorrhoeae and C. trachomatis but did not measure outcomes or the effect of screening.
+The systematic review found that the prevalence of N. gonorrhoeae and C. trachomatis at various sites was
+increased or unchanged in 10 and reduced in six sites over time with screening. Incidence was reported in
+the randomized controlled trial and found little to no difference (0.5 infections per 1000 person-days). The
+Guideline Development Group agreed that these benefits of screening may be trivial, but HIV acquisition
+and transmission to heterosexual populations were not measured in studies. Given the increased risk of HIV
+acquisition with STIs and the risk of transmission to heterosexual populations, the Guideline Development
+Group agreed that the benefits are small. Regarding harm, there is uncertainty about whether antibiotic
+resistance may be slightly increased because of greater antibiotic consumption and about the long-term
+consequences of asymptomatic infection.
+17
+3. Updated and new recommendations
+3.5 Research needs
+To address the gaps in the certainty of evidence in effects of the asymptomatic screening of STIs, particularly
+of N. gonorrhoeae and C. trachomatis, more randomized controlled trials and/or hybrid efficacy and
+implementation science studies are essential, especially in low- and middle-income countries and among
+diverse populations. These studies should aim to measure how asymptomatic screening affects the outcomes
+of transmission, including onward STI transmission, HIV acquisition and transmission, adverse events
+associated with these infections among pregnant and non-pregnant people and their broader impact on
+incidence and population health. Implementation outcomes should also be documented as asymptomatic
+screening procedures are incorporated into clinical services.
+Antimicrobial resistance represents a significant area of concern and should be given priority in research
+efforts to detect any rise in resistance among the pathogens being screened. Collaborative efforts with
+other sectors should also monitor antimicrobial resistance in non-STI-related organisms. Further studies are
+necessary to elucidate the role of asymptomatic STIs in transmission to sexual partners and the associated
+morbidity of untreated infections.
+In addition, the development of low-cost, rapid point-of-care tests with high specificity and sensitivity is
+critically needed. Implementation research focused on the use of point-of-care and nucleic-acid amplification
+tests for screening is vital to optimize these approaches. Emerging testing technologies should be rigorously
+evaluated and incorporated into screening programmes in a learn-as-you-go approach.
+When screening programmes for asymptomatic infections are implemented, gathering data on potential harm,
+acceptability and feasibility within various settings and populations is crucial. Moreover, research should
+explore the sustainability of these programmes, identifying factors contributing to the discontinuation or
+inefficacy of screening strategies, especially those that fail to achieve high coverage or reach the intended
+populations.
+Two studies (32,34) assessed the acceptability of screening and found mixed reactions to screening: some
+wanted to treat infections and not prevent infections; others wanted asymptomatic infections treated.
+Evidence on the frequency of screening was also considered from a systematic review of 46 studies (35),
+of which none directly compared less frequent to more frequent. Although fewer people tested positive
+when screened every 2–3 months than every 4–6 months, confounding between the populations could be
+responsible for the difference. The Guideline Development Group agreed that screening is probably acceptable
+to and feasible for men who have sex with men. The resources and costs of nucleic-acid amplification tests or
+point-of-care tests to screen asymptomatic men who have sex with men are moderate, and screening may not
+be feasible in many countries that currently do not have the tests available.
+4. Other recommendations related to
+asymptomatic screening of STIs
+19
+4. Other recommendations related to asymptomatic screening of STIs
+4. Other recommendations related to
+asymptomatic screening of STIs
+Box 4.1. Existing WHO recommendations on screening for asymptomatic syphilis infection
+Pregnant women (37,38)
+•
+Recommendation: WHO recommends screening all pregnant women for syphilis at least once and as
+early as possible, ideally at the first antenatal care visit (strong recommendation, moderate-certainty
+evidence).
+Key populations (39)
+•
+Recommendation: Offering periodic serological testing for asymptomatic syphilis infection to men
+who have sex with men and trans and gender-diverse people is strongly recommended over not
+offering such screening (strong recommendation, moderate certainty of evidence).
+•
+Recommendation: WHO suggests offering periodic screening for asymptomatic syphilis infection to
+sex workers (conditional recommendation, low certainty of evidence).
+People with STI symptoms (11)
+•
+Good practice statement: For people with symptoms of: (1) urethral discharge from the penis; (2)
+vaginal discharge; (3) lower abdominal pain (among sexually active women); (4) genital ulcers
+(including anorectal ulcers); or (5) anorectal discharge, good practice includes offering HIV and
+syphilis testing.
+4.1 Syphilis
+Syphilis is a bacterial STI caused by T. pallidum that is transmitted through sexual or direct contact with
+infectious lesions and organism penetration of intact mucous membranes or abraded skin, via blood
+transfusion or trans-placentally (vertically) from a pregnant woman to her fetus (congenital syphilis). Vertical
+transmission can be devastating to the fetus when maternal infection is not detected and treated sufficiently
+early in pregnancy. Syphilis, if not treated, results in substantial morbidity and mortality. Syphilis in pregnancy,
+if untreated, can lead to stillbirth, neonatal death, prematurity, low birthweight, malformations in bones and
+serious neurological issues. When untreated among sexually active people, the disease lasts many years and
+is divided into stages. Early syphilis consists of primary syphilis, secondary syphilis and early latent syphilis,
+and late syphilis comprises late latent syphilis and tertiary syphilis (neurosyphilis, ocular syphilis and gumma).
+Sexual transmission typically occurs during early syphilis. Syphilis also increases the risk of HIV infection,
+which is facilitated by syphilitic ulcers (36).
+Syphilis diagnosis is complex. It is usually based on a combination of clinical history, physical examination,
+laboratory testing and sometimes radiology. Although other laboratory tests exist, serological tests are most
+commonly used to support diagnosis. Serological tests include treponemal tests that detect antibodies to
+T. pallidum infection and non-treponemal tests that use indirect markers of infection. Further information
+about syphilis diagnosis is available in Laboratory and point-of-care diagnostic testing for sexually transmitted
+infections, including HIV (12).
+WHO has a number of existing recommendations on the screening of asymptomatic syphilis for different
+populations (Box 4.1).
+5. Implementation considerations
+for the management of
+asymptomatic STIs
+21
+5. Implementation considerations for the management of asymptomatic STIs
+5. Implementation considerations
+for the management of
+asymptomatic STIs
+5.1 Definition of screening
+In the context of screening for asymptomatic STIs, especially N. gonorrhoeae, C. trachomatis, syphilis and HIV,
+the person being screened would be well and unaware that they may have an infection. Screening, therefore,
+can be defined as the presumptive identification of unrecognized infection or disease by applying tests,
+examinations or other procedures that can be applied rapidly to sort out apparently well people who probably
+have an infection or disease from those who probably do not.
+Broadly, three types of screening exist:
+•
+mass screening, with no selection of population, such as checking all infants for hearing problems;
+•
+selective screening, categorized, for example, by age, sex or sexual risk for a specific infection; and
+•
+multi-phased screening, performed periodically, such as annual health examinations.
+For STIs, depending on the infection being screened for, the latter two types of screening may be more
+appropriate. For example, it is generally accepted that C. trachomatis is more prevalent in adolescents
+and young people, and they would, therefore, be an appropriate target population for this pathogen. Key
+populations, such as men who have sex with men and sex workers, may also be offered screening for STIs
+including syphilis and HIV. For pregnant women, it is important to exclude syphilis and HIV or, if detected, be
+offered prompt treatment to prevent adverse pregnancy outcomes and reduce risk of infant infection.
+For pregnant women, the screening may be multi-phased and conducted in the first trimester and again near
+delivery to exclude, or pick up, any infection that may have been acquired in the nine months of pregnancy.
+5.2 Rationale and objectives for establishing screening
+programmes for asymptomatic STIs
+Justifying the screening strategy requires that the infections in question constitute a significant public
+health problem in terms of the morbidity and mortality they may cause and should be amenable to effective
+treatment that is available and accessible and with a potential for cure.
+People may have the most common bacterial and viral STIs (C. trachomatis, N. gonorrhoeae, HIV, herpes
+simplex virus and human papillomavirus) and Trichomonas vaginalis without symptoms. Some individuals,
+such as biological women, may have asymptomatic gonococcal and chlamydial infections of the cervix in
+about 50–97% of cases (40,41). In anatomical sites other than the urethra and the cervix, such as the anorectal
+and oropharyngeal sites, symptoms are usually minimal to absent in up to about 85% of cases (42).
+Asymptomatic infections, especially in anatomical sites such as the pharynx or rectum, may be reservoirs for
+the selection of antimicrobial resistance when antimicrobial agents are taken for other conditions but at below
+the minimal inhibitory concentration for the pre-existing STI pathogens (43).
+Since about 50–97% of STI infections may be asymptomatic, people with symptomatic infections represent
+the tip of the iceberg. Ignoring asymptomatic infections is imprudent since people who are infected but
+without symptoms have been documented to transmit the STI pathogens to their sexual partners (44,45).
+Asymptomatic STIs can cause significant ill health and mortality as precursors for cancer, including cervical,
+penile, anal and hepatic cancer. Further, untreated asymptomatic infections can result in an increased risk of
+transmitting and acquiring HIV.
+22
+Guidelines for the management of asymptomatic sexually transmitted infections
+Before a screening programme is introduced for asymptomatic STIs at the national level, there should be
+common agreement on the objectives of the intervention, the screening tests to be used, the populations to
+be screened and the pathogens to be screened for. Considerations on which populations (such as pregnant
+women and adolescents and young people) to screen will depend on the prevalence, the value placed on the
+outcomes of not screening (such as infertility among young women, adverse pregnancy outcomes or increased
+STI transmission) and the cost of the test. The populations for which screening is implemented should be
+known to have a high prevalence of N. gonorrhoeae and C. trachomatis. Screening may be cost-effective
+if it can target population subgroups at higher risk based on available surveillance data. The frequency of
+screening should depend on sexual exposure, the rates of partner exchange and transmission and the cost of
+the test. The frequency of screening should be balanced against the cost and the number of cases detected
+and the consequences of not screening. Based on the evidence for frequency of screening among men who
+have sex with men, fewer people test positive when screened every 2–3 months than 4–6 months, confounded
+between populations (34). However, more frequent screening costs more. Sex workers and men who have sex
+with men should be screened at least annually or every six months.
+The main objectives of a screening programme for asymptomatic STIs are:
+•
+to detect the infection at a stage when treatment can be given before the person develops signs,
+symptoms and complications; and
+•
+to interrupt the chain of transmission of STIs and the impact on the incidence and prevalence of STIs in
+the community.
+5.3 Ethical considerations
+Since screening is conducted on healthy people, the ethics of health care must be given priority. The following
+ethical principles should be observed:
+•
+autonomy: in moral, political, and bioethical philosophy, people must have the capacity to make
+informed and uncoerced decisions regarding whether to undertake the screening test;
+•
+non-maleficence: the principle of not causing harm or evil to people must be upheld;
+•
+beneficence: the process should be conducted with the intent to do good; and
+•
+justice: fairness must be ensured in how everyone involved is treated.
+People also have a mental risk associated with learning that they have an STI, especially sexually active
+adolescents. Minimizing social risks by ensuring the confidentiality of results is essential. In addition, sexually
+active adolescents, like sex workers and men who have sex with men, may be vulnerable to coercion and
+undue influence. Procedures should be in place to ensure that people from these populations receive proper
+education about screening and that informed consent is obtained. People with positive STI results should
+receive counselling from trained personnel. Adolescents should be counselled about the potential benefits
+and risks of disclosing their positive STI status and empowered and supported to decide whether, when, how
+and to whom to disclose their status.
+23
+5.4 Selecting diagnostic tests for screening asymptomatic STIs
+Screening tests are intended to determine whether an asymptomatic person has an infection that has not
+been recognized because lack of symptoms. The accurate identification of asymptomatic STIs depends on the
+availability of accurate diagnostic tests and a sound screening strategy.
+The following guidance should be adhered to in selecting the tests to be used:
+•
+validity: the test should be able to detect as many as possible of the infections in the asymptomatic
+state, to be determined by the performance characteristics of the test in terms of its sensitivity and
+specificity;
+•
+reliability: the test should give consistent results with no random errors;
+•
+acceptability and accessibility: the test should cause the least discomfort to the person and should have
+an affordable cost for the individual and/or the government; and
+•
+the testing can be linked to care, treatment and follow-up.
+High-quality diagnostic tests for STIs are available but are currently expensive, frequently labour intensive
+and currently not suitable for use as rapid point-of-care tests. A screening strategy therefore needs to be
+established to determine the targeted population and the specific pathogens to be screened. In settings where
+screening for syphilis and HIV is already established, assessments should be made to determine whether
+screening for the additional pathogens can be integrated into that population.
+5.5 Acceptable performance characteristics of a screening test
+To ensure the sustainability of a screening programme, the tests used should be inexpensive and easy to
+administer and should not cause discomfort that would deter the person from being tested. Further, the
+tests should be widely available and accessible to the target population. For the test to serve its purpose
+adequately, it should have acceptably good sensitivity and specificity.
+The sensitivity of a screening test is its ability to detect a true positive: correctly identifying an infection among
+everyone infected. The specificity of a screening test is its ability to detect a true negative: correctly identifying
+people who do not have infection.
+The predictive value is the probability of having the infection given the results of a test. Positive predictive
+value is the probability that a person with a positive test result has the infection, whereas a negative predictive
+value is the probability that a person with a negative test result is truly free from infection. Predictive
+values are determined by the sensitivity and specificity of the test and the prevalence of the infection in the
+population being tested.
+For a screening programme, the specificity is especially important to a health-care provider because a positive
+test reduces the likelihood that the person tested is free from infection. When the prevalence of infection is
+low, the positive predictive value will also be low, even if the test has high sensitivity and high specificity.
+Increasing the positive predictive value in a screening programme therefore requires targeting those at high
+risk of infection.
+The sensitivity and specificity of the test should be evaluated against a gold standard or a reference standard
+test, and policy-makers should ensure they have this information before selecting screening tests for a
+screening programme. Currently, the gold standard for diagnostic or screening tests for STIs is molecular-
+based testing, such as real-time polymerase chain reaction (PCR).
+A highly sensitive test for asymptomatic infections would mean that the number of people with asymptomatic
+infection who are not diagnosed by the test decreases. The test would pick up a high proportion of those
+infected but may also have some false positives. A highly specific test would produce a small percentage
+of false-positive results. For a screening programme, high specificity may be desired over sensitivity,
+especially when the costs of overtreatment need to be avoided, including unnecessary use of antibiotics and
+5. Implementation considerations for the management of asymptomatic STIs
+24
+Guidelines for the management of asymptomatic sexually transmitted infections
+development of antimicrobial resistance. However, as indicated above, the predictive values depend on the
+prevalence of infection in the community being tested. Nevertheless, since specificity may never be 100%, the
+tested person should be informed that a negative screening result does not mean the infection is not present
+but, rather, that the likelihood of infection being present is low. Similarly, a highly sensitive screening test
+is unlikely to produce false-negative results, and people who test negative on that kind of screening test are
+therefore very unlikely to be infected. However, false positives, even if fewer, should be borne in mind.
+Screening tests should be reliable and reproducible. This is important when point-of-care tests are used for
+screening since the traffic of people being tested may be high and the tests may be performed in a rush or
+by different health-care personnel or self-test. The frequent causes of variability of results are usually the
+following:
+•
+anatomical site from which the sample was taken;
+•
+intraobserver variability because of the differences in interpretation of a test at different times; and
+•
+interobserver variability because of variation of interpretation of a test by two or more health-care
+providers.
+Therefore, regardless of which test is selected for screening, training should be conducted, and standard
+operating procedures established covering preparation of the person and anatomical site to be tested,
+collecting and processing the specimen, conducting the test and how to interpret the result.
+5.6 Treatment, antibiotic consumption and preparedness for the
+screening programme
+All people testing positive for an STI should be treated based on the national guidelines. In addition, since
+a screening programme should also constitute part of a prevention strategy, the sexual partners of people
+testing positive should also be tested and treated, if positive. Testing sexual partners ensures that all antibiotic
+use is rational and adheres to the principle of antimicrobial stewardship.
+An effective and successful screening programme will detect more infections requiring more treatment options
+than previously obtained for the management of symptomatic infections.
+5.7 Screening as an integrated prevention intervention
+Screening for asymptomatic STIs should be implemented as part of an integrated prevention intervention and
+not as a panacea for ending the STI burden on its own. In the general population and in any of the populations
+selected for targeted STI screening, other prevention interventions should be enhanced and scaled up to
+maximum coverage for impact. The prevention package for STIs includes the following interventions (46):
+•
+information, education and communication activities aimed at fostering participants' knowledge of
+STIs and safer sex;
+•
+use of male and female condoms;
+•
+vaccines, currently for the human papillomavirus and hepatitis B;
+•
+voluntary medical male circumcision; and
+•
+suppressive therapy for genital herpes, which may prevent the transmission of herpes simplex virus 2
+(HSV-2).
+25
+5.8 Ensuring early and effective treatment
+All prevention interventions and screening services should be implemented in conjunction with accessible and
+acceptable STI services for treatment and care for the general population, adolescents and key populations
+and ensure the following in the process:
+•
+promoting good STI health care–seeking behaviour;
+•
+providing high-quality care for STIs, which ensures immediate treatment; and
+•
+ensuring universal access to STI care for everyone who needs the services and thus putting the services
+to scale for adequate coverage for maximum impact.
+5.9 STI services for key populations, adolescents and young
+people
+The adaptation and implementation of these guidelines should be accompanied by efforts to promote
+and protect the human rights of people requiring STI care services. This includes ensuring that stigma and
+discrimination are prevented in service provision while promoting gender equity and ensuring that the use
+of services is voluntary. Since key populations are disproportionately affected by STIs, it is critical to increase
+access to STI services for key populations and people living with HIV, including adolescents and young people.
+In many settings, people from key populations may not disclose their identities or behaviour, particularly
+in contexts where sex work and certain sexual activities are criminalized. Therefore, services should be
+designed to be accessible and non-discriminatory, ensuring confidentiality and protection from legal or social
+repercussions.
+The WHO Consolidated guidelines on HIV, viral hepatitis and STI prevention, diagnosis, treatment and care
+for key populations provide recommendations and guidance (39). In addition, the following WHO guidance
+publications offer further implementation considerations for increasing access to and delivering STI services
+for key populations:
+•
+Implementing comprehensive HIV and STI programmes with sex workers: practical approaches from
+collaborative interventions (47);
+•
+Implementing comprehensive HIV and STI programmes with men who have sex with men: practical
+guidance for collaborative interventions (48);
+•
+Implementing comprehensive HIV and STI programmes with transgender people: practical guidance for
+collaborative interventions (49); and
+•
+Implementing comprehensive HIV and HCV programmes with people who inject drugs: practical guidance
+for collaborative interventions (50).
+Adolescent-friendly health services should be provided, ensuring that they meet the specific needs of
+adolescents through community-based approaches and training for health-care providers. Services should
+maintain confidentiality, privacy and non-judgemental attitudes to create a supportive environment for those
+seeking care. Additional WHO guidance on providing high-quality health-care services for adolescents is
+available in the following publications:
+•
+Global standards for quality health-care services for adolescents: a guide to implement a standards-
+driven approach to improve the quality of health-care services for adolescents (51); and
+•
+Adolescent-friendly health services for adolescents living with HIV: from theory to practice (52).
+5. Implementation considerations for the management of asymptomatic STIs
+26
+Guidelines for the management of asymptomatic sexually transmitted infections
+5.10 Antenatal screening for pregnant women
+The WHO recommendations on antenatal care for a positive pregnancy experience (53) recommend maternal
+assessments to detect various conditions during pregnancy. These include anaemia, asymptomatic
+bacteriuria, intimate partner violence, gestational diabetes mellitus, tobacco use, substance use, HIV, syphilis
+and tuberculosis. All pregnant women should be tested for HIV, as well as syphilis and hepatitis B virus, at least
+once and as early as possible during pregnancy (38).
+In settings with a high prevalence of infections (exceeding 15–20%), WHO also recommends to integrate
+screening for N. gonorrhoeae and C. trachomatis into maternal assessments to prevent adverse maternal and
+newborn outcomes from gonococcal and chlamydial infections.
+6. Disseminating and updating the
+guidelines
+28
+Guidelines for the management of asymptomatic sexually transmitted infections
+6. Disseminating and updating the
+guidelines
+6.1 Dissemination
+These guidelines will be made available on the WHO website at https://www.who.int/health-topics/sexually-
+transmitted-infections – click on “Guidelines” (there will also be links to other supporting documents).
+WHO headquarters will work with WHO regional offices and country offices to ensure that countries receive
+support in adapting, implementing and monitoring the utility of these guidelines.
+Every level of WHO (headquarters, regional offices and country offices) will work with regional and national
+partners – including the United Nations Population Fund (UNFPA), the United Nations Children’s Fund
+(UNICEF), the Joint United Nations Programme on HIV/AIDS (UNAIDS), nongovernmental organizations and
+other agencies implementing HIV, STI and sexual and reproductive health services to ensure an integrated
+approach to preventing and controlling STIs. WHO will advocate that these external partners support the
+dissemination and implementation of these guidelines.
+These guidelines will also be disseminated at conferences related to HIV, STIs and sexual and reproductive
+health and through electronic media. These recommendations will also be included in WHO’s forthcoming
+consolidated guidelines for the prevention, diagnosis, treatment and care of STIs.
+6.2 Updating the STI guidelines and user feedback
+A system of monitoring relevant new evidence and updating the recommendations in these guidelines will
+be established and mechanisms for disseminating the new information put into operation. Some of the
+mechanisms will be by electronic communication. An electronic follow-up survey of key end-users of these
+guidelines will be conducted after they have been disseminated for one year. The results of the survey will
+be used to identify challenges and barriers to the uptake of the guidelines, to evaluate their usefulness for
+improving service delivery for STIs and to identify topics or gaps in treatment that need to be addressed in
+future editions.
+References
+30
+Guidelines for the management of asymptomatic sexually transmitted infections
+1.
+Global progress report on HIV, viral hepatitis and sexually transmitted infections, 2021: accountability for
+the global health sector strategies 2016–2021: actions for impact. Geneva: World Health Organization;
+2021 (https://iris.who.int/handle/10665/341412). Licence: CC BY-NC-SA 3.0 IGO.
+2.
+Adachi K, Nielsen-Saines K, Klausner JD. Chlamydia trachomatis infection in pregnancy: the global
+challenge of preventing adverse pregnancy and infant outcomes in sub-Saharan Africa and Asia. Biomed
+Res Int. 2016;2016:9315757 (https://doi.org/10.1155/2016/9315757).
+3.
+Hoenderboom BM, van Benthem BHB, van Bergen J, Dukers-Muijrers N, Gotz HM, Hoebe C et al. Relation
+between Chlamydia trachomatis infection and pelvic inflammatory disease, ectopic pregnancy and tubal
+factor infertility in a Dutch cohort of women previously tested for chlamydia in a chlamydia screening trial.
+Sex Transm Infect. 2019;95(4):300–6 (https://doi.org/10.1136/sextrans-2018-053778).
+4.
+Wi T, Lahra MM, Ndowa F, Bala M, Dillon JR, Ramon-Pardo P et al. Antimicrobial resistance in Neisseria
+gonorrhoeae: global surveillance and a call for international collaborative action. PLoS Med.
+2017;14(7):e1002344 (https://doi.org/10.1371/journal.pmed.1002344).
+5.
+Unemo M, Seifert HS, Hook EW 3rd, Hawkes S, Ndowa F, Dillon JR. Gonorrhoea. Nat Rev Dis Primers.
+2019;5(1):79 (https://doi.org/10.1038/s41572-019-0128-6).
+6.
+Unemo M, Lahra MM, Cole M, Galarza P, Ndowa F, Martin I et al. World Health Organization Global
+Gonococcal Antimicrobial Surveillance Program (WHO GASP): review of new data and evidence to inform
+international collaborative actions and research efforts. Sex Health. 2019;16(5):412–25 (https://doi.
+org/10.1071/SH19023).
+7.
+Implementing the global health sector strategies on HIV, viral hepatitis and sexually transmitted
+infections, 2022–2030: report on progress and gaps 2024. Geneva: World Health Organization; 2024
+(https://iris.who.int/handle/10665/378246). Licence: CC BY-NC-SA 3.0 IGO.
+8.
+Global Sexually Transmitted Infections Programme: Strategic information [website]. Geneva: World Health
+Organization; 2024 (https://www.who.int/teams/global-hiv-hepatitis-and-stis-programmes/stis/strategic-
+information).
+9.
+Global health sector strategies on, respectively, HIV, viral hepatitis and sexually transmitted
+infections for the period 2022-2030. Geneva: World Health Organization; 2022 (https://iris.who.int/
+handle/10665/360348). Licence: CC BY-NC-SA 3.0 IGO.
+10.	 Guidelines for the management of sexually transmitted infections. Geneva: World Health Organization;
+2003 (https://iris.who.int/handle/10665/42782).
+11.	 Guidelines for the management of symptomatic sexually transmitted infections. Geneva: World Health
+Organization; 2021 (https://iris.who.int/handle/10665/342523). Licence: CC BY-NC-SA 3.0 IGO.
+12.	 Laboratory and point-of-care diagnostic testing for sexually transmitted infections, including HIV. Geneva:
+World Health Organization; 2023 (https://iris.who.int/handle/10665/374252). Licence: CC BY-NC-SA 3.0
+IGO.
+13.	 The WHO AWaRe (access, watch, reserve) antibiotic book. Geneva: World Health Organization; 2022
+(https://iris.who.int/handle/10665/365237). Licence: CC BY-NC-SA 3.0 IGO.
+14.	 AWaRe Antibiotic Categorization [website]. World Health Organization; 2025 (https://aware.essentialmeds.
+org/groups).
+References
+2
+2 All references were accessed on 2 January 2025.
+31
+References
+15.	 WHO handbook for guideline development. 2nd edition. Geneva: World Health Organization; 2014
+(https://iris.who.int/handle/10665/145714).
+16.	 Brozek JL, Canelo-Aybar C, Akl EA, Bowen JM, Bucher J, Chiu WA et al. GRADE Guidelines 30: the GRADE
+approach to assessing the certainty of modeled evidence – an overview in the context of health decision-
+making. J Clin Epidemiol. 2021;129:138–50 (https://doi.org/10.1016/j.jclinepi.2020.09.018).
+17.	 GRADEpro Guideline Development Tool (GDT) [Software]. McMaster University and Evidence Prime; 2024
+(https://www.gradepro.org).
+18.	 Riddell MA, Vallely LM, Mengi A, Badman SG, Low N, Wand H et al. Point-of-care testing and treatment
+of sexually transmitted and genital infections to improve birth outcomes in high-burden, low-resource
+settings (WANTAIM): a pragmatic cluster randomised crossover trial in Papua New Guinea. Lancet Glob
+Health. 2024;12(4):e641–51 (https://doi.org/10.1016/S2214-109X(24)00004-4).
+19.	 Wynn A, Mussa A, Ryan R, Babalola CM, Hansman E, Ramontshonyana K et al. Evaluating Chlamydia
+trachomatis and Neisseria gonorrhoeae screening and treatment among asymptomatic pregnant women
+to prevent preterm birth and low birthweight in Gaborone, Botswana: a secondary analysis from a
+non-randomised, cluster-controlled trial. BJOG. 2024;131(9):1259–69 (https://doi.org/10.1111/1471-
+0528.17775).
+20.	 Mussa A, Wynn A, Ryan R, Babalola C, Simon S, Ramontshonyana K et al. High cure rate among pregnant
+women in a Chlamydia trachomatis and Neisseria gonorrhoeae testing and treatment intervention study in
+Gaborone, Botswana. Sex Transm Dis. 2023;50(2):124–7 (https://doi.org/10.1097/OLQ.0000000000001725).
+21.	 Shannon CL, Bristow C, Hoff N, Wynn A, Nguyen M, Medina-Marino A et al. Acceptability and feasibility
+of rapid chlamydial, gonococcal, and trichomonal screening and treatment in pregnant women in
+6 low- to middle-income countries. Sex Transm Dis. 2018;45(10):673–6 (https://doi.org/10.1097/
+OLQ.0000000000000832).
+22.	 Canada’s Drug Agency. Screening for Chlamydia trachomatis and Neisseria gonorrhoeae during pregnancy:
+a health technology assessment. Ottawa: Canadian Agency for Drugs and Technologies in Health; 2018
+(https://www.cda-amc.ca/sites/default/files/pdf/feedback/DRAFT_HT0023-report.pdf).
+23.	 Low N, Redmond S, Uuskula A, van Bergen J, Ward H, Andersen B et al. Screening for genital chlamydia
+infection. Cochrane Database Syst Rev. 2016;9(9):CD010866 (https://doi.org/10.1002/14651858.CD010866.
+pub2).
+24.	 Chikwari CD, Simms V, Kranzer K, Dauya E, Bandason T, Tembo M et al. Evaluation of a community-
+based aetiological approach for sexually transmitted infections management for youth in Zimbabwe:
+intervention findings from the STICH cluster randomised trial. EClinicalMedicine. 2023;62:102125 (https://
+doi.org/10.1016/j.eclinm.2023.102125).
+25.	 Hocking JS, Temple-Smith M, Guy R, Donovan B, Braat S, Law M et al. Population effectiveness of
+opportunistic chlamydia testing in primary care in Australia: a cluster-randomised controlled trial. Lancet.
+2018;392(10156):1413–22 (https://doi.org/10.1016/S0140-6736(18)31816-6).
+26.	 Jiang TT, Han Y, Cao NX, Yin YP, Chen XS. Knowledge on Chlamydia trachomatis and acceptance to testing
+for it among young students in China. Sex Transm Dis. 2023;50(4):236–40 (https://doi.org/10.1097/
+OLQ.0000000000001756).
+27.	 Marcus R, C P, Gill K, Smith P, Rouhani S, Mendelsohn A et al. Acceptability, feasibility and cost of point
+of care testing for sexually transmitted infections among South African adolescents where syndromic
+management is standard of care. BMC Health Serv Res. 2023;23(1):1078 (https://doi.org/10.1186/s12913-
+023-10068-8).
+28.	 Garcia PJ, Holmes KK, Carcamo CP, Garnett GP, Hughes JP, Campos PE et al. Prevention of sexually
+transmitted infections in urban communities (Peru PREVEN): a multicomponent community-randomised
+controlled trial. Lancet. 2012;379(9821):1120–8 (https://doi.org/10.1016/S0140-6736(11)61846-1).
+29.	 Prevention and treatment of HIV and other sexually transmitted infections for sex workers in low- and
+middle-income countries: recommendations for a public health approach. Geneva: World Health
+Organization; 2012 (https://iris.who.int/handle/10665/77745).
+30.	 Xu W, Liang P, Wang C. Facilitators and barriers for chlamydia and gonorrhea testing in female sex workers:
+a scoping review. Open Forum Infect Dis. 2023;10(8):ofad397 (https://doi.org/10.1093/ofid/ofad397).
+32
+Guidelines for the management of asymptomatic sexually transmitted infections
+31.	 Tsoumanis A, Hens N, Kenyon CR. Is screening for chlamydia and gonorrhea in men who have sex with
+men associated with reduction of the prevalence of these infections? A systematic review of observational
+studies. Sex Transm Dis. 2018;45(9):615–22 (https://doi.org/10.1097/OLQ.0000000000000824).
+32.	 Vanbaelen T, Tsoumanis A, Florence E, Van Dijck C, Huis In 't Veld D, Sauvage AS et al. Effect of screening
+for Neisseria gonorrhoeae and Chlamydia trachomatis on incidence of these infections in men who have
+sex with men and transgender women taking HIV pre-exposure prophylaxis (the Gonoscreen study):
+results from a randomised, multicentre, controlled trial. Lancet HIV. 2024;11(4):e233–44 (https://doi.
+org/10.1016/S2352-3018(23)00299-0).
+33.	 Prevention and treatment of HIV and other sexually transmitted infections among men who have sex
+with men and transgender people: recommendations for a public health approach. Geneva: World Health
+Organization; 2011 (https://iris.who.int/handle/10665/44619).
+34.	 Wardley AM, Williams H, Coombe J, Caddy C, Fairley CK, Hocking JS. Would men who have sex with men
+support less frequent screening for asymptomatic chlamydia and gonorrhoea to improve antibiotic
+stewardship? A qualitative study. Sex Health. 2023;20(2):148–57 (https://doi.org/10.1071/SH22139).
+35.	 Kim CM, Zhao V, Brito De Mello M, Baggaley R, Johnson CC, Spielman E et al. Determining the screening
+frequency for sexually transmitted infections for people who use HIV pre-exposure prophylaxis: a
+systematic review and meta-analysis. Int J Infect Dis. 2023;129:181–7 (https://doi.org/10.1016/j.
+ijid.2023.01.007).
+36.	 Wu MY, Gong HZ, Hu KR, Zheng HY, Wan X, Li J. Effect of syphilis infection on HIV acquisition: a
+systematic review and meta-analysis. Sex Transm Infect. 2021;97(7):525–33 (https://doi.org/10.1136/
+sextrans-2020-054706).
+37.	 WHO guideline on syphilis screening and treatment for pregnant women. Geneva: World Health
+Organization; 2017 (https://iris.who.int/handle/10665/259003). Licence: CC BY-NC-SA 3.0 IGO.
+38.	 Consolidated guidelines on HIV testing services, 2019. Geneva: World Health Organization; 2020 (https://
+iris.who.int/handle/10665/336323). License: CC BY-NC-SA 3.0 IGO
+39.	 Consolidated guidelines on HIV, viral hepatitis and STI prevention, diagnosis, treatment and care for
+key populations. Geneva: World Health Organization; 2022 (https://iris.who.int/handle/10665/360601).
+Licence: CC BY-NC-SA 3.0 IGO.
+40.	 Martin-Sanchez M, Fairley CK, Ong JJ, Maddaford K, Chen MY, Williamson DA et al. Clinical presentation
+of asymptomatic and symptomatic women who tested positive for genital gonorrhoea at a sexual
+health service in Melbourne, Australia. Epidemiol Infect. 2020;148:e240 (https://doi.org/10.1017/
+S0950268820002265).
+41.	 Martin K, Olaru ID, Buwu N, Bandason T, Marks M, Dauya E et al. Uptake of and factors associated with
+testing for sexually transmitted infections in community-based settings among youth in Zimbabwe: a
+mixed-methods study. Lancet Child Adolesc Health. 2021;5(2):122–32 (https://doi.org/10.1016/S2352-
+4642(20)30335-7).
+42.	 Kent CK, Chaw JK, Wong W, Liska S, Gibson S, Hubbard G et al. Prevalence of rectal, urethral, and
+pharyngeal chlamydia and gonorrhea detected in 2 clinical settings among men who have sex with men:
+San Francisco, California, 2003. Clin Infect Dis. 2005;41(1):67–74 (https://doi.org/10.1086/430704).
+43.	 Hahn A, Frickmann H, Loderstadt U. Testing as prevention of resistance in bacteria causing sexually
+transmitted infections – a population-based model for Germany. Antibiotics (Basel). 2021;10(8):929
+(https://doi.org/10.3390/antibiotics10080929).
+44.	 Rieg G, Lewis RJ, Miller LG, Witt MD, Guerrero M, Daar ES. Asymptomatic sexually transmitted infections
+in HIV-infected men who have sex with men: prevalence, incidence, predictors, and screening strategies.
+AIDS Patient Care STDS. 2008;22(12):947–54 (https://doi.org/10.1089/apc.2007.0240).
+45.	 Farley TA, Cohen DA, Elkins W. Asymptomatic sexually transmitted diseases: the case for screening. Prev
+Med. 2003;36(4):502–9 (https://doi.org/10.1016/s0091-7435(02)00058-0).
+46.	 Marrazzo JM, Cates W. Interventions to prevent sexually transmitted infections, including HIV infection.
+Clin Infect Dis. 2011;53(Suppl. 3):S64–78 (https://doi.org/10.1093/cid/cir695).
+33
+References
+47.	 WHO, UNFPA, UNAIDS, World Bank, Global Network of Sex Work Projects. Implementing comprehensive
+HIV/STI programmes with sex workers: practical approaches from collaborative interventions. Geneva:
+World Health Organization; 2013 (https://iris.who.int/handle/10665/90000).
+48.	 UNFPA, Global Forum on MSM and HIV, UNDP, UNAIDS, WHO, USAID et al. Implementing comprehensive
+HIV and STI programmes with men who have sex with men: practical guidance for collaborative
+interventions. New York: United Nations Population Fund; 2015 (https://www.unfpa.org/publications/
+implementing-comprehensive-hiv-and-sti-programmes-men-who-have-sex-men).
+49.	 UNDP, IRGT: A Global Network of Trans Women and HIV, UNFPA, UCSF Center of Excellence for Transgender
+Health, Johns Hopkins Bloomberg School of Public Health, WHO et al. Implementing comprehensive
+HIV and STI programmes with transgender people: practical guidance for collaborative interventions
+(TRANSIT). New York: United Nations Development Programme; 2016 (https://www.undp.org/
+publications/implementing-comprehensive-hiv-and-sti-programmes-transgender-people).
+50.	 UNODC, International Network of People Who Use Drugs, UNAIDS, UNDP, UNFPA, WHO et al. Implementing
+comprehensive HIV and HCV programmes with people who inject drugs: practical guidance for
+collaborative interventions. Vienna: United Nations Office on Drugs and Crime; 2017 (https://www.undp.
+org/publications/implementing-comprehensive-hiv-and-hcv-programmes-people-who-inject-drugs).
+51.	 WHO, UNAIDS. Global standards for quality health-care services for adolescents: a guide to implement a
+standards-driven approach to improve the quality of health-care services for adolescents. Geneva: World
+Health Organization; 2015 (https://iris.who.int/handle/10665/183935).
+52.	 Adolescent-friendly health services for adolescents living with HIV: from theory to practice, December
+2019: technical brief. Geneva: World Health Organization; 2019 (WHO/CDS/HIV/19.39 (https://iris.who.int/
+handle/10665/329993). Licence: CC BY-NC-SA 3.0 IGO.
+53.	 WHO recommendations on antenatal care for a positive pregnancy experience. Geneva: World Health
+Organization; 2016 (https://iris.who.int/handle/10665/250796).
+Annex 1.
+Contributors to the guidelines
+35
+Annex 1. Guideline Development Group
+Annex 1.
+Contributors to the guidelines
+Laith Abu-Raddad
+Director, WHO Collaborating Centre for Disease
+Epidemiology Analytics on HIV/AIDS, STIs, and Viral
+Hepatitis
+Weill Cornell Medical College
+Doha, Qatar
+Yaw Adu-Sarkodie
+Professor of Clinical Microbiology
+Kwame Nkrumah University of Science and
+Technology
+Kumasi, Ghana
+Jamila Al-Abri
+Director, Woman and Child Health Department
+Ministry of Health
+Oman
+Zeyana Al-Habsi
+Head, HIV/STI and Hepatitis Section
+Ministry of Health
+Oman
+Mircea Betiu
+Associate Professor
+Nicolae Testimitanu State University of Medicine and
+Pharmacy
+Chisinau, Republic of Moldova
+Catriona Bradshaw
+Professor of Sexual Health
+Melbourne Sexual Health Centre
+School of Translational Medicine
+Monash University and Alfred Hospital
+Melbourne, Australia
+Xiang-Sheng Chen
+Deputy Director
+National Center for AIDS/STD Control and Prevention
+Nanjing, China
+Irith De Baetselier
+Coordinator, National Reference Centre for STIs
+Institute of Tropical Medicine
+Antwerp, Belgium
+Chido Dziva Chikwari
+Assistant Professor of Epidemiology
+London School of Hygiene & Tropical Medicine and
+The Health Research Unit Zimbabwe
+Biomedical Research and Training Institute
+Harare, Zimbabwe
+Amina El Kettani
+Medical Officer
+Direction de l’Epidémiologie et de Lutte Contre les
+Maladies
+Ministry of Health
+Rabat, Morocco
+Patricia Garcia
+Professor
+Universidad Peruana Cayetano Heredia
+Lima, Peru
+William M. Geisler
+Professor and Assistant Dean for Physician Scientist
+Development
+University of Alabama at Birmingham
+Birmingham, USA
+Kimberly Green
+Global Program Director, Primary Health Care
+PATH
+Hanoi, Viet Nam
+Somesh Gupta
+Dermatologist
+All India Institute of Medical Sciences
+New Delhi, India
+Edward W. Hook III
+Director, Division of Infectious Diseases
+University of Alabama at Birmingham
+Birmingham, USA
+Rena Janamnuaysook
+Program Manager, Implementation Science
+Institute of HIV Research and Innovation
+Bangkok, Thailand
+Guideline Development Group
+36
+Guidelines for the management of asymptomatic sexually transmitted infections
+Nathalie Kapp
+Chief Medical Adviser
+International Planned Parenthood Federation
+London, United Kingdom
+Hamida Khattabi
+Medical Officer, Service des MST-Sida
+Direction de l'Epidémiologie et de Lutte Contre les
+Maladies
+Ministry of Health
+Rabat, Morocco
+Rossaphorn Kittyaowamarn
+Chief of Bangrak STIs Center
+Bureau of AIDS, TB and STIs
+Department of Diseases Control
+Ministry of Public Health
+Nonthaburi, Thailand
+Jeffrey D. Klausner
+Professor of Medicine and Public Health
+University of Southern California
+Los Angeles, USA
+Ranmini Kularatne
+Clinical Head, Microbiology and Infectious Serology
+Awanui Labs
+Auckland, New Zealand
+Peter Kyambadde
+Executive Director
+Most at Risk Populations Initiative (MARPI)
+National Coordinator, Key Populations/STI Program
+Ministry of Health
+Kampala, Uganda
+David Lewis
+Director
+Western Sydney Sexual Health Centre
+Sydney, Australia
+Philippe Mayaud
+Professor of Infectious Diseases and Reproductive
+Health
+London School of Hygiene and Tropical Medicine
+London, United Kingdom
+Saiqa Mullick
+Director, Implementation Science
+Wits RHI
+University of the Witwatersrand
+Johannesburg, South Africa
+Francis Ndowa
+Physician
+Skin and Genito-Urinary Medicine Clinic
+Harare, Zimbabwe
+Lilani Rajapaksa
+Consultant Venereologist
+Ministry of Health
+Colombo, Sri Lanka
+Kees Rietmeijer
+Medical Director
+Denver STD Prevention Training Center
+Denver Public Health Department
+Denver, USA
+Danvic Rosadiño
+Program and Innovations Director
+LoveYourself Inc.
+Manila, Philippines
+Jonathan Ross
+Consultant Physician
+University Hospitals Birmingham NHS Foundation
+Trust
+Birmingham, United Kingdom
+Lon Sayheng
+Head of STD Unit
+National Center for HIV/AIDS, Dermatology and STD
+Phnom Penh, Cambodia
+Anna Shapiro
+Policy Manager
+Global Network of Sex Work Projects
+Edinburgh, United Kingdom
+Daniel Simões
+Strategic Information Manager
+Coalition Plus
+Lisbon, Portugal
+Jane Thiomi
+GBV and HIV Prevention Manager
+LVCT Health
+Nairobi, Kenya
+Jane Tomnay
+Director
+Centre for Excellence in Rural Sexual Health
+University of Melbourne
+Melbourne, Australia
+Magnus Unemo
+Associate Professor in Medical Microbiology and
+Molecular Biology
+Örebro University Hospital
+Örebro, Sweden
+Judith Wasserheit
+Professor of Global Health and Medicine
+University of Washington
+Seattle, USA
+37
+Annex 1. Guideline Development Group
+Francis Kakooza
+Head, Global Health Security Department
+Infectious Diseases Institute
+Makerere University
+Kampala, Uganda
+Otilia Mardh
+Medical Epidemiologist
+European Centre for Disease Prevention and Control
+Stockholm, Sweden
+Fernando Pascal Martinez
+Research and Development Access Development
+Lead
+Global Antibiotic Research and Development
+Partnership
+Barcelona, Spain
+Tim Sladden
+Senior Advisor, Sexual and Reproductive Health
+United Nations Population Fund
+New York, NY, USA
+Henry J.C. de Vries
+Amsterdam Sexual Health Clinic
+Amsterdam, Netherlands (Kingdom of the)
+Hans Benjamin Hampel
+University of Zurich
+Zurich, Switzerland
+Kausar Jabeen
+Professor and Consultant Microbiologist, Pathology
+and Laboratory Medicine
+The Aga Khan University
+Karachi, Pakistan
+Monica Lahra
+WHO Collaborating Centre for STIs and Antimicrobial
+Resistance
+Prince of Wales Hospital
+Sydney, Australia
+Pham Thi Lan
+National Hospital of Dermatology and Venereology
+Hanoi Medical University
+Hanoi, Viet Nam
+Ahmed Latif
+Public health consultant
+Brisbane, Australia
+Ioannis Mameletzis
+Consultant
+Kyiv, Ukraine
+Angelica Espinosa Miranda
+Coordinator of Surveillance of STIs
+Ministry of Health
+Brasília, Brazil
+Koleka Mlisana
+Executive Manager, Academic Affairs, Research and
+Quality Assurance
+National Health Laboratory Service
+Johannesburg, South Africa
+Lori Newman
+Deputy Director STI and Gynecology
+Gates Foundation
+Washington, DC, USA
+Catherine Ngugui
+Head, National AIDS and STI Control
+Ministry of Health
+Nairobi, Kenya
+Reshmie Ramautarsing
+Physician
+Institute of HIV Research and Innovation
+Bangkok, Thailand
+Pachara Sirivongrangson
+Ministry of Public Health
+Bangkok, Thailand
+Janet Wilson
+Consultant, Genito-Urinary Medicine
+Leeds Teaching Hospitals NHS Trust
+Leeds, United Kingdom
+Observers
+External Review Group
+38
+Guidelines for the management of asymptomatic sexually transmitted infections
+Headquarters
+Arif Al-Hann
+Technical Officer
+Department of Surveillance, Prevention and Control
+Antimicrobial Resistance Division
+Avni Amin
+Technical Officer
+Department of Sexual and Reproductive Health
+Research
+Maeve Brito de Mello
+Technical Officer
+Department of Global HIV, Hepatitis and Sexually
+Transmitted Infection Programmes
+Meg Doherty
+Director
+Department of Global HIV, Hepatitis and Sexually
+Transmitted Infection Programmes
+Sami Gottlieb
+Medical Officer
+Department of Sexual and Reproductive Health
+Research
+Benedikt Huttner
+Team Lead
+Department of Access to Medicines and Health
+Products
+Cheryl Johnson
+Technical Officer
+Department of Global HIV, Hepatitis and Sexually
+Transmitted Infection Programmes
+James Kiarie
+Unit Head
+Department of Sexual and Reproductive Health
+Research
+Ismail Maatouk
+Technical Officer
+Department of Global HIV, Hepatitis and Sexually
+Transmitted Infection Programmes
+Daniel Marcan-Zamora
+Technical Officer
+Department of Surveillance, Prevention and Control
+Antimicrobial Resistance Division
+Gitau Mburu
+Scientist
+Department of Sexual and Reproductive Health
+Research
+Daniel McCartney
+Consultant
+Department of Global HIV, Hepatitis and Sexually
+Transmitted Infection Programmes
+Antons Mozalevskis
+Technical Officer
+Department of Global HIV, Hepatitis and Sexually
+Transmitted Infection Programmes
+Yamuna Mundade
+Programme Manager
+Department of Global HIV, Hepatitis and Sexually
+Transmitted Infection Programmes
+Morkor Newman Owiredu
+Medical Officer
+Department of Global HIV, Hepatitis and Sexually
+Transmitted Infection Programmes
+Anne-Laure Page
+Scientist
+Regulation and Prequalification
+Remco Peters
+Medical Officer
+Department of Global HIV, Hepatitis and Sexually
+Transmitted Infection Programmes
+Jane Rowley
+Technical Officer
+Department of Global HIV, Hepatitis and Sexually
+Transmitted Infection Programmes
+Özge Tuncalp
+Medical Officer
+Maternal, Child and Adolescent Health
+Igor Toskin
+Scientist
+Department of Sexual and Reproductive Health
+Research
+Annette Verster
+Technical Officer
+Department of Global HIV, Hepatitis and Sexually
+Transmitted Infection Programmes
+Marco Vitoria
+Medical Officer
+Department of Global HIV, Hepatitis and Sexually
+Transmitted Infection Programmes
+Teodora Wia
+Lead, Sexually Transmitted Infections
+Department of Global HIV, Hepatitis and Sexually
+Transmitted Infection Programmes
+aOverall coordinator of these guidelines.
+WHO Steering Committee
+39
+Annex 1. Guideline Development Group
+Regional offices
+Polin Chan
+Regional Advisor, Hepatitis, HIV and STIs
+WHO Regional Office for South-East Asia
+Viatcheslav Grankov
+Unit Lead, Joint Infectious Diseases
+WHO Regional Office for Europe
+Joumana Hermez
+Regional Adviser
+WHO Regional Office for the Eastern Mediterranean
+Kiyohiko Izumi
+Medical Officer
+WHO Regional Office for the Western Pacific
+Ruben Mayorga Sagastume
+Unit Chief, HIV, Hepatitis, Tuberculosis and STIs
+WHO Regional Office for the Americas
+Agnes Shetty
+Medical Officer, HIV/AIDS Treatment and Care
+WHO Regional Office for Africa
+Methodologist and evidence review team
+Methodologist
+Farid Foroutan
+Ted Rogers Centre for Health Research
+Canada
+Systematic review and modelling team
+Nancy Santesso
+Michael G. DeGroote Cochrane Centre
+Canada
+Katy Turner, Krishnan Puri-Sudhir and Mary Ashley Keene
+Aquarius Public Health
+United Kingdom
+Annex 2.
+Declarations of conflicts of interest
+41
+Annex 2. Declarations of conflicts of interest
+Name
+1. Employment
+and consulting
+2. Research support
+3. Investment
+interests
+4. Intellectual
+property
+5. Public
+statements
+and positions
+6. Tobacco
+products
+Conflicts and
+management
+plan
+Laith Abu-Raddad (Weill
+Cornell Medical College, Qatar)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Yaw Adu-Sarkodie (Kwame
+Nkrumah University of Science
+and Technology, Ghana)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Jamila Al-Abri (Woman and
+Child Health Department,
+Ministry of Health, Oman)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Zeyana Al-Habsi (HIV/STIs &
+Hepatitis Section, Ministry of
+Health, Oman)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Mircea Betiu (Nicolae
+Testimitanu State University
+of Medicine and Pharmacy,
+Republic of Moldova)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Catriona Bradshaw (Monash
+University and Alfred Hospital,
+Australia)
+Funding from
+Abbott to support
+development
+of STI testing
+recommenda-
+tions in
+countries across
+the Asia-Pacific
+region (3800
+Australian
+dollars).
+Australian Research Council Grant
+to Monash University that contains
+contributions from the government,
+two diagnostic companies (Speedx and
+Cepheid) and NGOs including Global
+Antibiotic Research and Development
+Partnership (GARDP) to support work
+on the development of resistance
+diagnostics and antimicrobial
+resistance (1.5 million Australian
+dollars). Diagnostic kits and GeneXpert
+platform donated for use in specific
+investigator-initiated research.
+-
+-
+-
+-
+Declare. Direct
+finance not
+significant.
+Full
+participation
+Xiang-Sheng Chen (National
+Center for AIDS/STD Control
+and Prevention, China)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Irith De Baetselier (Institute of
+Tropical Medicine, Belgium)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Guideline Development Group members
+42
+Guidelines for the management of asymptomatic sexually transmitted infections
+Name
+1. Employment
+and consulting
+2. Research support
+3. Investment
+interests
+4. Intellectual
+property
+5. Public
+statements
+and positions
+6. Tobacco
+products
+Conflicts and
+management
+plan
+Chido Dziva Chikwari
+(Biomedical Research and
+Training Institute, Zimbabwe)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Amina El Kettani (Ministry of
+Health, Morocco)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Patricia Garcia (Universidad
+Peruana Cayetano Heredia,
+Peru)
+-
+-
+-
+-
+-
+-
+Full
+participation
+William M. Geisler (University
+of Alabama at Birmingham,
+USA)
+Consulting on
+C. trachomatis
+vaccine for Sanofi
+(ceased 2023),
+consulting on
+STI point-of-care
+tests for Visby
+(ceased 2023).
+Research support from Hologic for
+study of M. genitalium prevalence
+and resistance in the USA (ceased
+2023), speaking honoraria related to
+M. genitalium from Hologic, Roche
+Molecular Systems, and Abbott (ceased
+2023).
+-
+-
+-
+-
+Declare. None
+are active. Full
+participation
+Kimberly Green (PATH, Viet
+Nam)
+-
+Support from the Hepatitis Fund for
+triple elimination, including syphilis
+screening (US$ 50,000).
+-
+-
+-
+-
+Declare.
+Finance not
+significant.
+Full
+participation
+Somesh Gupta (All India
+Institute of Medical Sciences,
+India)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Edward W. Hook III (University
+of Alabama at Birmingham,
+USA)
+-
+Member of advisory board for Visby
+Diagnostics (US$ 10 000) and Talsis
+Diagnostics.
+-
+-
+-
+-
+Declare.
+Finance not
+significant.
+Full
+participation
+Rena Janamnuaysook
+(Institute of HIV Research and
+Innovation, Thailand)
+-
+-
+-
+-
+-
+-
+Full
+participation
+43
+Annex 2. Declarations of conflicts of interest
+Name
+1. Employment
+and consulting
+2. Research support
+3. Investment
+interests
+4. Intellectual
+property
+5. Public
+statements
+and positions
+6. Tobacco
+products
+Conflicts and
+management
+plan
+Nathalie Kapp (International
+Planned Parenthood
+Federation, United Kingdom)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Hamida Khattabi (Ministry of
+Health, Morocco)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Rossaphorn Kittyaowamarn
+(Ministry of Public Health,
+Thailand)
+-
+Multi-centre randomized, open-label,
+non-inferiority trial to evaluate the
+efficacy and safety of single oral dose
+of zoliflodacin for treatment of patients
+with uncomplicated gonorrhoea
+(GARDP).
+-
+-
+-
+-
+Full
+participation –
+not related to
+STI screening
+Jeffrey D. Klausner (University
+of Southern California, USA)
+Consulting and
+technical adviser
+with Visby
+Medical (ceased
+2023), Biofire
+(ceased 2023),
+Cepheid (ceased
+2022), and Roche
+(ceased 2021).
+-
+-
+-
+-
+-
+Declare. None
+are active. Full
+participation
+Ranmini Kularatne (Awanui
+Labs, New Zealand)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Peter Kyambadde (Ministry of
+Health, Uganda)
+-
+-
+-
+-
+-
+-
+Full
+participation
+David Lewis (Western
+Sydney Sexual Health Centre,
+Australia)
+Consultancy
+to GSK relating
+to gepotidacin
+treatment for
+gonorrhoea
+(review of
+Phase 3 results,
+Advisory Board
+meetings).
+-
+-
+-
+-
+-
+Full
+participation –
+not related to
+STI screening
+44
+Guidelines for the management of asymptomatic sexually transmitted infections
+Name
+1. Employment
+and consulting
+2. Research support
+3. Investment
+interests
+4. Intellectual
+property
+5. Public
+statements
+and positions
+6. Tobacco
+products
+Conflicts and
+management
+plan
+Philippe Mayaud (London
+School of Hygiene and Tropical
+Medicine, United Kingdom)
+-
+Research support from Abbott
+Diagnostics for sample collection for
+development of N. gonorrhoeae and C.
+trachomatis diagnostic tests (ceased
+2023).
+-
+-
+-
+-
+Declare. None
+are active. Full
+participation
+Saiqa Mullick (Wits RHI,
+University of the
+Witwatersrand, South Africa)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Francis Ndowa (Skin and
+Genito-Urinary Medicine
+Clinic, Zimbabwe)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Lilani Rajapaksa (Ministry of
+Health, Sri Lanka)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Kees Rietmeijer (Denver
+Public Health Department,
+USA)
+Past consulting
+with Sentient
+(ceased 2023),
+and WHO (ceased
+2022).
+-
+-
+-
+-
+-
+Declare. None
+are active. Full
+participation
+Danvic Rosadiño (LoveYourself
+Inc., Philippines)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Jonathan Ross (Birmingham
+University Hospitals NHS
+Trust, United Kingdom)
+Consultancy
+advice in relation
+to clinical trials
+(GSK Pharma).
+Research payments to my employer
+in my role as principal investigator
+for clinical trial (purified protein
+derivative).
+Investments
+(self and
+wife) in GSK
+Pharma and
+AstraZeneca.
+-
+-
+-
+Declare.
+Finance not
+significant.
+Full
+participation
+Lon Sayheng (National Center
+for HIV/AIDS, Dermatology and
+STD, Cambodia)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Anna Shapiro (Global Network
+of Sex Work Projects, United
+Kingdom)
+-
+-
+-
+-
+-
+-
+Full
+participation
+45
+Annex 2. Declarations of conflicts of interest
+Name
+1. Employment
+and consulting
+2. Research support
+3. Investment
+interests
+4. Intellectual
+property
+5. Public
+statements
+and positions
+6. Tobacco
+products
+Conflicts and
+management
+plan
+Daniel Simões (Coalition Plus,
+Portugal)
+Employed by GAT
+Portugal.
+Member of Country Support core team
+(trainer) with CHIP (Center of Excellence
+for Health Immunity and Infections) and
+European AIDS Clinical Society. Member
+of WHO Regional Office for Europe’s
+European Laboratory Initiative, Co-chair
+of the EuroTest Initiative, Member of the
+European Union’s Drugs Agency review
+panel for updated guidance on people
+who inject drugs.
+-
+-
+-
+-
+Full
+participation
+Jane Thiomi (LVCT Health,
+Kenya)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Jane Tomnay (University of
+Melbourne, Australia)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Magnus Unemo (Örebro
+University Hospital, Sweden)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Judith Wasserheit (University
+of Washington, USA)
+-
+-
+-
+-
+-
+-
+Full
+participation
+46
+Guidelines for the management of asymptomatic sexually transmitted infections
+Name
+1. Employment
+and consulting
+2. Research support
+3. Investment
+interests
+4. Intellectual
+property
+5. Public
+statements
+and positions
+6. Tobacco
+products
+Conflicts and
+management
+plan
+Francis Kakooza (Makerere
+University, Uganda)
+-
+-
+-
+-
+-
+-
+Nil
+Otilia Mardh (European Centre
+for Disease Prevention and
+Control, Sweden)
+-
+-
+-
+-
+-
+-
+Nil
+Fernando Pascal Martinez
+(Global Antibiotic Research
+and Development Partnership,
+Spain)
+-
+-
+-
+-
+-
+-
+Nil
+Tim Sladden (United Nations
+Population Fund, USA)
+-
+-
+-
+-
+-
+-
+Nil
+Name
+1. Employment
+and consulting
+2. Research support
+3. Investment
+interests
+4. Intellectual
+property
+5. Public
+statements
+and positions
+6. Tobacco
+products
+Conflicts and
+management
+plan
+Henry J.C. de Vries
+(Amsterdam Sexual Health
+Clinic, Netherlands [Kingdom
+of the])
+-
+-
+-
+-
+-
+-
+Full
+participation
+Kristina Grabbe (Jhpiego,
+USA)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Hans Benjamin Hampel
+(University of Zurich,
+Switzerland)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Kausar Jabeen (Aga Khan
+Foundation, Pakistan)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Monica Lahra (Prince of Wales
+Hospital, Australia)
+-
+-
+-
+-
+-
+-
+Full
+participation
+External Review Group members
+Observers
+47
+Annex 2. Declarations of conflicts of interest
+Name
+1. Employment
+and consulting
+2. Research support
+3. Investment
+interests
+4. Intellectual
+property
+5. Public
+statements
+and positions
+6. Tobacco
+products
+Conflicts and
+management
+plan
+Pham Thi Lan (Institute of
+Dermatology and Venerology,
+Viet Nam)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Ahmed Latif (public health
+consultant, Australia)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Ioannis Mameletzis
+(consultant, Ukraine)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Angelica Espinosa Miranda
+(Ministry of Health, Brazil)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Koleka Mlisana (National
+Health Laboratory Service,
+South Africa)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Lori Newman (Gates
+Foundation, USA)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Catherine Ngugui (Ministry of
+Health, Kenya)
+-
+Research support from the GARDP,
+the Drugs for Neglected Diseases
+Initiative (DNDI) and the Ministry of
+Health for study on the prevalence of
+C. trachomatis and N. gonorrhoeae
+infections among pregnant women and
+key populations in Kenya (US$ 40 000;
+ceased 2022).
+-
+-
+Former
+Director of
+National
+AIDS and STI
+Control in
+Kenya.
+-
+None are
+active. Full
+participation
+Reshmie Ramautarsing
+(Institute of HIV Research and
+Innovation, Thailand)
+-
+-
+-
+-
+-
+-
+Full
+participation
+Pachara Sirivongrangson
+(Ministry of Public Health,
+Thailand)
+Consulting work
+for GARDP
+(US$ 10 000).
+-
+-
+-
+-
+-
+Full
+participation
+Janet Wilson (Leeds Teaching
+Hospitals NHS Trust, United
+Kingdom)
+-
+-
+-
+-
+-
+-
+Full
+participation
+For more information, please contact:
+World Health Organization
+Global HIV, Hepatitis and Sexually Transmitted Infections Programmes
+20 Avenue Appia
+1211 Geneva 27
+Switzerland
+Email: hiv-aids@who.int
+Website: www.who.int/teams/global-hiv-hepatitis-and-stis-programmes
+www.who.int
