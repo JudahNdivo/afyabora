@@ -101,7 +101,7 @@ def retrieve_chunks(query: str, model, conn, top_k: int = TOP_K) -> list:
         cursor = conn.cursor()
         cursor.execute(
             """
-            SELECT chunk_text, disease, source_file, chunk_index
+            SELECT id, chunk_text, disease, source_file, chunk_index
             FROM document_chunks
             ORDER BY embedding <-> %s::vector
             LIMIT %s;
@@ -117,7 +117,7 @@ def retrieve_chunks(query: str, model, conn, top_k: int = TOP_K) -> list:
         cursor = conn.cursor()
         cursor.execute(
             """
-            SELECT chunk_text, disease, source_file, chunk_index
+            SELECT id, chunk_text, disease, source_file, chunk_index
             FROM document_chunks
             ORDER BY embedding <-> %s::vector
             LIMIT %s;
@@ -129,9 +129,20 @@ def retrieve_chunks(query: str, model, conn, top_k: int = TOP_K) -> list:
         return results
 
 
-def build_prompt(query: str, chunks: list, language: str) -> str:
+def build_prompt(query: str, chunks: list, language: str, history: list = None) -> str:
     # Combine retrieved chunks into a single context block
-    context = "\n\n".join([chunk[0] for chunk in chunks])
+    # chunk[1] is chunk_text now that chunk[0] is id
+    context = "\n\n".join([chunk[1] for chunk in chunks])
+
+    # Include recent conversation history if provided, to help
+    # interpret follow-up questions that refer back to a prior exchange
+    history_block = ""
+    if history:
+        history_lines = []
+        for past_query, past_response in history:
+            history_lines.append(f"User asked: {past_query}")
+            history_lines.append(f"You answered: {past_response}")
+        history_block = "PREVIOUS CONVERSATION:\n" + "\n".join(history_lines) + "\n\n"
 
     if language == "sw":
         language_instruction = (
@@ -142,24 +153,25 @@ def build_prompt(query: str, chunks: list, language: str) -> str:
         language_instruction = "Answer in English."
 
     prompt = f"""You are AfyaBora, a friendly and trustworthy STI health \
-education assistant for youth in Nairobi, Kenya.
+education assistant for youth in Nairobi, Kenya, replying over SMS.
 
-Your role is to provide accurate, stigma-free, and detailed sexual health \
-information based ONLY on the verified health guidelines provided below.
+Your role is to provide accurate, stigma-free sexual health information \
+based ONLY on the verified health guidelines provided below.
 
 IMPORTANT RULES:
+- This response will be sent as a plain-text SMS. Do NOT use markdown formatting of any kind — no asterisks, no hashes/headings, no bold, no italics. Plain sentences and simple dashes for lists only.
+- Keep the answer concise and focused — SMS has a strict character limit. Aim for 2-4 short paragraphs or a short list at most. Cover the most important points only, not every detail in the context.
 - Answer ONLY using the information in the CONTEXT below
 - Do NOT use any outside knowledge or make up information
-- Provide a thorough and specific answer covering all relevant points from the context including causes, symptoms, prevention, and treatment where available
-- Use numbered lists or bullet points to organise information clearly
-- If the context contains partial information, share everything available and recommend visiting a health facility for more information
+- If the previous conversation is provided below and the user's question refers back to it (e.g. "what about if untreated", "and for men?"), use it to understand what they are asking, but still answer only from the CONTEXT
+- If the user's message is not a real health question (e.g. a greeting, a test message or unclear), do not force an answer from unrelated context — briefly explain what AfyaBora can help with and invite them to ask a specific question about HIV, syphilis, gonorrhoea, chlamydia, or HPV
+- If the context contains partial information, share what's available and recommend visiting a health facility for more
 - If the context has NO relevant information at all, say so clearly and recommend visiting a health facility
-- Be empathetic, non-judgmental, and clear
-- For questions about casual contact such as toilet seats, doorknobs, swimming pools, or sharing utensils use specific STI evidence from the context to give a general answer about casual contact transmission
+- Be empathetic and non-judgmental
 - {language_instruction}
-- End with a brief recommendation to seek professional care for personal medical decisions
+- End with a brief, short recommendation to seek professional care for personal medical decisions
 
-CONTEXT FROM VERIFIED HEALTH GUIDELINES:
+{history_block}CONTEXT FROM VERIFIED HEALTH GUIDELINES:
 {context}
 
 USER QUESTION: {query}
@@ -190,7 +202,7 @@ def generate_answer(prompt: str) -> str:
     return "AfyaBora is temporarily unavailable. Please try again in a moment."
 
 
-def rag_pipeline(query: str, model, conn) -> dict:
+def rag_pipeline(query: str, model, conn, history: list = None) -> dict:
     # Step 1 - detect language
     language = detect_language(query)
 
@@ -201,8 +213,8 @@ def rag_pipeline(query: str, model, conn) -> dict:
     expanded_query = expand_query(retrieval_query)
     chunks = retrieve_chunks(expanded_query, model, conn)
 
-    # Step 4 - build augmented prompt with original query
-    prompt = build_prompt(query, chunks, language)
+    # Step 4 - build augmented prompt with original query and history
+    prompt = build_prompt(query, chunks, language, history)
 
     # Step 5 - generate answer from Gemini
     answer = generate_answer(prompt)
@@ -214,9 +226,10 @@ def rag_pipeline(query: str, model, conn) -> dict:
         "answer": answer,
         "sources": [
             {
-                "source_file": chunk[2],
-                "disease": chunk[1],
-                "chunk_index": chunk[3]
+                "chunk_id": chunk[0],
+                "source_file": chunk[3],
+                "disease": chunk[2],
+                "chunk_index": chunk[4]
             }
             for chunk in chunks
         ]
