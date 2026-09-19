@@ -216,3 +216,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Generated data artifacts (reproducible via scripts/)
+data/processed_chunks.json
