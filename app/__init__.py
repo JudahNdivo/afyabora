@@ -1,0 +1,1 @@
+# AfyaBora Flask application package
