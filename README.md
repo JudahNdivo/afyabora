@@ -7,18 +7,6 @@ A bilingual (English/Kiswahili) STI health education chatbot for youth in Nairob
 
 Flask · Supabase (PostgreSQL + pgvector + Auth) · Gemini · Sentence Transformers (`paraphrase-multilingual-MiniLM-L12-v2`)
 
-## What's Built
-
-- RAG pipeline: retrieval, prompt construction, grounded generation
-- English/Kiswahili support, with informal/Sheng-friendly tone for Kiswahili
-- Auth, persistent multi-turn conversations, follow-up context
-- Chunk-level source traceability per response
-- Anonymous usage logging for future admin reporting
-
-## What's Next
-
-Frontend (chat UI, history, search) · admin dashboard · Google sign-in · 2FA · deployment
-
 ## Setup
 
 ```
