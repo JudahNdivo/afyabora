@@ -46,27 +46,6 @@ def detect_language(text: str) -> str:
         return "en"
 
 
-def normalise_query_for_retrieval(query: str, language: str) -> str:
-    # For Kiswahili queries, translate to English for retrieval
-    # since the knowledge base is in English
-    if language == "en":
-        return query
-
-    translation_prompt = f"""Translate this health question to English.
-Return ONLY the English translation, nothing else.
-
-Question: {query}
-English translation:"""
-
-    interaction = client.interactions.create(
-        model=GEMINI_MODEL,
-        input=translation_prompt
-    )
-    english_query = interaction.output_text.strip()
-    print(f"Query translated for retrieval: {english_query}")
-    return english_query
-
-
 def expand_query(query: str) -> str:
     # Expand casual contact queries to improve retrieval
     # of myth-busting content from the knowledge base
@@ -94,7 +73,12 @@ def get_connection():
 
 def retrieve_chunks(query: str, model, conn, top_k: int = TOP_K) -> list:
     # Embed the query and retrieve the most similar chunks
-    # using pgvector cosine similarity search
+    # using pgvector cosine similarity search.
+    # The multilingual embedding model handles cross-lingual retrieval
+    # natively, so Kiswahili/mixed-language queries are embedded
+    # directly without translating to English first — this was tested
+    # and found to retrieve equally or more relevant chunks while
+    # avoiding an extra ~9s translation round-trip per query.
     query_vector = model.encode(query).tolist()
 
     try:
@@ -145,22 +129,29 @@ def build_prompt(query: str, chunks: list, language: str, history: list = None) 
         history_block = "PREVIOUS CONVERSATION:\n" + "\n".join(history_lines) + "\n\n"
 
     if language == "sw":
+        # Targets informal, everyday Kiswahili/Sheng register rather than
+        # formal "textbook" Kiswahili, since target users are Nairobi
+        # youth who typically speak casually and mix in some English
         language_instruction = (
-            "Jibu kwa Kiswahili. "
-            "Jibu kwa lugha ile ile ambayo swali liliulizwa."
+            "Jibu kwa Kiswahili rahisi na cha kawaida, kama vile "
+            "kijana wa Nairobi angependa kuongea na rafiki yake. "
+            "Usitumie Kiswahili cha kitaalamu au maneno magumu. "
+            "Unaweza kuchanganya maneno machache ya Kiingereza kama "
+            "inavyofanyika kawaida (kwa mfano: STI, test, dawa), "
+            "lakini hakikisha maelezo ni rahisi kueleweka."
         )
     else:
         language_instruction = "Answer in English."
 
     prompt = f"""You are AfyaBora, a friendly and trustworthy STI health \
-education assistant for youth in Nairobi, Kenya, replying over SMS.
+education assistant for youth in Nairobi, Kenya.
 
 Your role is to provide accurate, stigma-free sexual health information \
 based ONLY on the verified health guidelines provided below.
 
 IMPORTANT RULES:
-- This response will be sent as a plain-text SMS. Do NOT use markdown formatting of any kind — no asterisks, no hashes/headings, no bold, no italics. Plain sentences and simple dashes for lists only.
-- Keep the answer concise and focused — SMS has a strict character limit. Aim for 2-4 short paragraphs or a short list at most. Cover the most important points only, not every detail in the context.
+- Do NOT use markdown formatting of any kind — no asterisks, no hashes/headings, no bold, no italics. Plain sentences and simple dashes for lists only.
+- Keep the answer concise and focused. Aim for 2-4 short paragraphs or a short list at most. Cover the most important points only, not every detail in the context.
 - Answer ONLY using the information in the CONTEXT below
 - Do NOT use any outside knowledge or make up information
 - If the previous conversation is provided below and the user's question refers back to it (e.g. "what about if untreated", "and for men?"), use it to understand what they are asking, but still answer only from the CONTEXT
@@ -203,26 +194,38 @@ def generate_answer(prompt: str) -> str:
 
 
 def rag_pipeline(query: str, model, conn, history: list = None) -> dict:
+    timings = {}
+
     # Step 1 - detect language
+    t0 = time.time()
     language = detect_language(query)
+    timings["language_detection"] = time.time() - t0
 
-    # Step 2 - translate query to English for retrieval if Kiswahili
-    retrieval_query = normalise_query_for_retrieval(query, language)
-
-    # Step 3 - expand query for better retrieval then retrieve chunks
-    expanded_query = expand_query(retrieval_query)
+    # Step 2 - expand query and retrieve chunks directly using the
+    # original query (no translation - see retrieve_chunks note)
+    t0 = time.time()
+    expanded_query = expand_query(query)
     chunks = retrieve_chunks(expanded_query, model, conn)
+    timings["retrieval"] = time.time() - t0
 
-    # Step 4 - build augmented prompt with original query and history
+    # Step 3 - build augmented prompt with original query and history
+    t0 = time.time()
     prompt = build_prompt(query, chunks, language, history)
+    timings["prompt_building"] = time.time() - t0
 
-    # Step 5 - generate answer from Gemini
+    # Step 4 - generate answer from Gemini
+    t0 = time.time()
     answer = generate_answer(prompt)
+    timings["generation"] = time.time() - t0
+
+    print("Stage timings (seconds):")
+    for stage, duration in timings.items():
+        print(f"  {stage}: {duration:.2f}s")
+    print(f"  TOTAL: {sum(timings.values()):.2f}s")
 
     return {
         "query": query,
         "language": language,
-        "retrieval_query": retrieval_query,
         "answer": answer,
         "sources": [
             {
@@ -262,8 +265,6 @@ def main():
         result = rag_pipeline(query, model, conn)
 
         print(f"\nLanguage detected: {result['language']}")
-        if result['language'] != 'en':
-            print(f"Retrieval query: {result['retrieval_query']}")
         print(f"\nAnswer:\n{result['answer']}")
         print(f"\nSources used:")
         for source in result['sources']:
