@@ -1,3 +1,4 @@
+import time
 from flask import Blueprint, request, jsonify
 from app.auth import require_auth, db
 from app.session import save_message, get_conversation_history, log_usage_stat
@@ -83,26 +84,32 @@ def send_message(conversation_id):
     if not query_text:
         return jsonify({"error": "message is required"}), 400
 
-    # Save the user's message first
-    save_message(conversation_id, "user", query_text)
-
-    # Get recent history for follow-up context (excluding the message
-    # we just saved, since the RAG pipeline receives it separately)
+    # Get recent history for follow-up context, before saving the
+    # current message so it isn't accidentally included in its own context
     history_rows = get_conversation_history(conversation_id, limit=6)
     history = [
         (content, "") for role, content in history_rows if role == "user"
     ]
 
-    # Run the RAG pipeline
-    result = rag_pipeline(query_text, _model, _conn, history=history)
+    # Run the RAG pipeline, timed so we can log actual response latency.
+    # Only save messages once generation succeeds, so a failed request
+    # never leaves an orphaned user message.
+    start_time = time.time()
+    try:
+        result = rag_pipeline(query_text, _model, _conn, history=history)
+    except Exception as e:
+        return jsonify({"error": "Failed to generate a response, please try again"}), 502
+    latency_ms = int((time.time() - start_time) * 1000)
+
     answer = result["answer"]
     language = result["language"]
     chunk_ids = [source["chunk_id"] for source in result["sources"]]
 
-    # Save the assistant's response, linked to the chunks used
+    # Now save both messages together
+    save_message(conversation_id, "user", query_text)
     save_message(
         conversation_id, "assistant", answer,
-        language=language, chunk_ids=chunk_ids
+        language=language, latency_ms=latency_ms, chunk_ids=chunk_ids
     )
 
     # Log anonymous usage stat - disease category from the top chunk
@@ -130,4 +137,5 @@ def send_message(conversation_id):
     return jsonify({
         "answer": answer,
         "language": language,
+        "latency_ms": latency_ms,
     }), 200
