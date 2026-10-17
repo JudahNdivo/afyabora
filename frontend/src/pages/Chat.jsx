@@ -18,10 +18,15 @@ export default function Chat() {
   const [notice, setNotice] = useState("");
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  // send people without a session back to the login page, then load their chats
+  // send people without a session back to the login page, send
+  // administrators to the dashboard, then load the user's chats
   useEffect(() => {
     if (!localStorage.getItem("access_token")) {
       navigate("/");
+      return;
+    }
+    if (user?.role === "admin") {
+      navigate("/admin");
       return;
     }
     api("/api/conversations")
@@ -29,7 +34,8 @@ export default function Chat() {
       .catch((err) => setNotice(err.message));
   }, [navigate]);
 
-  if (!user) return null;
+  // administrators never see the chat, not even for a moment
+  if (!user || user.role === "admin") return null;
 
   async function refreshConversations() {
     try {

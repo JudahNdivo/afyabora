@@ -156,3 +156,22 @@ def require_admin(f):
         return f(*args, **kwargs)
 
     return decorated
+
+def require_regular_user(f):
+    # chat routes are for regular users only; administrators use the dashboard
+    @require_auth
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        try:
+            profile = db.table("users").select("role").eq(
+                "id", request.user.id
+            ).single().execute()
+        except Exception:
+            return jsonify({"error": "Could not check your account, please try again"}), 503
+
+        if profile.data and profile.data.get("role") == "admin":
+            return jsonify({"error": "Administrator accounts cannot use the chat"}), 403
+
+        return f(*args, **kwargs)
+
+    return decorated

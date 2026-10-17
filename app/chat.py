@@ -2,7 +2,7 @@ import time
 import threading
 import traceback
 from flask import Blueprint, request, jsonify
-from app.auth import require_auth, db
+from app.auth import require_regular_user, db
 from app.session import (
     save_message, save_exchange, get_conversation_history, log_usage_stat,
 )
@@ -41,7 +41,7 @@ def get_live_conn():
 
 
 @chat_bp.route("/api/conversations", methods=["POST"])
-@require_auth
+@require_regular_user
 def create_conversation():
     result = db.table("conversations").insert({
         "user_id": request.user.id,
@@ -52,7 +52,7 @@ def create_conversation():
 
 
 @chat_bp.route("/api/conversations", methods=["GET"])
-@require_auth
+@require_regular_user
 def list_conversations():
     result = db.table("conversations").select("*").eq(
         "user_id", request.user.id
@@ -62,7 +62,7 @@ def list_conversations():
 
 
 @chat_bp.route("/api/conversations/<conversation_id>", methods=["DELETE"])
-@require_auth
+@require_regular_user
 def delete_conversation(conversation_id):
     # Confirm this conversation actually belongs to the requesting user
     # before deleting, so one user can't delete another's conversation
@@ -80,7 +80,7 @@ def delete_conversation(conversation_id):
 
 
 @chat_bp.route("/api/conversations/<conversation_id>/messages", methods=["GET"])
-@require_auth
+@require_regular_user
 def get_messages(conversation_id):
     convo = db.table("conversations").select("id").eq(
         "id", conversation_id
@@ -97,7 +97,7 @@ def get_messages(conversation_id):
 
 
 @chat_bp.route("/api/conversations/<conversation_id>/messages", methods=["POST"])
-@require_auth
+@require_regular_user
 def send_message(conversation_id):
     convo = db.table("conversations").select("id, title").eq(
         "id", conversation_id
@@ -174,7 +174,7 @@ def send_message(conversation_id):
 
 
 @chat_bp.route("/api/conversations/<conversation_id>/messages/<message_id>", methods=["PUT"])
-@require_auth
+@require_regular_user
 def edit_message(conversation_id, message_id):
     convo = db.table("conversations").select("id").eq(
         "id", conversation_id

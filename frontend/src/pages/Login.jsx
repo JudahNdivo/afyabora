@@ -38,7 +38,8 @@ export default function Login() {
     if (!data.access_token) throw new Error("Login could not be completed");
     localStorage.setItem("access_token", data.access_token);
     localStorage.setItem("user", JSON.stringify(data.user));
-    navigate("/chat");
+    // administrators go to the dashboard, everyone else to the chat
+    navigate(data.user.role === "admin" ? "/admin" : "/chat");
   }
 
   async function handleSubmit(e) {
