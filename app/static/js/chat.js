@@ -18,29 +18,54 @@ const messageForm = document.getElementById("message-form");
 const messageInput = document.getElementById("message-input");
 const loadingIndicator = document.getElementById("loading-indicator");
 
-// small helper so every API call automatically includes the auth token
+// small helper so every API call automatically includes the auth token.
+// Returns the parsed JSON, or null if the request failed. Only a 401
+// (token rejected) logs the user out; network problems and server
+// errors keep the session so the user can simply try again.
 async function api(path, options = {}) {
-  const res = await fetch(path, {
-    ...options,
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": `Bearer ${token}`,
-      ...options.headers
-    }
-  });
-
-  if (res.status === 401) {
-    // token expired or invalid - send back to login
-    localStorage.clear();
-    window.location.href = "/";
-    return;
+  let res;
+  try {
+    res = await fetch(path, {
+      ...options,
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`,
+        ...options.headers
+      }
+    });
+  } catch (err) {
+    return null;
   }
 
-  return res.json();
+  if (res.status === 401) {
+    localStorage.clear();
+    window.location.href = "/";
+    return null;
+  }
+
+  if (!res.ok) {
+    return null;
+  }
+
+  try {
+    return await res.json();
+  } catch (err) {
+    return null;
+  }
+}
+
+// shows a failure message in the chat area as an assistant bubble
+function showErrorBubble(text) {
+  const el = document.createElement("div");
+  el.className = "message assistant";
+  el.textContent = text;
+  messageList.appendChild(el);
+  messageList.scrollTop = messageList.scrollHeight;
 }
 
 async function loadConversations() {
-  conversations = await api("/api/conversations");
+  // keep the current list if the request fails
+  conversations = (await api("/api/conversations")) || conversations;
   renderConversationList(conversations);
 }
 
@@ -75,7 +100,11 @@ async function deleteConversation(id) {
   const confirmed = confirm("Delete this conversation? This cannot be undone.");
   if (!confirmed) return;
 
-  await api(`/api/conversations/${id}`, { method: "DELETE" });
+  const result = await api(`/api/conversations/${id}`, { method: "DELETE" });
+  if (!result) {
+    alert("Could not delete the conversation, please try again.");
+    return;
+  }
 
   conversations = conversations.filter(c => c.id !== id);
   renderConversationList(conversations);
@@ -90,10 +119,14 @@ async function deleteConversation(id) {
 }
 
 async function openConversation(id) {
+  const messages = await api(`/api/conversations/${id}/messages`);
+  if (!messages) {
+    alert("Could not open the conversation, please try again.");
+    return;
+  }
+
   currentConversationId = id;
   renderConversationList(conversations);
-
-  const messages = await api(`/api/conversations/${id}/messages`);
 
   emptyState.hidden = true;
   messageList.hidden = false;
@@ -168,15 +201,21 @@ async function submitMessageEdit(messageId, newText) {
 
   loadingIndicator.hidden = true;
 
-  if (result && result.answer) {
-    // simplest safe approach: reload the whole conversation from the
-    // server, rather than trying to patch the DOM in place
-    await openConversation(currentConversationId);
+  // reload the whole conversation from the server either way, so the
+  // screen matches what was actually saved
+  await openConversation(currentConversationId);
+
+  if (!result || !result.answer) {
+    showErrorBubble("Something went wrong and your edit was not applied. Please try again.");
   }
 }
 
 document.getElementById("new-chat-btn").addEventListener("click", async () => {
   const conv = await api("/api/conversations", { method: "POST" });
+  if (!conv) {
+    alert("Could not start a new chat, please try again.");
+    return;
+  }
   conversations.unshift(conv);
   await openConversation(conv.id);
 });
@@ -213,7 +252,12 @@ messageForm.addEventListener("submit", async (e) => {
 
     // refresh the sidebar in case the title just got set from this message
     await loadConversations();
-    renderConversationList(conversations);
+  } else {
+    // the request failed: take the unsent bubble back, put the text back
+    // in the box so it can be resent, and say what happened
+    pendingUserBubble.remove();
+    messageInput.value = text;
+    showErrorBubble("Something went wrong and your message did not go through. Please try sending it again.");
   }
 });
 
