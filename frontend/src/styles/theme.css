@@ -112,3 +112,22 @@ h1, h2, .brand-mark { font-family: 'Outfit', sans-serif; }
 @media (max-width: 720px) {
   .auth-side { display: none; }
 }
+
+@media print {
+  .no-print { display: none !important; }
+
+  /* browsers drop background colours when printing unless told not to,
+     which is why the bars disappeared */
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* keep each card on one page */
+  .card { break-inside: avoid; }
+}
+
+
+.progress {
+  --bs-progress-bar-bg: #1F6F64;
+}

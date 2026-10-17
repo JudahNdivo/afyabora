@@ -4,9 +4,11 @@ from app.auth import (
     request_password_reset, complete_password_reset,
 )
 from app.chat import chat_bp
+from app.admin import admin_bp
 
 app = Flask(__name__)
 app.register_blueprint(chat_bp)
+app.register_blueprint(admin_bp)
 
 
 @app.route("/api/signup", methods=["POST"])
