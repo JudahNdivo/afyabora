@@ -1,6 +1,8 @@
 import os
+import re
 import time
 import psycopg2
+from concurrent.futures import ThreadPoolExecutor, TimeoutError as FutureTimeoutError
 from sentence_transformers import SentenceTransformer
 from google import genai
 from langdetect import detect
@@ -17,6 +19,10 @@ TOP_K = 5
 
 # Setup Gemini client
 client = genai.Client(api_key=GOOGLE_API_KEY)
+
+# Used to enforce a hard timeout on Gemini calls, regardless of
+# whether the client library itself supports a timeout parameter
+_executor = ThreadPoolExecutor(max_workers=4)
 
 
 def detect_language(text: str) -> str:
@@ -46,39 +52,83 @@ def detect_language(text: str) -> str:
         return "en"
 
 
+# Kiswahili/Sheng health terms the embedding model does not reliably
+# match, mapped to English equivalents. When a query contains any of
+# these, retrieval embeds the English terms instead of the Kiswahili
+# wording. Added after tests showed Kiswahili disease names retrieved
+# unrelated chunks, and that English terms alone ranked the plain-
+# language factsheets higher.
+SW_TERMS = {
+    "kaswende": "syphilis",
+    "kisonono": "gonorrhoea",
+    "klamidia": "chlamydia",
+    "vvu": "HIV",
+    "ukimwi": "HIV AIDS",
+    "dalili": "symptoms",
+    "maambukizi": "infection transmission",
+    "kuambukizwa": "transmission",
+    "matibabu": "treatment",
+    "kinga": "prevention",
+    "kondomu": "condom",
+    "vipimo": "testing",
+}
+
+# English disease names a user may type inside a Kiswahili sentence,
+# kept so they are not lost when the Kiswahili words are dropped
+ENGLISH_DISEASES = re.compile(
+    r"\b(hiv|hpv|aids|syphilis|gonorrhoea|gonorrhea|chlamydia|stis?)\b"
+)
+
+
 def expand_query(query: str) -> str:
-    # Expand casual contact queries to improve retrieval
-    # of myth-busting content from the knowledge base
+    original_lower = query.lower()
+
+    # English equivalents of any Kiswahili glossary terms found
+    terms = [en for sw, en in SW_TERMS.items()
+             if re.search(rf"\b{sw}\b", original_lower)]
+
+    if terms:
+        # embed English terms only, but keep English disease names the
+        # user typed that the glossary terms don't already cover
+        covered = set(" ".join(terms).lower().split())
+        kept = [d for d in ENGLISH_DISEASES.findall(original_lower)
+                if d not in covered]
+        text = " ".join(dict.fromkeys(terms + kept))
+    else:
+        text = query
+
+    # casual-contact myths: check the original wording, so this still
+    # works when the text above was replaced
     casual_contact_terms = [
         "toilet", "toilet seat", "doorknob", "swimming pool",
         "sharing", "utensils", "casual contact", "surfaces"
     ]
-
-    query_lower = query.lower()
     for term in casual_contact_terms:
-        if term in query_lower:
-            return (
-                query +
-                " syphilis casual contact cannot transmit toilet seats"
-            )
-    return query
+        if term in original_lower:
+            return text + " syphilis casual contact cannot transmit toilet seats"
+    return text
 
 
 def get_connection():
-    # Create a new database connection
-    conn = psycopg2.connect(DATABASE_URL)
+    conn = psycopg2.connect(
+        DATABASE_URL,
+        connect_timeout=10,
+        keepalives=1,
+        keepalives_idle=30,
+        keepalives_interval=10,
+        keepalives_count=3,
+    )
     conn.autocommit = True
     return conn
 
 
 def retrieve_chunks(query: str, model, conn, top_k: int = TOP_K) -> list:
-    # Embed the query and retrieve the most similar chunks
-    # using pgvector cosine similarity search.
-    # The multilingual embedding model handles cross-lingual retrieval
-    # natively, so Kiswahili/mixed-language queries are embedded
-    # directly without translating to English first — this was tested
-    # and found to retrieve equally or more relevant chunks while
-    # avoiding an extra ~9s translation round-trip per query.
+    # Embed the query and retrieve the closest chunks using pgvector
+    # L2 distance (the <-> operator). The multilingual embedding model
+    # handles most cross-lingual retrieval directly, so queries are not
+    # translated to English first, which avoids an extra ~9s round-trip.
+    # It does miss Kiswahili disease names (e.g. "kaswende"), which
+    # expand_query() covers with a small glossary.
     query_vector = model.encode(query).tolist()
 
     try:
@@ -143,15 +193,13 @@ def build_prompt(query: str, chunks: list, language: str, history: list = None) 
     else:
         language_instruction = "Answer in English."
 
-    prompt = f"""You are AfyaBora, a friendly and trustworthy STI health \
-education assistant for youth in Nairobi, Kenya.
+    prompt = f"""You are AfyaBora, a friendly and trustworthy STI health education assistant for youth in Nairobi, Kenya.
 
-Your role is to provide accurate, stigma-free sexual health information \
-based ONLY on the verified health guidelines provided below.
+Your role is to provide accurate, stigma-free sexual health information based ONLY on the verified health guidelines provided below.
 
 IMPORTANT RULES:
 - Do NOT use markdown formatting of any kind — no asterisks, no hashes/headings, no bold, no italics. Plain sentences and simple dashes for lists only.
-- Keep the answer concise and focused. Aim for 2-4 short paragraphs or a short list at most. Cover the most important points only, not every detail in the context.
+- Keep the answer under 120 words. Cover only the most important points, not every detail in the context.
 - Answer ONLY using the information in the CONTEXT below
 - Do NOT use any outside knowledge or make up information
 - If the previous conversation is provided below and the user's question refers back to it (e.g. "what about if untreated", "and for men?"), use it to understand what they are asking, but still answer only from the CONTEXT
@@ -172,17 +220,33 @@ ANSWER:"""
     return prompt
 
 
+def _call_gemini(prompt: str) -> str:
+    # The raw, blocking Gemini call - wrapped separately so it can
+    # be run in a thread with an enforced timeout
+    interaction = client.interactions.create(
+        model=GEMINI_MODEL,
+        input=prompt
+    )
+    return interaction.output_text.strip()
+
+
 def generate_answer(prompt: str) -> str:
-    # Send prompt to Gemini using the Interactions API
-    # with retry on server errors
+    # Send prompt to Gemini using the Interactions API, with retry on
+    # server errors and a hard timeout per attempt. The timeout is
+    # enforced using a thread pool rather than a client-side parameter,
+    # since not all client library versions reliably support one -
+    # this guarantees the request fails predictably instead of
+    # potentially hanging indefinitely.
     max_retries = 3
+    timeout_seconds = 45
+
     for attempt in range(max_retries):
+        future = _executor.submit(_call_gemini, prompt)
         try:
-            interaction = client.interactions.create(
-                model=GEMINI_MODEL,
-                input=prompt
-            )
-            return interaction.output_text.strip()
+            return future.result(timeout=timeout_seconds)
+        except FutureTimeoutError:
+            print(f"Request timed out after {timeout_seconds}s, attempt {attempt + 1}/{max_retries}")
+            continue
         except Exception as e:
             if "503" in str(e) or "UNAVAILABLE" in str(e):
                 wait_time = (attempt + 1) * 5
@@ -190,7 +254,8 @@ def generate_answer(prompt: str) -> str:
                 time.sleep(wait_time)
             else:
                 raise e
-    return "AfyaBora is temporarily unavailable. Please try again in a moment."
+
+    return "AfyaBora is taking longer than usual to respond right now. Please try again in a moment."
 
 
 def rag_pipeline(query: str, model, conn, history: list = None) -> dict:
@@ -201,8 +266,9 @@ def rag_pipeline(query: str, model, conn, history: list = None) -> dict:
     language = detect_language(query)
     timings["language_detection"] = time.time() - t0
 
-    # Step 2 - expand query and retrieve chunks directly using the
-    # original query (no translation - see retrieve_chunks note)
+    # Step 2 - expand query (Kiswahili glossary, casual-contact terms)
+    # and retrieve chunks using the expanded query. The user's
+    # original wording is still what goes into the prompt.
     t0 = time.time()
     expanded_query = expand_query(query)
     chunks = retrieve_chunks(expanded_query, model, conn)
