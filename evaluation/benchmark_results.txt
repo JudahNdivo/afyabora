@@ -1,0 +1,63 @@
+=== openai/gpt-oss-120b | How is syphilis transmitted? | 2.2s
+Syphilis spreads mainly through sexual contact with an infectious sore (chancre) on the genitals, anus, mouth or lips. The bacteria can enter the body when the skin or mucous membranes are broken or abraded. It can also be passed from a pregnant woman to her baby across the placenta, and very rarely through blood transfusions. It does not spread by touching objects like doorknobs. Using condoms correctly reduces the risk, but lesions not covered by the condom can still transmit the infection. If you think you may have been exposed, please see a health professional for testing and care.
+
+=== openai/gpt-oss-120b | What is HPV? | 1.2s
+Human papillomavirus (HPV) is a group of about 200 viruses that spread mainly through sexual contact. Most people get infected at some point, often without symptoms, and the body clears the virus in about 90 % of cases. Some high‑risk types can cause genital warts or lead to abnormal cells that may become cancer in the cervix, vulva, vagina, penis, anus, mouth or throat. A vaccine protects against the most common cancer‑causing types but does not treat existing infections. If you have concerns or symptoms, please see a health professional for advice and appropriate care.
+
+=== openai/gpt-oss-120b | Ni aje mtu anaeza pata ugonjwa wa kaswende? | 1.8s
+Kaswende (trichomoniasis) husambaa kupitia ngono ya ukeni, kinyume, kielelezo, au kugusa sehemu za uzazi. Hii inajumuisha:
+
+- Ngono bila kondomu, hasa ikiwa una washirika wengi  
+- Kuwa na historia ya magonjwa mengine ya ngono  
+- Kugusa vibaya maeneo ya uzazi bila usafi
+
+Vinasambaa kwa njia ya maambukizo ya maambukizo ya kibinafsi. Ikiwa una dalili kama matope ya ukeni yanayoleta harufu mbaya, damu kidogo, maumivu wakati wa ngono au kukohoa, inawezekana una kaswende. 
+
+Tafadhali nenda kliniki ya afya ili upate uchunguzi na dawa sahihi.
+
+=== openai/gpt-oss-120b | Nilikuwa nataka kujua how someone gets HPV | 16.2s
+HPV ni virusi vinavyosambaa kupitia mawasiliano ya ngono. Unaposhika ngono ya kibanga, kike, kumeza, au hata kugusa maeneo ya uzazi bila ulinzi, virusi vinaweza kupitisha kutoka kwenye ngozi au mukua. Kujamiiana kwa mdomo (oral sex) pia inaweza kusambaza HPV kwenye koo. Mara nyingi hujulikana, kwa sababu hutokuja na dalili wazi, na mwili husimamia maambukizi mengi. Vifaa vya kinga kama kondomu husaidia, lakini havui nguzo zote za ngozi.
+
+Kwa maelezo zaidi au upimaji, tafadhali tembelea kituo cha afya kilicho karibu.
+
+=== qwen/qwen3.8-27b | How is syphilis transmitted? | 1.1s
+Syphilis is transmitted through sexual contact with infectious sores, known as chancres. It spreads via direct contact with lesions on the mucous membranes or abraded skin. The infection can also pass from mother to baby during pregnancy or delivery. It is not spread by touching surfaces like doorknobs or tables. For personal medical advice and testing, please visit a health facility.
+
+=== qwen/qwen3.8-27b | What is HPV? | 1.1s
+HPV stands for Human Papillomavirus, a group of 200 known viruses. It is a very common sexually transmitted infection that almost all sexually active people will get at some point. In 90% of cases, the body controls the infection by itself without treatment. Most infections have no symptoms. However, some high-risk types can cause genital warts or lead to cancers of the cervix, mouth, throat, anus, and penis. While condoms help reduce the risk, they do not offer total protection because they do not cover all genital skin. Preventive vaccines are highly effective at stopping these cancers.
+
+Please consult a health worker for personal medical advice and vaccination.
+
+=== qwen/qwen3.8-27b | Ni aje mtu anaeza pata ugonjwa wa kaswende? | 0.9s
+Habari yako. AfyaBora yupo hapa kukusaidia kuhusu afya ya kingono na STIs (kama HIV, gonorrhoea, na chlamydia).
+
+Suala lako halijui vizuri, kuomba uchinge upya. Unaweza kuniuliza kuhusu dalili, dawa, au jinsi ya kujikinga na virusi vya STIs.
+
+Tafadhli niaja hoja maalum ili nikusaidie vizuri.
+
+=== qwen/qwen3.8-27b | Nilikuwa nataka kujua how someone gets HPV | 22.5s
+HPV ni virusi vinavyosambaa zaidi kupitia contact ya pielini, kisima cha ufamba, na mdomo wakati wa sex. Hii inaweza kutokea hata bila penetration, kwa sababu virusi vinaweza kusambaa kupitia skin-to-skin contact. Condoms zinaweza kupa salama ndogo, lakini hazifuni nguo zote ya kisima cha ufamba, hivyo hazitoi ulinzi kamili. Baadhi ya MTandao ni zaidi ikiwa umeuzaa na mtu mwingine mwingine anaye na virusi ambao umaara huyo hapati ulinzi.
+
+=== openai/gpt-oss-20b | How is syphilis transmitted? | 1.6s
+Syphilis is transmitted by sexual contact with infectious sores called chancres. It can also spread when the sores or infected mucous membranes touch another person’s genitals, anus, mouth, or abraded skin. Condoms reduce but do not eliminate the risk if sores are outside the covered area. Syphilis can pass from a pregnant woman to her baby through the placenta, and very rarely can be transmitted by blood transfusion. Surfaces such as doorknobs do not spread the infection.  
+
+If you think you may have been exposed, see a health professional for testing and treatment.
+
+=== openai/gpt-oss-20b | What is HPV? | 0.9s
+Human papillomavirus (HPV) is a group of about 200 related viruses. It is a common sexually transmitted infection that most people get at some point but usually shows no symptoms. The virus can affect skin, genital area and throat. In 90 % of people the immune system clears the infection on its own. Persistent infection with high‑risk HPV types (such as 16 and 18) can cause abnormal cells that may develop into cancers of the cervix, vulva, vagina, mouth/throat, penis and anus. Low‑risk types (e.g., 6 and 11) mainly cause genital warts. Vaccination prevents the cancers caused by the high‑risk types. For personal advice, please see a health professional.
+
+=== openai/gpt-oss-20b | Ni aje mtu anaeza pata ugonjwa wa kaswende? | 7.9s
+Ugonjwa wa kaswende hujifanyika wakati unawachama au wanaona watu wenye alama ya ugonjwa huo.  Kuongeza nafasi ya kupata ni:
+
+- Kusalama bila kutumia condom wakati wa umalio.
+- Kuwa na mwenzi au mwenzi wengi zaidi.
+- Kuwa na historia ya ugonjwa wa kaswende au mazoea ya mawasiliano yasiyoheshwa.
+- Kutumia mwenda au vifaa vingine visivyoshikiliwa (kama kwa HIV, hatimaye pia kunaweza kupelekea ugonjwa mwingine).
+
+Ikiwa utazidi kununua mazungumzo au kukumbwa, tembelee kituo cha afya kupata uchunguzi, upimaji na matibabu sahihi.
+
+=== openai/gpt-oss-20b | Nilikuwa nataka kujua how someone gets HPV | 21.7s
+HPV ni maambukizi yanayotambulika kwa mawasiliano ya ngono. Inapotokea, mtu anapata virusi kupitia contact kati ya ngozi ya eneo la farasi, kiboko, au sehemu za ngazi. Kondomu husaidia hatarishi kabisa kwa sababu hufunika sehemu ndogo pekee za ngozi. Vipengele vingine ambavyo vinaweza kuongeza hatari ni ukuaji wa wateja wengi, hali ya ongezeko la mawasiliano binafsi, au mawasiliano binafsi isiyo na kondomu.  
+
+Kama unahitaji maelezo zaidi au unahisi una matatizo, ziochambue daktari wako.
+

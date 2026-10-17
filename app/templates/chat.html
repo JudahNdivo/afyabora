@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AfyaBora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}">
+</head>
+<body>
+  <div class="chat-screen">
+
+    <!-- sidebar: new chat, search, conversation list, user info -->
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <div class="brand-mark small">A</div>
+        <span class="brand-name">AfyaBora</span>
+      </div>
+
+      <button id="new-chat-btn" class="btn-new-chat">+ New chat</button>
+
+      <input
+        type="text"
+        id="search-input"
+        class="search-input"
+        placeholder="Search conversations..."
+      >
+
+      <div id="conversation-list" class="conversation-list"></div>
+
+      <div class="sidebar-user">
+        <span id="username-display"></span>
+        <button id="logout-btn" class="btn-text">Log out</button>
+      </div>
+    </aside>
+
+    <!-- main chat area -->
+    <main class="chat-main">
+      <div id="empty-state" class="empty-state">
+        <p>Start a new conversation or pick one from the sidebar.</p>
+      </div>
+
+      <div id="message-list" class="message-list" hidden></div>
+
+      <div id="loading-indicator" class="loading-indicator" hidden>
+        <span></span><span></span><span></span>
+      </div>
+
+      <form id="message-form" class="message-form" hidden>
+        <input
+          type="text"
+          id="message-input"
+          placeholder="Ask a question in English or Kiswahili..."
+          autocomplete="off"
+        >
+        <button type="submit" class="btn-send">Send</button>
+      </form>
+    </main>
+
+  </div>
+
+  <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+=== gemini-3.5-flash | How is syphilis transmitted? | 8.7s
+Syphilis is transmitted through sexual contact with infectious sores, called chancres. This can happen through direct contact with these sores on the genitals, anus, rectum, lips, or mouth, or through broken skin. Mothers can also pass syphilis to their unborn baby during pregnancy, and it can be spread through blood transfusions. 
+
+Syphilis is not spread by touching everyday surfaces like doorknobs or tables. Using condoms correctly helps reduce the risk of transmission.
+
+Please seek professional care at a health facility for personal medical decisions and STI testing.
+
+=== gemini-3.5-flash | How is syphilis transmitted? | 6.9s
+Hello! Syphilis is transmitted mainly through sexual contact with infectious sores or chancres on the genitals, anus, mouth, mucous membranes, or abraded skin. A mother can also pass syphilis to her unborn child during pregnancy, and it can spread through blood transfusions. 
+
+You cannot get syphilis from touching shared surfaces like doorknobs or tables. 
+
+For personal medical decisions and testing, please consult a healthcare professional at a medical facility.
+
+=== gemini-3.5-flash | What is HPV? | 9.3s
+Human papillomavirus (HPV) is a common sexually transmitted infection. It refers to a group of 200 known viruses that can affect the skin, genital area, and throat. 
+
+Most sexually active people will be infected at some point, usually without symptoms. In 90 percent of people, the body controls the infection, and it goes away on its own without treatment. However, infection with high-risk HPV types can cause genital warts or cancers, including cervical, anal, penile, vulvar, vaginal, and mouth/throat cancers. Prophylactic vaccination can help prevent these cancers.
+
+Please visit a health facility to consult a healthcare professional for personal medical decisions.
+
+=== gemini-3.5-flash | What is HPV? | 9.4s
+Human papillomavirus (HPV) is a common sexually transmitted infection caused by a group of 200 known viruses. It can affect the skin, genital area, and throat. Most people get infected at some point in their lives, usually without symptoms.
+
+In 90% of people, the body controls the infection by itself. However, persistent high-risk HPV types can cause genital warts or lead to cancers, including cervical, anal, penile, vaginal, vulvar, and mouth or throat cancers. Prophylactic vaccines and screening can help prevent HPV-related cancers.
+
+Please visit a health facility to consult with a qualified health professional for personal medical decisions.
+
+=== gemini-3.5-flash | Ni aje mtu anaeza pata ugonjwa wa kaswende? | 8.9s
+Niaje! Kwa bahati mbaya, sina taarifa kwenye mwongozo wangu kuhusu jinsi mtu anavyoweza kupata ugonjwa wa kaswende (syphilis). 
+
+Kwa masuala ya afya na kupata ushauri sahihi au vipimo, nakushauri utembelee kituo cha afya kilicho karibu ili uweze kuongea na mhudumu wa afya.
+
+=== gemini-3.5-flash | Ni aje mtu anaeza pata ugonjwa wa kaswende? | 8.0s
+Niaje! Pole sana, lakini sina maelezo kamili kwenye mwongozo wangu kuhusu jinsi mtu anavyoweza kupata ugonjwa wa kaswende (syphilis). 
+
+Kwa usaidizi na taarifa sahihi kuhusu vipimo au matibabu, tafadhali tembelea kituo cha afya kilicho karibu nawe uweze kuongea na mhudumu wa afya.
+
+=== gemini-3.5-flash | Nilikuwa nataka kujua how someone gets HPV | 10.4s
+Niaje! HPV ni STI ya kawaida sana. Mtu anaipata kupitia kujihusisha kimapenzi, na virusi hivi vinaweza kuathiri ngozi, sehemu za siri na throat. 
+
+Mambo machache ya kufahamu:
+- Karibu watu wote wanaofanya sex hupata HPV wakati fulani maishani mwao.
+- Kuwa na sexual partners wengi huongeza hatari ya kuipata.
+- Condoms zinasaidia kuzuia maambukizi lakini hazitoi ulinzi kamili kwa sababu hazifuniki ngozi yote ya sehemu za siri.
+
+Tafadhali tembelea kituo cha afya au clinic iliyo karibu nawe ili kupata ushauri na vipimo kutoka kwa mhudumu wa afya.
+
+=== gemini-3.5-flash | Nilikuwa nataka kujua how someone gets HPV | 9.2s
+HPV ni STI ya kawaida sana inayowapata watu wengi wanaoshiriki ngono. Unaweza kuipata kupitia kugusana kwa ngozi ya sehemu za siri wakati wa kushiriki ngono. Pia, kuwa na wapenzi wengi wa kimapenzi huongeza hatari ya kuipata infection hii.
+
+Kutumia condom inasaidia kupunguza hatari ya kuipata, lakini haikingi kabisa kwa sababu haifuniki ngozi yote ya sehemu za siri.
+
+Kumbuka, ni muhimu kutembelea kituo cha afya ili kupata vipimo na ushauri wa kitaalamu kwa afya yako.
+
+=== gemini-3.5-flash-lite | How is syphilis transmitted? | 3.5s
+Hello there. Syphilis is transmitted in the following ways:
+- Through sexual contact with infectious sores, lesions, or chancres on the mucous membranes or abraded skin
+- Across the placenta from a mother to her unborn child during pregnancy
+- Through blood transfusion
+
+Please seek professional medical care for personal health decisions.
+
+=== gemini-3.5-flash-lite | How is syphilis transmitted? | 3.3s
+Syphilis is transmitted through sexual contact with infectious sores or chancres. It can also be spread through contact with infectious lesions of the mucous membranes or abraded skin, blood transfusion, or across the placenta from a mother to her unborn child during pregnancy. Please seek professional care for personal medical decisions.
+
+=== gemini-3.5-flash-lite | What is HPV? | 3.4s
+Human papillomavirus is the name of a group of two hundred known viruses. It is a common sexually transmitted infection that can affect the skin, genital area, and throat. Almost all sexually active people will be infected at some point in their lives, usually without symptoms. In ninety percent of people, the body controls the infection by itself, and the virus usually goes away on its own without treatment. However, infection with some high-risk types can cause genital warts or cancer, including cervical cancer and cancers of the vulva, vagina, mouth or throat, penis, and anus. Please seek professional care for personal medical decisions.
+
+=== gemini-3.5-flash-lite | What is HPV? | 3.6s
+Hello! Human papillomavirus is the name of a group of two hundred known viruses. It is a common sexually transmitted infection that can affect the skin, genital area, and throat. Most sexually active people will be infected at some point in their lives, usually without symptoms. In ninety percent of people, the body controls the infection by itself, and it usually goes away on its own without treatment. However, infection with some high-risk types can cause genital warts or cancer, including cervical cancer and cancers of the vulva, vagina, mouth or throat, penis, and anus. Please seek professional care for personal medical decisions.
+
+=== gemini-3.5-flash-lite | Ni aje mtu anaeza pata ugonjwa wa kaswende? | 3.2s
+Pole sana, lakini mwongozo wangu hauna maelezo kuhusu jinsi mtu anavyoweza kupata ugonjwa wa kaswende. Tafadhali tembelea kituo cha afya au uwasiliane na daktari kwa ushauri na huduma za kwanza za kitabibu.
+
+=== gemini-3.5-flash-lite | Ni aje mtu anaeza pata ugonjwa wa kaswende? | 3.8s
+Mambo vipi. Kuhusu swali lako kuhusu kaswende, samahani lakini sina taarifa hizo katika mwongozo wangu wa afya. Tafadhali tembelea kituo cha afya au zungumza na daktari ili upate maelezo sahihi na ushauri wa kitaalamu.
+
+=== gemini-3.5-flash-lite | Nilikuwa nataka kujua how someone gets HPV | 3.0s
+Mambo vipi. HPV ni common sexually transmitted infection na karibu kila mtu anayefanya ngono ataipata wakati fulani maishani mwake, mara nyingi bila dalili zozote. Hali hii inaweza kuathiri ngozi, eneo la siri, na koo. 
+
+Tafadhali tembelea kituo cha afya kwa ushauri na huduma za kitaalamu za afya.
+
+=== gemini-3.5-flash-lite | Nilikuwa nataka kujua how someone gets HPV | 3.9s
+Mambo vipi. HPV ni common sexually transmitted infection na karibu kila mtu anayefanya ngono ataipata wakati fulani maishani mwake, mara nyingi bila dalili zozote. Inaweza kuathiri ngozi, eneo la siri, na koo. 
+
+- Maambukizi huambukizwa kupitia kujamiiana
+- Kondomu husaidia kuzuia HPV lakini hazitoi ulinzi kamili kwa sababu hazifuniki ngozi yote ya sehemu za siri
+
+Tafadhali tembelea kituo cha afya au mtaalamu wa matibabu ili kupata ushauri mzuri kuhusu afya yako.
+

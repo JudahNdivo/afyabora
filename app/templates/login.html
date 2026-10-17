@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AfyaBora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="auth-screen">
+    <!-- left panel: brand message, no form here -->
+    <div class="auth-side">
+      <div class="auth-side-content">
+        <div class="brand-mark">A</div>
+        <h1>AfyaBora</h1>
+        <p>Honest, judgment-free answers about sexual health, in English or Kiswahili.</p>
+      </div>
+    </div>
+
+    <!-- right panel: the actual form -->
+    <div class="auth-main">
+      <div class="auth-card">
+        <!-- toggle between login and signup, same form area -->
+        <div class="auth-tabs">
+          <button class="auth-tab active" data-mode="login">Log in</button>
+          <button class="auth-tab" data-mode="signup">Sign up</button>
+        </div>
+
+        <form id="auth-form">
+          <!-- only shown in signup mode -->
+          <label class="field" id="username-field" hidden>
+            <span>Username</span>
+            <input type="text" id="username" autocomplete="username">
+          </label>
+
+          <label class="field">
+            <span>Email</span>
+            <input type="email" id="email" autocomplete="email" required>
+          </label>
+
+          <label class="field">
+            <span>Password</span>
+            <input type="password" id="password" autocomplete="current-password" required>
+          </label>
+
+          <p class="forgot-link"><a href="/forgot-password">Forgot password?</a></p>
+
+          <p class="form-error" id="form-error" hidden></p>
+
+          <button type="submit" class="btn-primary" id="submit-btn">Log in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+</body>
+</html>
