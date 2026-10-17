@@ -1,0 +1,114 @@
+/* design tokens used across the whole app */
+:root {
+  --bg: #FAF7F2;
+  --surface: #FFFFFF;
+  --primary: #1F6F64;
+  --primary-dark: #164F47;
+  --text: #2B332F;
+  --muted: #6E7772;
+  --accent: #E2A33B;
+  --border: #E5DFD6;
+  --error: #B8503F;
+
+  /* point Bootstrap's own variables at the same palette */
+  --bs-primary: #1F6F64;
+  --bs-primary-rgb: 31, 111, 100;
+  --bs-body-bg: #FAF7F2;
+  --bs-body-color: #2B332F;
+  --bs-body-font-family: 'Inter', sans-serif;
+  --bs-border-color: #E5DFD6;
+  --bs-link-color: #1F6F64;
+  --bs-link-hover-color: #164F47;
+}
+
+h1, h2, .brand-mark { font-family: 'Outfit', sans-serif; }
+
+/* Bootstrap colours its buttons from per-button variables, so set them here */
+.btn-primary {
+  --bs-btn-bg: #1F6F64;
+  --bs-btn-border-color: #1F6F64;
+  --bs-btn-hover-bg: #164F47;
+  --bs-btn-hover-border-color: #164F47;
+  --bs-btn-active-bg: #164F47;
+  --bs-btn-active-border-color: #164F47;
+  --bs-btn-disabled-bg: #1F6F64;
+  --bs-btn-disabled-border-color: #1F6F64;
+  --bs-btn-focus-shadow-rgb: 31, 111, 100;
+}
+
+.form-control:focus {
+  border-color: #1F6F64;
+  box-shadow: 0 0 0 0.2rem rgba(31, 111, 100, 0.2);
+}
+
+/* login screen */
+.auth-screen { display: flex; min-height: 100vh; }
+
+.auth-side {
+  flex: 1;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+}
+
+.auth-side-content { max-width: 360px; }
+
+.brand-mark {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: var(--primary-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 24px;
+}
+
+.auth-side h1 { font-size: 32px; font-weight: 600; margin-bottom: 16px; }
+.auth-side p { font-size: 16px; line-height: 1.6; color: rgba(255, 255, 255, 0.85); }
+
+.auth-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.auth-card { width: 100%; max-width: 360px; }
+
+.auth-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.auth-tab {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.auth-tab.active { color: var(--primary); border-bottom-color: var(--primary); }
+
+.forgot-link { text-align: right; font-size: 13px; margin-bottom: 20px; }
+.forgot-link a { color: var(--primary); text-decoration: none; }
+.forgot-link a:hover { text-decoration: underline; }
+
+@media (max-width: 720px) {
+  .auth-side { display: none; }
+}

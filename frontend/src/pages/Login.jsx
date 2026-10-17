@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { api } from "../api";
+import { Form, Button, Alert } from "react-bootstrap";
 
 function validatePassword(password) {
   const errors = [];
@@ -98,41 +99,41 @@ export default function Login() {
             </button>
           </div>
 
-          <form onSubmit={handleSubmit}>
+          <Form onSubmit={handleSubmit}>
             {isSignup && (
-              <label className="field">
-                <span>Username</span>
-                <input
+              <Form.Group className="mb-3" controlId="username">
+                <Form.Label>Username</Form.Label>
+                <Form.Control
                   type="text"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   autoComplete="username"
                   required
                 />
-              </label>
+              </Form.Group>
             )}
 
-            <label className="field">
-              <span>Email</span>
-              <input
+            <Form.Group className="mb-3" controlId="email">
+              <Form.Label>Email</Form.Label>
+              <Form.Control
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 autoComplete="email"
                 required
               />
-            </label>
+            </Form.Group>
 
-            <label className="field">
-              <span>Password</span>
-              <input
+            <Form.Group className="mb-2" controlId="password">
+              <Form.Label>Password</Form.Label>
+              <Form.Control
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 autoComplete={isSignup ? "new-password" : "current-password"}
                 required
               />
-            </label>
+            </Form.Group>
 
             {!isSignup && (
               <p className="forgot-link">
@@ -141,12 +142,12 @@ export default function Login() {
               </p>
             )}
 
-            {error && <p className="form-error">{error}</p>}
+            {error && <Alert variant="danger" className="py-2">{error}</Alert>}
 
-            <button type="submit" className="btn-primary" disabled={busy}>
+            <Button type="submit" variant="primary" className="w-100 py-2" disabled={busy}>
               {busy ? "Please wait..." : isSignup ? "Sign up" : "Log in"}
-            </button>
-          </form>
+            </Button>
+          </Form>
         </div>
       </div>
     </div>
