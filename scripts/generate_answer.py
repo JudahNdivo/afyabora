@@ -31,15 +31,16 @@ def detect_language(text: str) -> str:
         "je", "aje", "nini", "jinsi", "gani", "sasa", "mtu",
         "unaweza", "anaeza", "pata", "ni", "na", "ya", "kwa",
         "inaenezwa", "dalili", "matibabu", "ugonjwa", "dawa",
-        "hospitali", "ngono", "kinga", "sindano", "damu"
+        "hospitali", "ngono", "kinga", "sindano", "damu",  "naweza", "nawezaje", "kupata", "kupewa", "kuambukizwa", "huambukizwa",
+        "zipi", "wapi", "vipi", "pia", "sana", "nataka", "kujua", "nilikuwa",
     ]
 
-    text_lower = text.lower()
-    words = text_lower.split()
+    words = re.findall(r"[a-z']+", text.lower()) # words only, so "aje?" counts as "aje"
+
 
     # Check if any Kiswahili marker words are present
     for word in words:
-        if word in swahili_markers:
+        if word in swahili_markers or word in SW_TERMS:
             return "sw"
 
     # Fall back to langdetect for longer queries
@@ -194,7 +195,6 @@ def build_prompt(query: str, chunks: list, language: str, history: list = None) 
         language_instruction = "Answer in English."
 
     prompt = f"""You are AfyaBora, a friendly and trustworthy STI health education assistant for youth in Nairobi, Kenya.
-
 Your role is to provide accurate, stigma-free sexual health information based ONLY on the verified health guidelines provided below.
 
 IMPORTANT RULES:
@@ -207,6 +207,7 @@ IMPORTANT RULES:
 - If the context contains partial information, share what's available and recommend visiting a health facility for more
 - If the context has NO relevant information at all, say so clearly and recommend visiting a health facility
 - Be empathetic and non-judgmental
+- You may name medicines and vaccines (for example antibiotics or the HPV vaccine), but NEVER state doses, amounts, how often to take them, or for how long. Say that the right medicine and dose must come from a health worker.
 - {language_instruction}
 - End with a brief, short recommendation to seek professional care for personal medical decisions
 
@@ -220,6 +221,24 @@ ANSWER:"""
     return prompt
 
 
+class GenerationUnavailable(Exception):
+    # raised when Gemini could not give an answer after all retries, so the
+    # caller can report a failure instead of saving a made-up answer
+    pass
+
+
+def _retryable(error: Exception) -> bool:
+    # rate limits (429) and temporary server problems (5xx) are worth
+    # retrying; anything else, such as a bad request, is not
+    text = str(error)
+    code = getattr(error, "status_code", None) or getattr(error, "code", None)
+    if code in (429, 500, 502, 503, 504):
+        return True
+    if re.search(r"\b(429|500|502|503|504)\b", text):
+        return True
+    return "RESOURCE_EXHAUSTED" in text or "UNAVAILABLE" in text
+
+
 def _call_gemini(prompt: str) -> str:
     # The raw, blocking Gemini call - wrapped separately so it can
     # be run in a thread with an enforced timeout
@@ -231,31 +250,59 @@ def _call_gemini(prompt: str) -> str:
 
 
 def generate_answer(prompt: str) -> str:
-    # Send prompt to Gemini using the Interactions API, with retry on
-    # server errors and a hard timeout per attempt. The timeout is
-    # enforced using a thread pool rather than a client-side parameter,
-    # since not all client library versions reliably support one -
-    # this guarantees the request fails predictably instead of
-    # potentially hanging indefinitely.
-    max_retries = 3
-    timeout_seconds = 45
+    # Retries temporary failures (timeouts, rate limits, server errors)
+    # with a short wait between attempts, within a total time budget so a
+    # user is never left waiting for minutes. Raises GenerationUnavailable
+    # when it gives up.
+    max_attempts = 3
+    per_attempt_timeout = 45
+    total_budget = 100
+    started = time.time()
 
-    for attempt in range(max_retries):
+    for attempt in range(max_attempts):
+        remaining = total_budget - (time.time() - started)
+        if remaining <= 5:
+            break
+
         future = _executor.submit(_call_gemini, prompt)
         try:
-            return future.result(timeout=timeout_seconds)
+            return future.result(timeout=min(per_attempt_timeout, remaining))
         except FutureTimeoutError:
-            print(f"Request timed out after {timeout_seconds}s, attempt {attempt + 1}/{max_retries}")
-            continue
+            print(f"Gemini timed out (attempt {attempt + 1}/{max_attempts})")
         except Exception as e:
-            if "503" in str(e) or "UNAVAILABLE" in str(e):
-                wait_time = (attempt + 1) * 5
-                print(f"Server busy, retrying in {wait_time} seconds...")
-                time.sleep(wait_time)
-            else:
-                raise e
+            if not _retryable(e):
+                raise
+            print(f"Gemini temporary error (attempt {attempt + 1}/{max_attempts}): {str(e)[:200]}")
+            wait = (attempt + 1) * 5
+            if attempt < max_attempts - 1 and (time.time() - started) + wait < total_budget:
+                time.sleep(wait)
 
-    return "AfyaBora is taking longer than usual to respond right now. Please try again in a moment."
+    raise GenerationUnavailable("Gemini did not return an answer in time")
+
+TRANSLATE_MODEL = "gemini-3.5-flash-lite"
+
+
+def translate_for_retrieval(query: str):
+    # Translates a Kiswahili question to English so it can be searched
+    # against the English knowledge base. Returns None if anything goes
+    # wrong, so the caller can fall back to the glossary query.
+    prompt = (
+        "Translate this health question to English. "
+        "Return ONLY the translation.\n\n" + query
+    )
+
+    def call():
+        return client.interactions.create(
+            model=TRANSLATE_MODEL, input=prompt
+        ).output_text.strip()
+
+    future = _executor.submit(call)
+    try:
+        text = future.result(timeout=8)
+        return text or None
+    except Exception as e:
+        print(f"Translation failed, using glossary query: {str(e)[:120]}")
+        return None
 
 
 def rag_pipeline(query: str, model, conn, history: list = None) -> dict:
@@ -266,20 +313,29 @@ def rag_pipeline(query: str, model, conn, history: list = None) -> dict:
     language = detect_language(query)
     timings["language_detection"] = time.time() - t0
 
-    # Step 2 - expand query (Kiswahili glossary, casual-contact terms)
-    # and retrieve chunks using the expanded query. The user's
-    # original wording is still what goes into the prompt.
+    # Step 2 - for Kiswahili questions, translate to English for searching.
+    # Testing found the right sources more often this way than with the
+    # glossary alone (7 of 7 against 5 of 7 on the test questions).
+    # If the translation fails, the glossary query is used instead.
     t0 = time.time()
-    expanded_query = expand_query(query)
+    english = translate_for_retrieval(query) if language == "sw" else None
+    timings["translation"] = time.time() - t0
+
+    # Step 3 - expand the query (glossary and casual-contact terms)
+    # and retrieve chunks. The user's original wording is still
+    # what goes into the prompt.
+    t0 = time.time()
+    expanded_query = expand_query(english if english else query)
+    print(f"Retrieval query: {expanded_query}")
     chunks = retrieve_chunks(expanded_query, model, conn)
     timings["retrieval"] = time.time() - t0
 
-    # Step 3 - build augmented prompt with original query and history
+    # Step 4 - build augmented prompt with original query and history
     t0 = time.time()
     prompt = build_prompt(query, chunks, language, history)
     timings["prompt_building"] = time.time() - t0
 
-    # Step 4 - generate answer from Gemini
+    # Step 5 - generate answer from Gemini
     t0 = time.time()
     answer = generate_answer(prompt)
     timings["generation"] = time.time() - t0
@@ -303,7 +359,6 @@ def rag_pipeline(query: str, model, conn, history: list = None) -> dict:
             for chunk in chunks
         ]
     }
-
 
 def main():
     print("Loading embedding model...")

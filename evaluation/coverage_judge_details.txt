@@ -1,0 +1,175 @@
+
+== How is HIV transmitted?  judged: [1, 1, 0, 1, 0]
+  [1] cdc_hiv_101_factsheet: (Page 1 is in English, Page 2 is in Spanish) HIV 101 HIV 101 Without treatment, HIV (human
+  [1] kenya_clinical_guidelines_sti: even by the close nonsexual body contact that occurs at work, at school, or at home. Refer
+  [0] who-hiv-guidelines: and two randomized controlled trials (189). Three studies showed no evidence of HIV transm
+  [1] kenya_hiv_guidelines_2022: is a follow-up session, review what they remember from previous sessions and adapt the ses
+  [0] who-hiv-guidelines: HIV for both men and women (224,225). HIV increases the infectiousness and severity of sex
+
+== What are the symptoms of HIV?  judged: [1, 1, 0, 0, 0]
+  [1] hiv_gov_symptoms: Symptoms of HIV (HIV.gov, U.S. Department of Health and Human Services, https://www.hiv.go
+  [1] hiv_gov_symptoms: of acute HIV infection can include the following: Fever Chills Rash Night sweats Muscle ac
+  [0] hiv_faq_2024: with HIV medicines which suppress the amount of virus in the body and allow people living 
+  [0] who-hiv-guidelines: organs: respiratory or circulatory failure, nervous system signs, renal failure, coagulati
+  [0] who-hiv-guidelines: Introduction People living with HIV are at high risk of mental, nervous system and substan
+
+== How is HIV treated?  judged: [0, 1, 0, 1, 0]
+  [0] who-hiv-guidelines: of resources. Source: Consolidated guidelines on the use of antiretroviral drugs for treat
+  [1] cdc_hiv_101_factsheet: Take your HIV treatment as prescribed. your partners by using other HIV • Get and keep an 
+  [0] who-hiv-guidelines: largest proportion of people living with HIV who do not know their status. See Chapter 5 o
+  [1] who-hiv-guidelines: their HIV treatment through a differentiated service delivery model with extended ART refi
+  [0] who-hiv-guidelines: with HIV Immunizations are an important component of the HIV care package in many internat
+
+== How can I prevent HIV?  judged: [1, 0, 0, 1, 0]
+  [1] cdc_hiv_101_factsheet: Take your HIV treatment as prescribed. your partners by using other HIV • Get and keep an 
+  [0] who-hiv-guidelines: stop AIDS: technical brief (76). e Unless TB or cryptococcal meningitis is diagnosed (77)
+  [0] who-hiv-guidelines: be more cost-effective. 226 Consolidated guidelines on HIV prevention, testing, treatment,
+  [1] hiv_gov_symptoms: live long and healthy lives and will not transmit HIV to their HIV-negative partners throu
+  [0] who-hiv-guidelines: elimination initiative. 279 General care and managing common coinfections and comorbiditie
+
+== How do I get tested for HIV?  judged: [1, 0, 0, 0, 0]
+  [1] hiv_gov_symptoms: location. You can buy a self-test kit at a pharmacy or online, or your health care provide
+  [0] who-hiv-guidelines: among children who are already receiving ART (73–75). 49 HIV testing and diagnosis Rapid d
+  [0] kenya_hiv_guidelines_2022: people at risk of HIV infection as eligible for testing • Serial testing, using approved r
+  [0] kenya_hiv_guidelines_2022: Laboratory Results on Initial and Follow-up Assessment Screening Action HIV-positive at in
+  [0] kenya_hiv_guidelines_2022: to known HIV- positive mothers (Figure 2.2) ● Birth testing (HIV testing of infants at bir
+
+== How is syphilis transmitted?  judged: [0, 0, 1, 1, 1]
+  [0] who_sti_asymptomatic_guidelines: typically occurs during early syphilis. Syphilis also increases the risk of HIV infection,
+  [0] cdc_syphilis_about:  SEXUALLY TRANSMITTED INFECTIONS About Syphilis KEY POINTS Syphilis is a common sexually 
+  [1] plan_kenya_srhr_toolkit_2019: transmitted infection (STI) that can escalate severely without treatment. It is spread thr
+  [1] who_syphilis_factsheet: transmitted through chancres if they are not properly covered by a condom during sexual co
+  [1] who_sti_asymptomatic_guidelines: through sexual contact with infectious lesions of the mucous membranes or abraded skin, bl
+
+== What are the symptoms of syphilis?  judged: [0, 0, 1, 0, 1]
+  [0] who_sti_asymptomatic_guidelines: typically occurs during early syphilis. Syphilis also increases the risk of HIV infection,
+  [0] who_sti_asymptomatic_guidelines: through sexual contact with infectious lesions of the mucous membranes or abraded skin, bl
+  [1] cdc_syphilis_about: 2025 • ESPAÑOL For Everyone Syphilis 16/08/2026, 07:31 About Syphilis | Syphilis | CDC htt
+  [0] kenya_clinical_guidelines_sti: an undermined inguinal ulcer that should be aspirated before suppuration. Investigations S
+  [1] who_syphilis_factsheet: transmitted through chancres if they are not properly covered by a condom during sexual co
+
+== How is syphilis treated?  judged: [0, 0, 0, 1, 0]
+  [0] who_sti_symptomatic_guidelines: are reported or emerging. Good practice includes. • Performing serological tests for syphi
+  [0] who_sti_asymptomatic_guidelines: typically occurs during early syphilis. Syphilis also increases the risk of HIV infection,
+  [0] who_sti_symptomatic_guidelines: for syphilis (treponemal test) are available and cheap and allow for a same-day “screen an
+  [1] cdc_syphilis_about: syphilis by testing fluid from a syphilis sore. Treatment and recovery Is there a cure for
+  [0] who_sti_asymptomatic_guidelines: through sexual contact with infectious lesions of the mucous membranes or abraded skin, bl
+
+== How can I prevent syphilis?  judged: [1, 0, 0, 0, 0]
+  [1] who_syphilis_factsheet: People diagnosed with syphilis should notify their sexual partners to prevent new infectio
+  [0] who_sti_asymptomatic_guidelines: through sexual contact with infectious lesions of the mucous membranes or abraded skin, bl
+  [0] cdc_syphilis_about: syphilis by testing fluid from a syphilis sore. Treatment and recovery Is there a cure for
+  [0] who_sti_asymptomatic_guidelines: typically occurs during early syphilis. Syphilis also increases the risk of HIV infection,
+  [0] cdc_syphilis_about:  SEXUALLY TRANSMITTED INFECTIONS About Syphilis KEY POINTS Syphilis is a common sexually 
+
+== How do I get tested for syphilis?  judged: [1, 0, 1, 1, 0]
+  [1] who_sti_symptomatic_guidelines: for syphilis (treponemal test) are available and cheap and allow for a same-day “screen an
+  [0] who_sti_symptomatic_guidelines: are reported or emerging. Good practice includes. • Performing serological tests for syphi
+  [1] who_sti_symptomatic_guidelines: that may improve the treatment flow charts and minimize the undesirable consequences of un
+  [1] who_sti_asymptomatic_guidelines: typically occurs during early syphilis. Syphilis also increases the risk of HIV infection,
+  [0] who_sti_asymptomatic_guidelines: populations (39) • Recommendation: Offering periodic serological testing for asymptomatic 
+
+== How is gonorrhoea transmitted?  judged: [0, 0, 1, 0, 0]
+  [0] kenya_clinical_guidelines_sti: of endocervical swab (Neisseria gonorrhoea: shows Gram-negative intracellular diplococci).
+  [0] who_sti_symptomatic_guidelines: C. trachomatis or N. gonorrhoeae, it would be a mucus discharge or a purulent discharge (m
+  [1] plan_kenya_srhr_toolkit_2019: 81 PLAN INTERNATIONAL KENYA Training Toolkit Names of common STIs Gonorrhoea Gonorrhea is 
+  [0] who_sti_asymptomatic_guidelines: chlamydial infections and to model the cost and effectiveness of different strategies of d
+  [0] who_sti_symptomatic_guidelines: with N. gonorrhoeae and C. trachomatis and using the test results to support managing the 
+
+== What are the symptoms of gonorrhoea?  judged: [1, 0, 0, 0, 0]
+  [1] plan_kenya_srhr_toolkit_2019: 81 PLAN INTERNATIONAL KENYA Training Toolkit Names of common STIs Gonorrhoea Gonorrhea is 
+  [0] kenya_clinical_guidelines_sti: of endocervical swab (Neisseria gonorrhoea: shows Gram-negative intracellular diplococci).
+  [0] who_sti_symptomatic_guidelines: the following. 1. Treat for N. gonorrhoeae and C. trachomatis if discharge is present. 2. 
+  [0] who_sti_symptomatic_guidelines: with N. gonorrhoeae and C. trachomatis and using the test results to support managing the 
+  [0] who_sti_symptomatic_guidelines: STI guidelines suggest dual therapy for gonorrhoea. N. gonorrhoeae Ceftriaxone 250 mg, int
+
+== How is gonorrhoea treated?  judged: [1, 0, 0, 0, 1]
+  [1] who_sti_symptomatic_guidelines: STI guidelines suggest dual therapy for gonorrhoea. N. gonorrhoeae Ceftriaxone 250 mg, int
+  [0] who_sti_symptomatic_guidelines: the following. 1. Treat for N. gonorrhoeae and C. trachomatis if discharge is present. 2. 
+  [0] who_sti_symptomatic_guidelines: with N. gonorrhoeae and C. trachomatis and using the test results to support managing the 
+  [0] kenya_clinical_guidelines_sti: of endocervical swab (Neisseria gonorrhoea: shows Gram-negative intracellular diplococci).
+  [1] who_sti_symptomatic_guidelines: orally as single doses for gonorrhoea, and with acyclovir, valaciclovir or famciclovir for
+
+== How can I prevent gonorrhoea?  judged: [0, 0, 0, 0, 0]
+  [0] who_sti_symptomatic_guidelines: STI guidelines suggest dual therapy for gonorrhoea. N. gonorrhoeae Ceftriaxone 250 mg, int
+  [0] who_sti_symptomatic_guidelines: with N. gonorrhoeae and C. trachomatis and using the test results to support managing the 
+  [0] who_sti_symptomatic_guidelines: azithromycin) In settings in which local antimicrobial resistance data reliably confirm th
+  [0] who_sti_symptomatic_guidelines: with nutrient supplementation for the organism to grow. Cervical and anorectal specimens c
+  [0] kenya_clinical_guidelines_sti: of endocervical swab (Neisseria gonorrhoea: shows Gram-negative intracellular diplococci).
+
+== How do I get tested for gonorrhoea?  judged: [1, 0, 0, 0, 0]
+  [1] who_sti_symptomatic_guidelines: with N. gonorrhoeae and C. trachomatis and using the test results to support managing the 
+  [0] who_sti_symptomatic_guidelines: STI guidelines suggest dual therapy for gonorrhoea. N. gonorrhoeae Ceftriaxone 250 mg, int
+  [0] who_sti_symptomatic_guidelines: in N. gonorrhoeae to cephalosporin (a last-line treatment for N. gonorrhoeae) raise concer
+  [0] who_sti_symptomatic_guidelines: assay for people with a negative speculum examination who are at high risk of infection wi
+  [0] who_sti_symptomatic_guidelines: for candidiasis, where indicated by type of discharge (such as curd-like with vaginal itch
+
+== How is chlamydia transmitted?  judged: [0, 1, 0, 0, 0]
+  [0] who_chlamydia_factsheet: are pregnant, getting tested for chlamydia and receiving prompt treatment if you test posi
+  [1] who_chlamydia_factsheet: Donate Chlamydia 21 November 2025 Reading time: 4 min (1098 words) | العربية中文 Français Ру
+  [0] cdc_chlamydia_about:  SEXUALLY TRANSMITTED INFECTIONS About Chlamydia KEY POINTS Chlamydia is a common sexuall
+  [0] plan_kenya_srhr_toolkit_2019: sexual partners. Signs and symptoms Although most people with chlamydia do not exhibit sym
+  [0] cdc_chlamydia_about: to cure your infection. Do not share medicine for chlamydia with anyone. When taken proper
+
+== What are the symptoms of chlamydia?  judged: [1, 1, 0, 1, 1]
+  [1] plan_kenya_srhr_toolkit_2019: sexual partners. Signs and symptoms Although most people with chlamydia do not exhibit sym
+  [1] cdc_chlamydia_about: JAN. 31, 2025 • ESPAÑOL For Everyone Chlamydia 18/09/2026, 16:40 About Chlamydia | Chlamyd
+  [0] who_sti_asymptomatic_guidelines: chlamydial infections of the cervix in about 50–97% of cases (40,41). In anatomical sites 
+  [1] who_chlamydia_factsheet: abdominal cramps, diarrhoea, constipation, fever or pain while passing stools. Possible co
+  [1] who_chlamydia_factsheet: Donate Chlamydia 21 November 2025 Reading time: 4 min (1098 words) | العربية中文 Français Ру
+
+== How is chlamydia treated?  judged: [0, 0, 1, 0, 0]
+  [0] cdc_chlamydia_about: to cure your infection. Do not share medicine for chlamydia with anyone. When taken proper
+  [0] who_chlamydia_factsheet: are pregnant, getting tested for chlamydia and receiving prompt treatment if you test posi
+  [1] who_chlamydia_factsheet: Donate Chlamydia 21 November 2025 Reading time: 4 min (1098 words) | العربية中文 Français Ру
+  [0] kenya_clinical_guidelines_sti: the joints, and in some people, the urethra and the eyes (conjunctivitis). Chlamydia and H
+  [0] cdc_chlamydia_about: pregnant and have chlamydia, you can give the infection to your baby during delivery. This
+
+== How can I prevent chlamydia?  judged: [0, 1, 0, 0, 0]
+  [0] who_chlamydia_factsheet: are pregnant, getting tested for chlamydia and receiving prompt treatment if you test posi
+  [1] cdc_chlamydia_about: to cure your infection. Do not share medicine for chlamydia with anyone. When taken proper
+  [0] who_chlamydia_factsheet: Donate Chlamydia 21 November 2025 Reading time: 4 min (1098 words) | العربية中文 Français Ру
+  [0] cdc_chlamydia_about: pregnant and have chlamydia, you can give the infection to your baby during delivery. This
+  [0] plan_kenya_srhr_toolkit_2019: sexual partners. Signs and symptoms Although most people with chlamydia do not exhibit sym
+
+== How do I get tested for chlamydia?  judged: [1, 0, 0, 0, 1]
+  [1] cdc_chlamydia_about: pregnant and have chlamydia, you can give the infection to your baby during delivery. This
+  [0] kenya_clinical_guidelines_sti: the joints, and in some people, the urethra and the eyes (conjunctivitis). Chlamydia and H
+  [0] who_chlamydia_factsheet: are pregnant, getting tested for chlamydia and receiving prompt treatment if you test posi
+  [0] cdc_chlamydia_about: to cure your infection. Do not share medicine for chlamydia with anyone. When taken proper
+  [1] kenya_clinical_guidelines_sti: ◆ pain and/or swelling in the testicles. ◆ ycan also get chlamydia infection in your anus 
+
+== How is HPV transmitted?  judged: [0, 0, 1, 1, 0]
+  [0] kenya_hpv_report_2023: cancer is well-established, and there is growing evidence of its central role in other ano
+  [0] kenya_hpv_report_2023: Human Papillomavirus and Related Diseases Report KENYA Version posted at www.hpvcentre.net
+  [1] kenya_hpv_report_2023: 14: 467 ICO/IARC HPV Information Centre 4 HPV RELATED STATISTICS - 77 - 4.3 HPV burden in 
+  [1] who_hpv_factsheet: Donate Human papillomavirus and cancer 5 March 2024 Reading time: 5 min (1406 words) | الع
+  [0] kenya_hpv_report_2023: 3.5 (2.1−5.9) 0% 10% 20% Data updated on 30 Jun 2015 (data as of 30 Jun 2014) The samples 
+
+== What are the symptoms of HPV?  judged: [0, 0, 0, 0, 0]
+  [0] kenya_hpv_report_2023: . . 53 4 HPV related statistics 54 4.1 HPV burden in women with normal cervical cytology, 
+  [0] kenya_hpv_report_2023: the ten most frequent HPV types in VIN 2/3 cases in Africa and the World No data available
+  [0] kenya_hpv_report_2023: 14: 467 ICO/IARC HPV Information Centre 4 HPV RELATED STATISTICS - 77 - 4.3 HPV burden in 
+  [0] kenya_hpv_report_2023: of all cervical cancer cases, between 41% and 67% of high-grade cervical lesions and 16-32
+  [0] kenya_hpv_report_2023: Human Papillomavirus and Related Diseases Report KENYA Version posted at www.hpvcentre.net
+
+== How is HPV treated?  judged: [0, 0, 0, 0, 0]
+  [0] kenya_hpv_report_2023: cancer is well-established, and there is growing evidence of its central role in other ano
+  [0] who_hpv_factsheet: virus so it cannot cause cancer or other HPV-related illnesses. The HPV vaccine is not use
+  [0] kenya_hpv_report_2023: A systematic review of the literature was conducted on the worldwide HPV-prevalence and ty
+  [0] kenya_hpv_report_2023: L, Saura-Lázaro A, Montoliu A, Brotons M, Alemany L, Diallo MS, et al. HPV vaccination int
+  [0] kenya_hpv_report_2023: 3.5 (2.1−5.9) 0% 10% 20% Data updated on 30 Jun 2015 (data as of 30 Jun 2014) The samples 
+
+== How can I prevent HPV?  judged: [0, 1, 0, 1, 0]
+  [0] who_hpv_factsheet: virus so it cannot cause cancer or other HPV-related illnesses. The HPV vaccine is not use
+  [1] who_hpv_factsheet: is the best way to prevent HPV infection, cervical cancer and other HPV- related cancers. 
+  [0] kenya_hpv_report_2023: cancer is well-established, and there is growing evidence of its central role in other ano
+  [1] kenya_hpv_report_2023: L, Saura-Lázaro A, Montoliu A, Brotons M, Alemany L, Diallo MS, et al. HPV vaccination int
+  [0] kenya_hpv_report_2023: genital HPV infection. Information about sexual and reproductive health behaviours is esse
+
+== How do I get tested for HPV?  judged: [1, 0, 0, 0, 0]
+  [1] kenya_hpv_report_2023: 3.5 (2.1−5.9) 0% 10% 20% Data updated on 30 Jun 2015 (data as of 30 Jun 2014) The samples 
+  [0] kenya_hpv_report_2023: A systematic review of the literature was conducted on the worldwide HPV-prevalence and ty
+  [0] who_hpv_factsheet: is the best way to prevent HPV infection, cervical cancer and other HPV- related cancers. 
+  [0] who-hiv-guidelines: same test should be continued until HPV DNA testing is operational. Good-practice statemen
+  [0] kenya_hpv_report_2023: - Data updated on 19 Oct 2021 (data as of 19 May 2015) (95% CI): 95% Conﬁdence Interval a 
