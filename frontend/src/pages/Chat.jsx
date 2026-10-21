@@ -157,6 +157,7 @@ export default function Chat() {
         onSelect={selectConversation}
         onDelete={deleteConversation}
         onLogout={logout}
+        onSecurity={() => navigate("/security")}
       />
 
       <main className="chat-main">

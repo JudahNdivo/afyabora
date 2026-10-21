@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { api } from "../api";
 import { Form, Button, Alert } from "react-bootstrap";
 
@@ -14,18 +14,34 @@ function validatePassword(password) {
 
 export default function Login() {
   const navigate = useNavigate();
+  const location = useLocation();
   const [mode, setMode] = useState("login");
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [error, setError] = useState(location.state?.error || "");
   const [busy, setBusy] = useState(false);
+
+  // set when the first step was right but an authenticator code is still
+  // needed; it can also arrive from the Google callback page
+  const [mfa, setMfa] = useState(location.state?.mfa || null);
+  const [code, setCode] = useState("");
 
   const isSignup = mode === "signup";
 
   function switchMode(next) {
     setMode(next);
     setError("");
+    // clear the fields so nothing typed or filled in carries to the other tab
+    setEmail("");
+    setPassword("");
+  }
+
+  function finishLogin(data) {
+    localStorage.setItem("access_token", data.access_token);
+    localStorage.setItem("user", JSON.stringify(data.user));
+    // administrators go to the dashboard, everyone else to the chat
+    navigate(data.user.role === "admin" ? "/admin" : "/chat");
   }
 
   async function doLogin() {
@@ -34,12 +50,15 @@ export default function Login() {
       body: { email, password },
       auth: false,
     });
-    // a login that needs a 2FA code will be handled here later
+
+    if (data.mfa_required) {
+      // the password-only token is kept in memory, never in storage
+      setMfa({ token: data.mfa_token, factorId: data.factor_id });
+      setPassword("");
+      return;
+    }
     if (!data.access_token) throw new Error("Login could not be completed");
-    localStorage.setItem("access_token", data.access_token);
-    localStorage.setItem("user", JSON.stringify(data.user));
-    // administrators go to the dashboard, everyone else to the chat
-    navigate(data.user.role === "admin" ? "/admin" : "/chat");
+    finishLogin(data);
   }
 
   async function handleSubmit(e) {
@@ -71,6 +90,38 @@ export default function Login() {
     }
   }
 
+  async function handleCode(e) {
+    e.preventDefault();
+    setError("");
+
+    if (!/^\d{6}$/.test(code)) {
+      setError("Enter the 6-digit code from your authenticator app");
+      return;
+    }
+
+    setBusy(true);
+    try {
+      const data = await api("/api/mfa/verify", {
+        method: "POST",
+        body: { factor_id: mfa.factorId, code },
+        token: mfa.token,
+        auth: false,
+      });
+      finishLogin(data);
+    } catch (err) {
+      setError(err.message);
+      setCode("");
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  function cancelCode() {
+    setMfa(null);
+    setCode("");
+    setError("");
+  }
+
   return (
     <div className="auth-screen">
       <div className="auth-side">
@@ -83,72 +134,113 @@ export default function Login() {
 
       <div className="auth-main">
         <div className="auth-card">
-          <div className="auth-tabs">
-            <button
-              type="button"
-              className={`auth-tab ${!isSignup ? "active" : ""}`}
-              onClick={() => switchMode("login")}
-            >
-              Log in
-            </button>
-            <button
-              type="button"
-              className={`auth-tab ${isSignup ? "active" : ""}`}
-              onClick={() => switchMode("signup")}
-            >
-              Sign up
-            </button>
-          </div>
+          {mfa ? (
+            <Form onSubmit={handleCode}>
+              <h4 className="mb-2">Enter your code</h4>
+              <p className="text-muted">
+                Open your authenticator app and type the 6-digit code for AfyaBora.
+              </p>
 
-          <Form onSubmit={handleSubmit}>
-            {isSignup && (
-              <Form.Group className="mb-3" controlId="username">
-                <Form.Label>Username</Form.Label>
+              <Form.Group className="mb-3" controlId="code">
+                <Form.Label>Authenticator code</Form.Label>
                 <Form.Control
                   type="text"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                  autoComplete="username"
+                  inputMode="numeric"
+                  autoComplete="one-time-code"
+                  maxLength={6}
+                  value={code}
+                  onChange={(e) => setCode(e.target.value.replace(/\D/g, ""))}
+                  autoFocus
                   required
                 />
               </Form.Group>
-            )}
 
-            <Form.Group className="mb-3" controlId="email">
-              <Form.Label>Email</Form.Label>
-              <Form.Control
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                autoComplete="email"
-                required
-              />
-            </Form.Group>
+              {error && <Alert variant="danger" className="py-2">{error}</Alert>}
 
-            <Form.Group className="mb-2" controlId="password">
-              <Form.Label>Password</Form.Label>
-              <Form.Control
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                autoComplete={isSignup ? "new-password" : "current-password"}
-                required
-              />
-            </Form.Group>
+              <Button type="submit" variant="primary" className="w-100 py-2 mb-2" disabled={busy}>
+                {busy ? "Checking..." : "Verify"}
+              </Button>
+              <Button type="button" variant="link" className="w-100" onClick={cancelCode}>
+                Back to log in
+              </Button>
+            </Form>
+          ) : (
+            <>
+              <div className="auth-tabs">
+                <button
+                  type="button"
+                  className={`auth-tab ${!isSignup ? "active" : ""}`}
+                  onClick={() => switchMode("login")}
+                >
+                  Log in
+                </button>
+                <button
+                  type="button"
+                  className={`auth-tab ${isSignup ? "active" : ""}`}
+                  onClick={() => switchMode("signup")}
+                >
+                  Sign up
+                </button>
+              </div>
 
-            {!isSignup && (
-              <p className="forgot-link">
-                {/* points at the Flask page until the reset flow is ported */}
-                <a href="http://127.0.0.1:5000/forgot-password">Forgot password?</a>
-              </p>
-            )}
+              <Form onSubmit={handleSubmit}>
+                {isSignup && (
+                  <Form.Group className="mb-3" controlId="username">
+                    <Form.Label>Username</Form.Label>
+                    <Form.Control
+                      type="text"
+                      value={username}
+                      onChange={(e) => setUsername(e.target.value)}
+                      autoComplete="username"
+                      required
+                    />
+                  </Form.Group>
+                )}
 
-            {error && <Alert variant="danger" className="py-2">{error}</Alert>}
+                <Form.Group className="mb-3" controlId="email">
+                  <Form.Label>Email</Form.Label>
+                  <Form.Control
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    autoComplete="off"
+                    required
+                  />
+                </Form.Group>
 
-            <Button type="submit" variant="primary" className="w-100 py-2" disabled={busy}>
-              {busy ? "Please wait..." : isSignup ? "Sign up" : "Log in"}
-            </Button>
-          </Form>
+                <Form.Group className="mb-2" controlId="password">
+                  <Form.Label>Password</Form.Label>
+                  <Form.Control
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    autoComplete="new-password"
+                    required
+                  />
+                </Form.Group>
+
+                {!isSignup && (
+                  <p className="forgot-link">
+                    {/* points at the Flask page until the reset flow is ported */}
+                    <a href="http://127.0.0.1:5000/forgot-password">Forgot password?</a>
+                  </p>
+                )}
+
+                {error && <Alert variant="danger" className="py-2">{error}</Alert>}
+
+                <Button type="submit" variant="primary" className="w-100 py-2" disabled={busy}>
+                  {busy ? "Please wait..." : isSignup ? "Sign up" : "Log in"}
+                </Button>
+              </Form>
+
+              <div className="text-center text-muted my-3">or</div>
+
+              {/* a plain link: the whole page moves to Google and back */}
+              <Button variant="outline-secondary" className="w-100 py-2" href="/api/auth/google">
+                Continue with Google
+              </Button>
+            </>
+          )}
         </div>
       </div>
     </div>

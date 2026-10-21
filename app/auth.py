@@ -1,5 +1,8 @@
 import os
 import re
+import json
+import time
+import base64
 import requests
 from functools import wraps
 from flask import request, jsonify
@@ -17,8 +20,8 @@ auth_client: Client = create_client(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY)
 
 # Used for all direct database table operations. This key bypasses
 # Row Level Security, since Flask itself is the trusted backend
-# enforcing authorization (via require_auth/require_admin below),
-# not the browser talking to Supabase directly.
+# enforcing authorization (via the decorators below), not the browser
+# talking to Supabase directly.
 db: Client = create_client(SUPABASE_URL, SUPABASE_SECRET_KEY)
 
 
@@ -119,25 +122,162 @@ def complete_password_reset(access_token: str, new_password: str):
     return resp.json()
 
 
+# ---------- authenticator app (TOTP) two-factor login ----------
+
+def field_of(obj, key):
+    # factors may arrive as objects or as plain dictionaries
+    return obj.get(key) if isinstance(obj, dict) else getattr(obj, key, None)
+
+
+def totp_factors(user, status: str) -> list:
+    # the user's authenticator-app factors with the given status
+    found = []
+    for f in field_of(user, "factors") or []:
+        if (str(field_of(f, "factor_type")).lower() == "totp"
+                and str(field_of(f, "status")).lower() == status):
+            found.append(f)
+    return found
+
+
+def verified_totp_factors(user) -> list:
+    return totp_factors(user, "verified")
+
+
+def token_aal(access_token: str) -> str:
+    # Reads the assurance level (aal1 = password only, aal2 = password and
+    # code) from the token. The token was already verified by Supabase in
+    # get_user_from_token, so this only reads a claim.
+    try:
+        payload = access_token.split(".")[1]
+        payload += "=" * (-len(payload) % 4)
+        return json.loads(base64.urlsafe_b64decode(payload)).get("aal", "aal1")
+    except Exception:
+        return "aal1"
+
+
+def _auth_headers(access_token: str) -> dict:
+    return {
+        "Authorization": f"Bearer {access_token}",
+        "apikey": SUPABASE_PUBLISHABLE_KEY,
+        "Content-Type": "application/json",
+    }
+
+
+def mfa_unenroll(access_token: str, factor_id: str):
+    resp = requests.delete(
+        f"{SUPABASE_URL}/auth/v1/factors/{factor_id}",
+        headers=_auth_headers(access_token),
+        timeout=10,
+    )
+    if resp.status_code not in (200, 204):
+        print(f"MFA unenroll failed: {resp.status_code} {resp.text[:300]}")
+        raise Exception("Could not turn off the authenticator")
+
+
+def mfa_enroll(access_token: str, user) -> dict:
+    # remove abandoned, never-confirmed factors so a new setup starts cleanly
+    for f in totp_factors(user, "unverified"):
+        try:
+            mfa_unenroll(access_token, field_of(f, "id"))
+        except Exception:
+            pass
+
+    resp = requests.post(
+        f"{SUPABASE_URL}/auth/v1/factors",
+        headers=_auth_headers(access_token),
+        json={
+            "factor_type": "totp",
+            "friendly_name": f"AfyaBora {int(time.time())}",
+            "issuer": "AfyaBora",
+        },
+        timeout=10,
+    )
+    if resp.status_code not in (200, 201):
+        print(f"MFA enrol failed: {resp.status_code} {resp.text[:300]}")
+        raise Exception("Could not start authenticator setup")
+
+    data = resp.json()
+    totp = data.get("totp") or {}
+    return {
+        "factor_id": data.get("id"),
+        "qr_code": totp.get("qr_code"),
+        "secret": totp.get("secret"),
+        "uri": totp.get("uri"),
+    }
+
+
+def mfa_verify(access_token: str, factor_id: str, code: str) -> dict:
+    # challenge then verify; on success Supabase returns a new session
+    # whose token is at the higher assurance level
+    headers = _auth_headers(access_token)
+    base = f"{SUPABASE_URL}/auth/v1/factors/{factor_id}"
+
+    ch = requests.post(f"{base}/challenge", headers=headers, json={}, timeout=10)
+    if ch.status_code not in (200, 201):
+        print(f"MFA challenge failed: {ch.status_code} {ch.text[:300]}")
+        raise Exception("Could not start verification")
+
+    vr = requests.post(
+        f"{base}/verify",
+        headers=headers,
+        json={"challenge_id": ch.json().get("id"), "code": code},
+        timeout=10,
+    )
+    if vr.status_code != 200:
+        print(f"MFA verify failed: {vr.status_code} {vr.text[:300]}")
+        raise Exception("Invalid or expired code")
+    return vr.json()
+
+
+# ---------- request guards ----------
+
+def _read_token():
+    # returns (user, token, error_response)
+    header = request.headers.get("Authorization", "")
+    if not header.startswith("Bearer "):
+        return None, None, (jsonify({"error": "Missing or invalid authorization header"}), 401)
+
+    token = header.split(" ", 1)[1]
+    try:
+        user = get_user_from_token(token)
+    except AuthServiceUnavailable:
+        # 503, not 401, so the frontend keeps the session
+        return None, None, (jsonify({"error": "Could not reach the authentication service, please try again"}), 503)
+
+    if user is None:
+        return None, None, (jsonify({"error": "Invalid or expired session"}), 401)
+    return user, token, None
+
+
+def require_session(f):
+    # any valid session, including a password-only one that has not
+    # finished the second step; used only by the code-check route
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        user, token, error = _read_token()
+        if error:
+            return error
+        request.user = user
+        request.token = token
+        return f(*args, **kwargs)
+
+    return decorated
+
+
 def require_auth(f):
     @wraps(f)
     def decorated(*args, **kwargs):
-        auth_header = request.headers.get("Authorization", "")
-        if not auth_header.startswith("Bearer "):
-            return jsonify({"error": "Missing or invalid authorization header"}), 401
+        user, token, error = _read_token()
+        if error:
+            return error
 
-        token = auth_header.split(" ", 1)[1]
-
-        try:
-            user = get_user_from_token(token)
-        except AuthServiceUnavailable:
-            # 503, not 401, so the frontend keeps the session
-            return jsonify({"error": "Could not reach the authentication service, please try again"}), 503
-
-        if user is None:
-            return jsonify({"error": "Invalid or expired session"}), 401
+        # a user with a confirmed authenticator must have passed the
+        # code step; a password-only token is refused
+        if verified_totp_factors(user) and token_aal(token) != "aal2":
+            return jsonify({"error": "Two-factor verification required"}), 401
 
         request.user = user
+        request.token = token
         return f(*args, **kwargs)
 
     return decorated
@@ -156,6 +296,7 @@ def require_admin(f):
         return f(*args, **kwargs)
 
     return decorated
+
 
 def require_regular_user(f):
     # chat routes are for regular users only; administrators use the dashboard
