@@ -1,12 +1,10 @@
 // small wrapper for calls to the Flask API
-// only a 401 (token rejected) logs the user out; network
-// problems and server errors keep the session
-export async function api(path, { method = "GET", body, auth = true } = {}) {
+// only a 401 on the stored token logs the user out; network
+// problems, server errors and wrong codes keep the session
+export async function api(path, { method = "GET", body, auth = true, token } = {}) {
   const headers = { "Content-Type": "application/json" };
-  if (auth) {
-    const token = localStorage.getItem("access_token");
-    if (token) headers.Authorization = `Bearer ${token}`;
-  }
+  const bearer = token || (auth ? localStorage.getItem("access_token") : null);
+  if (bearer) headers.Authorization = `Bearer ${bearer}`;
 
   let res;
   try {
@@ -26,7 +24,7 @@ export async function api(path, { method = "GET", body, auth = true } = {}) {
     // no JSON body
   }
 
-  if (res.status === 401 && auth) {
+  if (res.status === 401 && auth && !token) {
     localStorage.clear();
     window.location.href = "/";
   }

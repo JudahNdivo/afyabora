@@ -132,6 +132,9 @@ export default function Admin() {
           <Button variant="outline-secondary" size="sm" disabled={!stats} onClick={() => window.print()}>
             Print / save as PDF
           </Button>
+          <Button variant="outline-secondary" size="sm" onClick={() => navigate("/security")}>
+            Security
+          </Button>
           <Button variant="outline-secondary" size="sm" onClick={logout}>
             Log out
           </Button>
