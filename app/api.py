@@ -12,10 +12,12 @@ from app.auth import (
 )
 from app.chat import chat_bp
 from app.admin import admin_bp
+from app.profile import profile_bp
 
 app = Flask(__name__)
 app.register_blueprint(chat_bp)
 app.register_blueprint(admin_bp)
+app.register_blueprint(profile_bp)
 
 
 def _session_response(access_token, user):
@@ -58,11 +60,13 @@ def api_signup():
     if not email or not password or not username:
         return jsonify({"error": "email, password and username are required"}), 400
 
+    base = (os.getenv("FRONTEND_URL") or request.host_url).rstrip("/")
     try:
-        result = signup(email, password, username)
+        result = signup(email, password, username, redirect_to=base + "/auth/callback")
         return jsonify({
             "message": "Account created",
-            "user_id": result.user.id,
+            # true when Supabase is waiting for the email link to be clicked
+            "needs_confirmation": result.session is None,
         }), 201
     except Exception as e:
         return jsonify({"error": str(e)}), 400
@@ -84,9 +88,10 @@ def api_login():
         return _finish_login(token, user)
     except AuthServiceUnavailable:
         return jsonify({"error": "Could not reach the authentication service, please try again"}), 503
-    except Exception:
+    except Exception as e:
+        if "not confirmed" in str(e).lower():
+            return jsonify({"error": "Please confirm your email first. Check your inbox for the link."}), 403
         return jsonify({"error": "Invalid email or password"}), 401
-
 
 @app.route("/api/auth/google", methods=["GET"])
 def api_google_start():
