@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Container, Card, Button, Form, Alert, Spinner } from "react-bootstrap";
 import { api } from "../api";
+import { SUPPORT_LINK } from "../config";
 
 export default function Security() {
   const navigate = useNavigate();
@@ -120,6 +121,13 @@ export default function Security() {
               <Button variant="outline-danger" onClick={turnOff} disabled={busy}>
                 Turn off
               </Button>
+              <p className="text-muted small mt-3 mb-0">
+                If you lose your phone,{" "}
+                <a href={SUPPORT_LINK} target="_blank" rel="noopener noreferrer">
+                  contact admin
+                </a>{" "}
+                from the email address you signed up with and the authenticator can be reset.
+              </p>
             </>
           )}
 
