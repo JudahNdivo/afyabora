@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { api } from "../api";
+import { api, apiStream } from "../api";
 import Sidebar from "../components/Sidebar";
 import MessageList from "../components/MessageList";
 import Composer from "../components/Composer";
@@ -87,20 +87,32 @@ export default function Chat() {
         setConversations((c) => [conv, ...c]);
       }
 
-      const result = await api(`/api/conversations/${id}/messages`, {
-        method: "POST",
+      // the answer appears word by word in a message with the id "streaming"
+      const result = await apiStream(`/api/conversations/${id}/messages/stream`, {
         body: { message: text },
+        onEvent: (event) => {
+          if (event.type !== "delta") return;
+          setMessages((m) =>
+            m.some((x) => x.id === "streaming")
+              ? m.map((x) =>
+                  x.id === "streaming" ? { ...x, content: x.content + event.text } : x
+                )
+              : [...m, { id: "streaming", role: "assistant", content: event.text }]
+          );
+        },
       });
 
+      // swap the temporary messages for the saved ones
       setMessages((m) => [
-        ...m.filter((x) => x.id !== "pending"),
+        ...m.filter((x) => x.id !== "pending" && x.id !== "streaming"),
         { id: result.user_message_id, role: "user", content: text },
         { id: result.assistant_message_id, role: "assistant", content: result.answer },
       ]);
       refreshConversations();
       return true;
     } catch {
-      setMessages((m) => m.filter((x) => x.id !== "pending"));
+      // nothing was saved, so the half-written answer is removed too
+      setMessages((m) => m.filter((x) => x.id !== "pending" && x.id !== "streaming"));
       setNotice("Your message did not go through. Please try sending it again.");
       return false;
     } finally {
@@ -157,7 +169,7 @@ export default function Chat() {
         onSelect={selectConversation}
         onDelete={deleteConversation}
         onLogout={logout}
-        onSecurity={() => navigate("/security")}
+        onProfile={() => navigate("/profile")}
       />
 
       <main className="chat-main">
@@ -175,7 +187,11 @@ export default function Chat() {
         {messages.length === 0 && !sending ? (
           <EmptyState onPick={sendMessage} />
         ) : (
-          <MessageList messages={messages} loading={sending} onEdit={editMessage} />
+          <MessageList
+            messages={messages}
+            loading={sending && !messages.some((x) => x.id === "streaming")}
+            onEdit={editMessage}
+          />
         )}
 
         {notice && <p className="chat-notice">{notice}</p>}

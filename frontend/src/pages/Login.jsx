@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { api } from "../api";
 import { Form, Button, Alert } from "react-bootstrap";
+import { SUPPORT_LINK } from "../config";
 
 function validatePassword(password) {
   const errors = [];
@@ -20,6 +21,7 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(location.state?.error || "");
+  const [notice, setNotice] = useState("");
   const [busy, setBusy] = useState(false);
 
   // set when the first step was right but an authenticator code is still
@@ -32,6 +34,7 @@ export default function Login() {
   function switchMode(next) {
     setMode(next);
     setError("");
+    setNotice("");
     // clear the fields so nothing typed or filled in carries to the other tab
     setEmail("");
     setPassword("");
@@ -64,6 +67,7 @@ export default function Login() {
   async function handleSubmit(e) {
     e.preventDefault();
     setError("");
+    setNotice("");
 
     if (isSignup) {
       const problems = validatePassword(password);
@@ -76,11 +80,19 @@ export default function Login() {
     setBusy(true);
     try {
       if (isSignup) {
-        await api("/api/signup", {
+        const res = await api("/api/signup", {
           method: "POST",
           body: { email, password, username },
           auth: false,
         });
+        if (res.needs_confirmation) {
+          // the account is not usable until the email link is clicked
+          setMode("login");
+          setUsername("");
+          setPassword("");
+          setNotice("Check your inbox for a confirmation link. Clicking it signs you in.");
+          return;
+        }
       }
       await doLogin();
     } catch (err) {
@@ -163,6 +175,13 @@ export default function Login() {
               <Button type="button" variant="link" className="w-100" onClick={cancelCode}>
                 Back to log in
               </Button>
+              <p className="text-muted small text-center mt-2 mb-0">
+                Lost your phone?{" "}
+                <a href={SUPPORT_LINK} target="_blank" rel="noopener noreferrer">
+                  Contact admin
+                </a>{" "}
+                from the email address you signed up with.
+              </p>
             </Form>
           ) : (
             <>
@@ -226,6 +245,7 @@ export default function Login() {
                   </p>
                 )}
 
+                {notice && <Alert variant="success" className="py-2">{notice}</Alert>}
                 {error && <Alert variant="danger" className="py-2">{error}</Alert>}
 
                 <Button type="submit" variant="primary" className="w-100 py-2" disabled={busy}>

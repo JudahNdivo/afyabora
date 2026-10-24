@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export default function Sidebar({
   conversations, currentId, username, open,
-  onClose, onNewChat, onSelect, onDelete, onLogout, onSecurity,
+  onClose, onNewChat, onSelect, onDelete, onLogout, onProfile,
 }) {
   const [query, setQuery] = useState("");
 
@@ -54,7 +54,7 @@ export default function Sidebar({
         <div className="sidebar-user">
           <span>{username}</span>
           <span>
-            <button className="btn-text" onClick={onSecurity}>Security</button>
+            <button className="btn-text" onClick={onProfile}>Profile</button>
             <button className="btn-text" onClick={onLogout}>Log out</button>
           </span>
         </div>

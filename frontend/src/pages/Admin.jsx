@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Container, Row, Col, Card, Alert, Spinner, ProgressBar, Button } from "react-bootstrap";
 import { api } from "../api";
+import AdminTools from "../components/AdminTools";
 
 const ACRONYMS = ["hiv", "hpv", "sti"];
 
@@ -215,6 +216,8 @@ export default function Admin() {
           </Card>
         </>
       )}
+
+      <AdminTools />
     </Container>
   );
 }

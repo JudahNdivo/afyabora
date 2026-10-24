@@ -47,9 +47,11 @@ function UserMessage({ message, onEdit }) {
 export default function MessageList({ messages, loading, onEdit }) {
   const endRef = useRef(null);
 
-  // keep the newest message in view
+  // keep the newest message in view; while an answer is being written the
+  // scroll jumps instead of animating, so it does not lag behind the text
   useEffect(() => {
-    endRef.current?.scrollIntoView({ behavior: "smooth" });
+    const writing = messages[messages.length - 1]?.id === "streaming";
+    endRef.current?.scrollIntoView({ behavior: writing ? "auto" : "smooth" });
   }, [messages, loading]);
 
   return (
