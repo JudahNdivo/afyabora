@@ -1,0 +1,140 @@
+=== flash, default | How is HIV transmitted? | 8.7s
+HIV can be transmitted through:
+- Sexual contact, such as vaginal, anal, or oral sex
+- Exchange of blood and bodily fluids
+- Sharing needles, syringes, or skin-piercing instruments like those used for tattooing or ear piercing
+- Passing from a mother to her baby during pregnancy, childbirth, or breastfeeding
+
+HIV is not transmitted through air, water, saliva, sweat, tears, closed-mouth kissing, insects, pets, or sharing toilets, food, or drinks.
+
+Please visit a healthcare worker at a local health facility for personalized advice and medical care.
+
+=== flash, default | What are the symptoms of HPV? | 9.0s
+Hello! Most people with HPV do not show symptoms right away. Often, a person only finds out they have HPV when health problems appear.
+
+Symptoms and conditions caused by HPV include:
+- Genital warts, which can stay the same, grow, or go away
+- Abnormal Pap test results in women during cervical screening
+- Cancers, such as cervical, vulvar, vaginal, penile, anal, or back of the throat cancer, which can develop years later
+
+Because HPV often shows no early signs, please visit a health facility to get proper guidance and professional care for your personal medical decisions.
+
+=== flash, default | How can I protect myself from getting STIs? | 9.3s
+Hello! You can protect yourself from STIs in the following ways:
+
+- Delaying sexual activity or abstaining from sex until in a stable relationship.
+- Learning how to use condoms properly before becoming sexually active.
+- Using condoms during sex, which effectively reduces STI risk.
+- Limiting your number of sexual partners and sticking to one partner.
+- Adult voluntary medical male circumcision.
+- Informing your partner if you have an STI so they can also get treated, preventing re-infection.
+
+Please consult a qualified healthcare professional or visit a health facility for personal medical advice and care.
+
+=== flash, default | How is gonorrhoea treated? | 8.5s
+Gonorrhoea is typically treated using dual therapy, which combines antibiotics like Ceftriaxone and Azithromycin, or Cefixime and Azithromycin. In certain cases where local resistance data allows, single therapy using Ceftriaxone or Cefixime may be prescribed. Treatment options might also include medicines for anaerobes, such as Metronidazole, or treatment for co-infections.
+
+It is important to remember that the right medicine and correct dose must always come directly from a health worker.
+
+Please visit a health facility to speak with a healthcare professional for personal medical care and proper treatment.
+
+=== flash, low | How is HIV transmitted? | 6.2s
+HIV can be transmitted through:
+- Sexual contact, including vaginal, anal, or oral sex
+- Sharing needles, syringes, or skin-piercing equipment
+- Mother-to-child transmission during pregnancy, childbirth, or breastfeeding
+- Exchange of blood or bodily fluids
+
+HIV is not transmitted through air, water, saliva, sweat, tears, casual contact, insects, or sharing toilets, food, or drinks. 
+
+If you suspect you have been exposed or want to learn more about protecting yourself, please visit a local health facility to speak with a healthcare provider for guidance and professional medical care.
+
+=== flash, low | What are the symptoms of HPV? | 5.4s
+AfyaBora here to help. Most people with HPV do not show symptoms right away, but the virus can cause genital warts. 
+
+Often, women find out they have HPV through an abnormal Pap test result during cervical screening. Others may only realize they have HPV once more serious health problems develop, such as cancers of the cervix, vulva, vagina, penis, anus, or the back of the throat. 
+
+Because HPV often shows no early signs, regular screening is important. Please visit a health facility to consult a healthcare provider for personal medical care and testing.
+
+=== flash, low | How can I protect myself from getting STIs? | 6.4s
+Here are key ways you can protect yourself from getting STIs:
+
+- Delay the onset of sexual activity or choose to abstain from vaginal and anal sex.
+- Learn how to use condoms correctly and use them when having sex.
+- Limit your number of sexual partners or stick with one uninfected partner.
+- If you have an STI, inform your partner so they can get treated, which also protects you from re-infection.
+- Other preventive interventions include voluntary medical male circumcision, microbicides, and vaccines.
+
+Please visit a health facility or speak with a healthcare provider for guidance and personal medical care.
+
+=== flash, low | How is gonorrhoea treated? | 6.3s
+Gonorrhoea is treated using antibiotics. Guidelines suggest dual therapy using medicines such as Ceftriaxone combined with Azithromycin, or Cefixime combined with Azithromycin. In settings where local resistance data confirms it is safe, single therapy with Ceftriaxone or Cefixime may be used. Because gonorrhoea often occurs alongside other infections, treatment may also cover chlamydia when discharge symptoms are present.
+
+The exact medicine and correct dose must always be prescribed by a healthcare provider to ensure the infection is cured properly and to avoid drug resistance.
+
+Please visit a health facility to consult a healthcare professional for personal medical care and accurate testing.
+
+=== flash, minimal | How is HIV transmitted? | 3.8s
+HIV stands for Human Immunodeficiency Virus, which attacks the body's immune system. HIV can be transmitted through:
+
+- Sexual contact, including vaginal, anal, or oral sex
+- Sharing needles, syringes, or instruments used to inject drugs, or skin-piercing tools
+- Pregnancy, childbirth, or breastfeeding from mother to baby
+- Exchange of blood and bodily fluids, such as receiving unscreened blood transfusions
+
+HIV is not spread through air, water, saliva, sweat, tears, casual kissing, insects, pets, or sharing toilets, food, and drinks.
+
+Please seek professional care at a health facility for personal medical decisions, testing, and advice.
+
+=== flash, minimal | What are the symptoms of HPV? | 3.8s
+Hello! I am AfyaBora, your health education assistant.
+
+According to health guidelines, HPV often shows no symptoms at all, but some people may get genital warts. 
+
+Women might also find out they have HPV after getting an abnormal Pap test result during cervical cancer screening. Others may only discover they have the virus once more serious health problems develop, such as cervical, vulvar, vaginal, penile, anal, or throat cancers. 
+
+If left untreated, genital warts may go away on their own, stay the same, or grow in size or number. 
+
+Please visit a health facility to speak with a healthcare worker for proper screening, diagnosis, and medical advice.
+
+=== flash, minimal | How can I protect myself from getting STIs? | 3.8s
+To protect yourself from getting STIs, you can take several key steps:
+
+- Delay the onset of sexual activity or choose to abstain from vaginal and anal sex.
+- Limit your number of sexual partners and stick with one uninfected partner in a stable relationship.
+- Practice using condoms correctly before becoming sexually active, and use condoms consistently.
+- Consider interventions like voluntary medical male circumcision and partner treatment.
+
+If you ever experience symptoms like genital sores, redness, or pain during urination, notify your partner so you both can get treated. Please visit a health worker at a nearby clinic for professional medical care and advice tailored to you.
+
+=== flash, minimal | How is gonorrhoea treated? | 3.7s
+Hello. Gonorrhoea can be treated with medicines like Ceftriaxone, Cefixime, Azithromycin, or Norfloxacin. Health guidelines often recommend using a combination of medicines together, known as dual therapy, to treat both gonorrhoea and other possible infections like chlamydia. 
+
+If discharge or other symptoms are present, healthcare providers may test for gonorrhoea or start same-day treatment based on symptoms. Because gonorrhoea can become resistant to certain drugs, it is important that a qualified health worker determines the specific medicine and correct dosage for you. 
+
+Please visit a health facility to get professional medical care and proper treatment for your situation.
+
+=== flash-lite, default | How is HIV transmitted? | 2.9s
+Hello there. HIV is transmitted through sexual contact, sharing needles, the exchange of blood and bodily fluids, and from mother to child during pregnancy, birth, or breastfeeding. HIV is not transmitted by air, water, saliva, sweat, tears, closed-mouth kissing, insects, pets, or sharing toilets, food, or drinks. Please seek professional care for personal medical decisions.
+
+=== flash-lite, default | What are the symptoms of HPV? | 2.8s
+Hello! Regarding your question about HPV symptoms, many people may not know they have it until they find out through an abnormal Pap test result during cervical cancer screening, or once they develop more serious health problems such as genital warts or cancers. Please visit a health facility for professional medical care and personal health decisions.
+
+=== flash-lite, default | How can I protect myself from getting STIs? | 3.1s
+Hello! To protect yourself from getting sexually transmitted infections, you can follow these helpful steps based on verified health guidelines.
+
+- Delay the onset of sexual activity by choosing to abstain from vaginal and anal intercourse until married or in a stable relationship.
+- Learn how to use condoms and practice using them before becoming sexually active.
+- Use condoms consistently. You may discontinue condom use only when pregnancy is desired or when both partners in a stable relationship know for certain they are disease-free.
+- Limit the number of partners by sticking with one partner and avoiding multiple sexual partners.
+- Other prevention methods include adult voluntary medical male circumcision, microbicides, and partner treatment.
+
+Please seek professional care and consult a health worker for personal medical decisions and guidance.
+
+=== flash-lite, default | How is gonorrhoea treated? | 2.9s
+Gonorrhoea is treated using options such as ceftriaxone, azithromycin, cefixime, erythromycin, or norfloxacin. 
+
+Please note that the right medicine and correct dose must always come from a qualified health worker. 
+
+We recommend seeking professional care for any personal medical decisions.
+
