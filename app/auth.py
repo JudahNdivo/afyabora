@@ -46,18 +46,27 @@ def validate_password(password: str) -> list:
     return errors
 
 
-def signup(email: str, password: str, username: str):
+def signup(email: str, password: str, username: str, redirect_to: str = None):
     password_errors = validate_password(password)
     if password_errors:
         raise Exception(f"Password needs: {', '.join(password_errors)}")
 
-    result = auth_client.auth.sign_up({
-        "email": email,
-        "password": password,
-    })
+    credentials = {"email": email, "password": password}
+    if redirect_to:
+        # where the link in the confirmation email sends the person
+        credentials["options"] = {"email_redirect_to": redirect_to}
+
+    result = auth_client.auth.sign_up(credentials)
 
     if result.user is None:
         raise Exception("Signup failed, no user returned")
+
+    # With confirmation on, signing up with an address that is already
+    # registered returns a user with no identities and sends nothing new.
+    # No profile is made for it, and the caller gives the same reply,
+    # so the response does not reveal that the address has an account.
+    if getattr(result.user, "identities", None) == []:
+        return result
 
     db.table("users").insert({
         "id": result.user.id,
@@ -122,7 +131,7 @@ def complete_password_reset(access_token: str, new_password: str):
     return resp.json()
 
 
-# ---------- authenticator app (TOTP) two-factor login ----------
+# authenticator app (TOTP) two-factor login:
 
 def field_of(obj, key):
     # factors may arrive as objects or as plain dictionaries
@@ -229,7 +238,7 @@ def mfa_verify(access_token: str, factor_id: str, code: str) -> dict:
     return vr.json()
 
 
-# ---------- request guards ----------
+# request guards:
 
 def _read_token():
     # returns (user, token, error_response)
