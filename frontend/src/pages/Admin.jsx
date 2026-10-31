@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Container, Row, Col, Card, Alert, Spinner, ProgressBar, Button } from "react-bootstrap";
+import { Row, Col, Card, Alert, Spinner, ProgressBar, Button } from "react-bootstrap";
 import { api } from "../api";
-import AdminTools from "../components/AdminTools";
 
 const ACRONYMS = ["hiv", "hpv", "sti"];
 
@@ -85,61 +83,31 @@ function downloadCsv(stats) {
 }
 
 export default function Admin() {
-  const navigate = useNavigate();
-  const user = JSON.parse(localStorage.getItem("user") || "null");
   const [stats, setStats] = useState(null);
   const [error, setError] = useState("");
 
-  // the server is what actually refuses non-admins; this only decides
-  // whether to bother asking
+  // the admin frame already checked the role; the server refuses anyone else
   useEffect(() => {
-    if (!user) {
-      navigate("/");
-      return;
-    }
-    if (user.role !== "admin") return;
     api("/api/admin/stats")
       .then(setStats)
       .catch((err) => setError(err.message));
-  }, [navigate]);
-
-  if (!user) return null;
-
-  if (user.role !== "admin") {
-    return (
-      <Container className="py-5" style={{ maxWidth: 520 }}>
-        <Alert variant="warning">This page is for administrators only.</Alert>
-        <a href="/chat">Back to chat</a>
-      </Container>
-    );
-  }
-
-  function logout() {
-    localStorage.clear();
-    navigate("/");
-  }
+  }, []);
 
   const days = stats ? lastDays(stats.per_day) : [];
   const maxDay = Math.max(1, ...days.map((d) => d.count));
 
   return (
-    <Container className="py-4">
-      <div className="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
-        <h2 className="mb-0">Usage dashboard</h2>
-        <div className="d-flex gap-2 align-items-center no-print">
-          <Button variant="primary" size="sm" disabled={!stats} onClick={() => downloadCsv(stats)}>
-            Download CSV
-          </Button>
-          <Button variant="outline-secondary" size="sm" disabled={!stats} onClick={() => window.print()}>
-            Print / save as PDF
-          </Button>
-          <Button variant="outline-secondary" size="sm" onClick={() => navigate("/security")}>
-            Security
-          </Button>
-          <Button variant="outline-secondary" size="sm" onClick={logout}>
-            Log out
-          </Button>
-        </div>
+    <div>
+      {/* shown only when printing, because the page title is in the top bar */}
+      <h2 className="d-none d-print-block mb-3">Usage dashboard</h2>
+
+      <div className="d-flex justify-content-end gap-2 mb-3 no-print">
+        <Button variant="primary" size="sm" disabled={!stats} onClick={() => downloadCsv(stats)}>
+          Download CSV
+        </Button>
+        <Button variant="outline-secondary" size="sm" disabled={!stats} onClick={() => window.print()}>
+          Print / save as PDF
+        </Button>
       </div>
 
       {error && <Alert variant="danger">{error}</Alert>}
@@ -216,8 +184,6 @@ export default function Admin() {
           </Card>
         </>
       )}
-
-      <AdminTools />
-    </Container>
+    </div>
   );
 }

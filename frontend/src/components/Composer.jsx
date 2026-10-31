@@ -20,10 +20,18 @@ export default function Composer({ onSend, disabled }) {
         <input
           value={text}
           onChange={(e) => setText(e.target.value)}
-          placeholder="Ask a question in English or Kiswahili..."
+          placeholder="Ask in English or Kiswahili..."
+          aria-label="Your question"
         />
-        <button type="submit" className="btn-send" disabled={disabled || !text.trim()}>
-          Send
+        <button
+          type="submit"
+          className="btn-send"
+          disabled={disabled || !text.trim()}
+          aria-label="Send"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 19V5M12 5l-6 6M12 5l6 6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
         </button>
       </div>
       <p className="composer-note">

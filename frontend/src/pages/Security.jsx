@@ -4,7 +4,7 @@ import { Container, Card, Button, Form, Alert, Spinner } from "react-bootstrap";
 import { api } from "../api";
 import { SUPPORT_LINK } from "../config";
 
-export default function Security() {
+export default function Security({ embedded = false }) {
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem("user") || "null");
 
@@ -93,13 +93,19 @@ export default function Security() {
     : "";
 
   return (
-    <Container className="py-4" style={{ maxWidth: 560 }}>
-      <div className="d-flex justify-content-between align-items-center mb-4">
-        <h2 className="mb-0">Security</h2>
-        <Button variant="outline-secondary" size="sm" onClick={() => navigate(home)}>
-          Back
-        </Button>
-      </div>
+    <Container
+      className={embedded ? "py-2" : "py-4"}
+      style={{ maxWidth: 560, ...(embedded ? { marginLeft: 0 } : {}) }}
+    >
+      {/* inside the admin area the title and navigation are already there */}
+      {!embedded && (
+        <div className="d-flex justify-content-between align-items-center mb-4">
+          <h2 className="mb-0">Security</h2>
+          <Button variant="outline-secondary" size="sm" onClick={() => navigate(home)}>
+            Back
+          </Button>
+        </div>
+      )}
 
       {error && <Alert variant="danger">{error}</Alert>}
       {notice && <Alert variant="success">{notice}</Alert>}
