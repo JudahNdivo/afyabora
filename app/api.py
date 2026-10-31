@@ -1,7 +1,8 @@
 import os
 import re
 from urllib.parse import quote
-from flask import Flask, request, jsonify, render_template, redirect
+from flask import Flask, request, jsonify, render_template, redirect, send_from_directory
+from werkzeug.middleware.proxy_fix import ProxyFix
 from app.auth import (
     signup, login, require_auth, require_session, db,
     request_password_reset, complete_password_reset,
@@ -15,6 +16,8 @@ from app.admin import admin_bp
 from app.profile import profile_bp
 
 app = Flask(__name__)
+# behind Render's proxy, so links are built with https and the real host
+app.wsgi_app = ProxyFix(app.wsgi_app, x_proto=1, x_host=1)
 app.register_blueprint(chat_bp)
 app.register_blueprint(admin_bp)
 app.register_blueprint(profile_bp)
@@ -224,7 +227,8 @@ def api_forgot_password():
     if not email:
         return jsonify({"error": "email is required"}), 400
 
-    redirect_to = request.host_url.rstrip("/") + "/reset-password"
+    base = (os.getenv("FRONTEND_URL") or request.host_url).rstrip("/")
+    redirect_to = base + "/reset-password"
     try:
         request_password_reset(email, redirect_to)
     except Exception:
@@ -259,16 +263,6 @@ def health_check():
     return {"status": "ok", "service": "AfyaBora"}, 200
 
 
-@app.route("/")
-def login_page():
-    return render_template("login.html")
-
-
-@app.route("/chat")
-def chat_page():
-    return render_template("chat.html")
-
-
 @app.route("/forgot-password")
 def forgot_password_page():
     return render_template("forgot_password.html")
@@ -277,6 +271,20 @@ def forgot_password_page():
 @app.route("/reset-password")
 def reset_password_page():
     return render_template("reset_password.html")
+
+
+# the built React app; any path that is not an API route gets index.html
+DIST = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "frontend", "dist")
+
+
+@app.route("/", defaults={"path": ""})
+@app.route("/<path:path>")
+def react_app(path):
+    if path.startswith("api/"):
+        return jsonify({"error": "Not found"}), 404
+    if path and os.path.isfile(os.path.join(DIST, path)):
+        return send_from_directory(DIST, path)
+    return send_from_directory(DIST, "index.html")
 
 
 if __name__ == "__main__":
