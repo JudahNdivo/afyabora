@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { api } from "../api";
 import { Form, Button, Alert } from "react-bootstrap";
 import { SUPPORT_LINK } from "../config";
+import GoogleLogo from "../components/GoogleLogo";
 
 function validatePassword(password) {
   const errors = [];
@@ -145,6 +146,10 @@ export default function Login() {
       </div>
 
       <div className="auth-main">
+        <div className="auth-mobile-brand">
+          <div className="brand-mark">A</div>
+          <span>AfyaBora</span>
+        </div>
         <div className="auth-card">
           {mfa ? (
             <Form onSubmit={handleCode}>
@@ -253,12 +258,13 @@ export default function Login() {
                 </Button>
               </Form>
 
-              <div className="text-center text-muted my-3">or</div>
+              <div className="auth-divider"><span>or</span></div>
 
               {/* a plain link: the whole page moves to Google and back */}
-              <Button variant="outline-secondary" className="w-100 py-2" href="/api/auth/google">
+              <a className="btn-google" href="/api/auth/google">
+                <GoogleLogo />
                 Continue with Google
-              </Button>
+              </a>
             </>
           )}
         </div>

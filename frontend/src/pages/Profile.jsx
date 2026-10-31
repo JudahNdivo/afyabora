@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Container, Card, Button, Form, Alert, Spinner } from "react-bootstrap";
+import { Button, Form, Alert, Spinner } from "react-bootstrap";
 import { api } from "../api";
+import "../styles/profile.css";
 
 // readable names for the ways an account can sign in
 const METHOD_NAMES = { email: "Email and password", google: "Google" };
 
-export default function Profile() {
+export default function Profile({ embedded = false }) {
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem("user") || "null");
 
@@ -74,15 +75,18 @@ export default function Profile() {
   const methods = profile
     ? profile.sign_in_methods.map((m) => METHOD_NAMES[m] || m).join(", ")
     : "";
+  const shownName = (profile && profile.username) || user.username || "";
 
   return (
-    <Container className="py-4" style={{ maxWidth: 560 }}>
-      <div className="d-flex justify-content-between align-items-center mb-4">
-        <h2 className="mb-0">Your profile</h2>
-        <Button variant="outline-secondary" size="sm" onClick={() => navigate(home)}>
-          Back
-        </Button>
-      </div>
+    <div className={`profile-page ${embedded ? "embedded" : ""}`}>
+      {!embedded && (
+        <div className="profile-top">
+          <h2>Your profile</h2>
+          <Button variant="outline-secondary" size="sm" onClick={() => navigate(home)}>
+            Back
+          </Button>
+        </div>
+      )}
 
       {error && <Alert variant="danger">{error}</Alert>}
       {notice && <Alert variant="success">{notice}</Alert>}
@@ -90,52 +94,70 @@ export default function Profile() {
 
       {profile && (
         <>
-          <Card body className="mb-3">
-            <Form onSubmit={saveUsername}>
-              <Form.Group className="mb-3" controlId="profile-username">
-                <Form.Label>Username</Form.Label>
-                <Form.Control
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                  minLength={2}
-                  maxLength={40}
-                  required
-                />
-              </Form.Group>
+          <div className="profile-hero">
+            <div className="profile-avatar">{shownName.charAt(0).toUpperCase() || "?"}</div>
+            <div className="profile-hero-text">
+              <p className="profile-name">{shownName}</p>
+              <div className="profile-email">{profile.email}</div>
+              <span className="profile-role">
+                {profile.role === "admin" ? "Administrator" : "Member"}
+              </span>
+            </div>
+          </div>
+
+          <div className="profile-card">
+            <h3>Username</h3>
+            <Form onSubmit={saveUsername} className="d-flex gap-2 flex-wrap">
+              <Form.Control
+                aria-label="Username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                minLength={2}
+                maxLength={40}
+                required
+                style={{ flex: "1 1 200px" }}
+              />
               <Button
                 type="submit"
                 variant="primary"
-                size="sm"
                 disabled={busy || username.trim() === (profile.username || "")}
               >
-                Save username
+                Save
               </Button>
             </Form>
+          </div>
 
-            <hr />
-
-            <div className="mb-2">
-              <div className="text-muted small">Email</div>
-              <div>{profile.email}</div>
+          <div className="profile-card">
+            <h3>Account</h3>
+            <div className="profile-row">
+              <span className="profile-label">Email</span>
+              <span className="profile-value">{profile.email}</span>
             </div>
-            <div className="mb-2">
-              <div className="text-muted small">Signs in with</div>
-              <div>{methods}</div>
+            <div className="profile-row">
+              <span className="profile-label">Signs in with</span>
+              <span className="profile-value">{methods}</span>
             </div>
-            <div>
-              <div className="text-muted small">Authenticator app login</div>
-              <div className="d-flex align-items-center gap-2">
-                <span>{profile.authenticator_enabled ? "On" : "Off"}</span>
-                <Button variant="link" size="sm" className="p-0" onClick={() => navigate("/security")}>
+            <div className="profile-row">
+              <span className="profile-label">Authenticator app login</span>
+              <span className="profile-value d-flex align-items-center gap-2">
+                <span className={`status-pill ${profile.authenticator_enabled ? "on" : ""}`}>
+                  {profile.authenticator_enabled ? "On" : "Off"}
+                </span>
+                <Button
+                  variant="link"
+                  size="sm"
+                  className="p-0"
+                  onClick={() => navigate(embedded ? "/admin/security" : "/security")}
+                >
                   Manage
                 </Button>
-              </div>
+              </span>
             </div>
-          </Card>
+          </div>
 
           {profile.role !== "admin" && (
-            <Card body border="danger">
-              <h6>Delete account</h6>
+            <div className="profile-card profile-danger">
+              <h3>Delete account</h3>
               <p className="text-muted small">
                 This permanently deletes your account and all your conversations. It cannot be undone.
               </p>
@@ -173,10 +195,10 @@ export default function Profile() {
                   </Button>
                 </Form>
               )}
-            </Card>
+            </div>
           )}
         </>
       )}
-    </Container>
+    </div>
   );
 }

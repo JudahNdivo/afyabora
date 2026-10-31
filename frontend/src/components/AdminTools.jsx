@@ -5,6 +5,8 @@ import { api } from "../api";
 const ACTION_NAMES = {
   reset_authenticator: "Authenticator reset",
   reset_authenticator_failed: "Reset failed",
+  make_admin: "Made admin",
+  remove_admin: "Removed admin",
 };
 
 function when(iso) {
@@ -54,7 +56,7 @@ export default function AdminTools() {
       <Card body className="mt-3 no-print">
         <h6>Reset a user's authenticator</h6>
         <p className="text-muted small">
-          For a user who lost their phone. Type their email address. They can then log in with
+          For anyone who lost their phone, including another administrator (never yourself). Type their email address. They can then log in with
           their password and set the authenticator up again. Every reset is recorded below.
         </p>
         {error && <Alert variant="danger">{error}</Alert>}

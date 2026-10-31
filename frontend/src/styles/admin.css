@@ -1,0 +1,22 @@
+/* admin area: reuses the chat sidebar, plus a few pieces of its own */
+.admin-nav { flex: 1; display: flex; flex-direction: column; margin-top: 6px; }
+
+.admin-link {
+  text-decoration: none;
+  color: var(--text);
+}
+.admin-link:hover { color: var(--text); }
+
+.admin-main { overflow-y: auto; }
+.admin-content { padding: 8px 24px 32px; }
+
+@media (max-width: 720px) {
+  .admin-content { padding: 8px 14px 24px; }
+}
+
+@media print {
+  /* print the dashboard on its own, without the sidebar or top bar */
+  .chat-screen { display: block; height: auto; padding: 0; background: #FFFFFF; }
+  .admin-main { overflow: visible; height: auto; }
+  .admin-content { padding: 0; }
+}
