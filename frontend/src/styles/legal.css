@@ -1,0 +1,21 @@
+/* privacy policy and terms of use */
+.legal-page { min-height: 100vh; background: var(--bg); padding: 24px 16px 48px; }
+.legal-card {
+  max-width: 720px; margin: 0 auto; background: var(--surface);
+  border: 1px solid var(--border); border-radius: 24px; padding: 28px 32px;
+}
+.legal-back { font-size: 0.9rem; }
+.legal-card h1 { font-size: 1.8rem; margin: 16px 0 4px; }
+.legal-card h2 { font-size: 1.1rem; margin: 24px 0 8px; font-family: 'Outfit', sans-serif; }
+.legal-updated { color: var(--muted); font-size: 0.85rem; }
+.legal-card li { margin-bottom: 6px; }
+.legal-links { margin: 28px 0 0; padding-top: 16px; border-top: 1px solid var(--border); font-size: 0.9rem; }
+
+/* the agreement line under the login and sign-up forms */
+.auth-legal { color: var(--muted); font-size: 0.8rem; text-align: center; margin: 14px 0 0; }
+
+@media (max-width: 480px) {
+  .legal-card { padding: 20px 18px; }
+}
+
+.legal-card a, .auth-legal a { color: var(--text); }
