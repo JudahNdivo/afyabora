@@ -197,6 +197,9 @@ export default function Profile({ embedded = false }) {
               )}
             </div>
           )}
+          <p className="text-center small text-muted">
+            <a href="/privacy">Privacy policy</a> · <a href="/terms">Terms of use</a>
+          </p>
         </>
       )}
     </div>

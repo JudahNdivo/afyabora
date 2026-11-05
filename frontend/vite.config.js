@@ -8,6 +8,8 @@ export default defineConfig({
     // send API calls to the Flask server, so the browser sees one origin
     proxy: {
       '/api': 'http://127.0.0.1:5000',
+      '/forgot-password': 'http://127.0.0.1:5000',
+      '/reset-password': 'http://127.0.0.1:5000',
     },
   },
 })

@@ -245,8 +245,8 @@ export default function Login() {
 
                 {!isSignup && (
                   <p className="forgot-link">
-                    {/* points at the Flask page until the reset flow is ported */}
-                    <a href="http://127.0.0.1:5000/forgot-password">Forgot password?</a>
+                    {/* a Flask page, served from the same address as this app */}
+                    <a href="/forgot-password">Forgot password?</a>
                   </p>
                 )}
 
@@ -265,6 +265,12 @@ export default function Login() {
                 <GoogleLogo />
                 Continue with Google
               </a>
+
+              <p className="auth-legal">
+                By signing up or continuing with Google you agree to the{" "}
+                <a href="/terms" target="_blank" rel="noopener noreferrer">Terms of use</a> and{" "}
+                <a href="/privacy" target="_blank" rel="noopener noreferrer">Privacy policy</a>.
+              </p>
             </>
           )}
         </div>
