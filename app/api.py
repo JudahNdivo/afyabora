@@ -1,7 +1,7 @@
 import os
 import re
 from urllib.parse import quote
-from flask import Flask, request, jsonify, render_template, redirect, send_from_directory
+from flask import Flask, request, jsonify, redirect, send_from_directory
 from werkzeug.middleware.proxy_fix import ProxyFix
 from app.auth import (
     signup, login, require_auth, require_session, db,
@@ -261,16 +261,6 @@ def api_reset_password():
 @app.route("/health", methods=["GET"])
 def health_check():
     return {"status": "ok", "service": "AfyaBora"}, 200
-
-
-@app.route("/forgot-password")
-def forgot_password_page():
-    return render_template("forgot_password.html")
-
-
-@app.route("/reset-password")
-def reset_password_page():
-    return render_template("reset_password.html")
 
 
 # the built React app; any path that is not an API route gets index.html
