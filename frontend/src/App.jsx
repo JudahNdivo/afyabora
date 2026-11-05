@@ -6,6 +6,8 @@ import Admin from "./pages/Admin";
 import AdminReset from "./pages/AdminReset";
 import Security from "./pages/Security";
 import Profile from "./pages/Profile";
+import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import NewAdmins from "./pages/NewAdmins";
@@ -25,6 +27,8 @@ export default function App() {
       </Route>
       <Route path="/security" element={<Security />} />
       <Route path="/profile" element={<Profile />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
+      <Route path="/reset-password" element={<ResetPassword />} />
       <Route path="/privacy" element={<Privacy />} />
       <Route path="/terms" element={<Terms />} />
       <Route path="/auth/callback" element={<AuthCallback />} />
