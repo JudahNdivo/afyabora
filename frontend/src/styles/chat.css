@@ -85,7 +85,7 @@
   color: var(--text);
   font-weight: 600;
 }
-.conversation-item.active .conversation-delete-btn { color: var(--text); }
+.conversation-item.active .conversation-menu-btn { color: var(--text); }
 
 .conversation-title {
   flex: 1;
@@ -94,18 +94,70 @@
   white-space: nowrap;
 }
 
-.conversation-delete-btn {
+/* three-dot button, shown on hover or for the open chat */
+.conversation-menu-btn {
   background: none;
   border: none;
   color: var(--muted);
-  font-size: 16px;
+  font-size: 18px;
+  line-height: 1;
   cursor: pointer;
-  padding: 0 4px;
+  padding: 2px 8px;
+  border-radius: 6px;
   opacity: 0;
 }
 
-.conversation-item:hover .conversation-delete-btn { opacity: 1; }
-.conversation-delete-btn:hover { color: var(--error); }
+.conversation-item:hover .conversation-menu-btn,
+.conversation-item.active .conversation-menu-btn { opacity: 1; }
+.conversation-menu-btn:hover { background: rgba(0, 0, 0, 0.08); color: var(--text); }
+
+/* the small menu with rename and delete */
+.conversation-menu-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+}
+
+.conversation-menu {
+  position: fixed;
+  z-index: 50;
+  width: 140px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(17, 19, 18, 0.12);
+  padding: 4px;
+}
+
+.conversation-menu button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.conversation-menu button:hover { background: var(--bg); }
+.conversation-menu .danger { color: var(--error); }
+
+/* the title box shown while renaming */
+.conversation-rename-input {
+  flex: 1;
+  min-width: 0;
+  border: 2px solid var(--accent);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  background: var(--surface);
+  outline: none;
+}
 
 .sidebar-user {
   display: flex;
@@ -388,7 +440,7 @@
 
 /* touch screens have no hover, so keep the small buttons visible */
 @media (hover: none) {
-  .conversation-delete-btn,
+  .conversation-menu-btn,
   .message-edit-btn { opacity: 1; }
 }
 

@@ -150,6 +150,15 @@ export default function Chat() {
     }
   }
 
+  async function renameConversation(id, title) {
+    try {
+      await api(`/api/conversations/${id}`, { method: "PATCH", body: { title } });
+      setConversations((c) => c.map((x) => (x.id === id ? { ...x, title } : x)));
+    } catch {
+      setNotice("Could not rename the conversation. Please try again.");
+    }
+  }
+
   function logout() {
     localStorage.clear();
     navigate("/");
@@ -168,6 +177,7 @@ export default function Chat() {
         onNewChat={newChat}
         onSelect={selectConversation}
         onDelete={deleteConversation}
+        onRename={renameConversation}
         onLogout={logout}
         onProfile={() => navigate("/profile")}
       />
