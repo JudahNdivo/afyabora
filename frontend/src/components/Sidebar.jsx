@@ -2,14 +2,39 @@ import { useState } from "react";
 
 export default function Sidebar({
   conversations, currentId, username, open,
-  onClose, onNewChat, onSelect, onDelete, onLogout, onProfile,
+  onClose, onNewChat, onSelect, onDelete, onRename, onLogout, onProfile,
 }) {
   const [query, setQuery] = useState("");
+  const [editingId, setEditingId] = useState(null);
+  const [draft, setDraft] = useState("");
+  // the open three-dot menu: which chat, and where on the screen
+  const [menu, setMenu] = useState(null);
 
   // search only looks at conversation titles
   const shown = conversations.filter((c) =>
     c.title.toLowerCase().includes(query.toLowerCase())
   );
+
+  function openMenu(e, c) {
+    e.stopPropagation();
+    // the menu is placed from the button's position so the scrolling
+    // list cannot cut it off
+    const box = e.currentTarget.getBoundingClientRect();
+    setMenu({ id: c.id, title: c.title, top: box.bottom + 4, left: box.right - 140 });
+  }
+
+  function startEdit() {
+    setEditingId(menu.id);
+    setDraft(menu.title);
+    setMenu(null);
+  }
+
+  // an empty or unchanged title is ignored
+  function saveEdit(c) {
+    const title = draft.trim();
+    setEditingId(null);
+    if (title && title !== c.title) onRename(c.id, title);
+  }
 
   return (
     <>
@@ -34,19 +59,36 @@ export default function Sidebar({
             <div
               key={c.id}
               className={`conversation-item ${c.id === currentId ? "active" : ""}`}
-              onClick={() => onSelect(c.id)}
+              onClick={() => editingId !== c.id && onSelect(c.id)}
             >
-              <span className="conversation-title">{c.title}</span>
-              <button
-                className="conversation-delete-btn"
-                title="Delete conversation"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onDelete(c.id);
-                }}
-              >
-                ×
-              </button>
+              {editingId === c.id ? (
+                <input
+                  className="conversation-rename-input"
+                  value={draft}
+                  maxLength={80}
+                  autoFocus
+                  onClick={(e) => e.stopPropagation()}
+                  onChange={(e) => setDraft(e.target.value)}
+                  onBlur={() => saveEdit(c)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") saveEdit(c);
+                    if (e.key === "Escape") setEditingId(null);
+                  }}
+                />
+              ) : (
+                <span className="conversation-title">{c.title}</span>
+              )}
+
+              {editingId !== c.id && (
+                <button
+                  className="conversation-menu-btn"
+                  title="More options"
+                  aria-label="More options"
+                  onClick={(e) => openMenu(e, c)}
+                >
+                  ⋮
+                </button>
+              )}
             </div>
           ))}
         </div>
@@ -59,6 +101,25 @@ export default function Sidebar({
           </span>
         </div>
       </aside>
+
+      {menu && (
+        <>
+          <div className="conversation-menu-backdrop" onClick={() => setMenu(null)} />
+          <div className="conversation-menu" style={{ top: menu.top, left: menu.left }}>
+            <button onClick={startEdit}>Rename</button>
+            <button
+              className="danger"
+              onClick={() => {
+                const id = menu.id;
+                setMenu(null);
+                onDelete(id);
+              }}
+            >
+              Delete
+            </button>
+          </div>
+        </>
+      )}
     </>
   );
 }

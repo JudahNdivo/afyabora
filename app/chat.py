@@ -123,6 +123,32 @@ def delete_conversation(conversation_id):
     return jsonify({"message": "Conversation deleted"}), 200
 
 
+@chat_bp.route("/api/conversations/<conversation_id>", methods=["PATCH"])
+@require_regular_user
+def rename_conversation(conversation_id):
+    # only the owner can rename, and the title must be 1 to 80 characters
+    data = request.get_json(silent=True) or {}
+    title = str(data.get("title", "")).strip()
+
+    if not title:
+        return jsonify({"error": "title is required"}), 400
+    if len(title) > 80:
+        return jsonify({"error": "title is too long"}), 400
+
+    convo = db.table("conversations").select("id").eq(
+        "id", conversation_id
+    ).eq("user_id", request.user.id).execute()
+
+    if not convo.data:
+        return jsonify({"error": "Conversation not found"}), 404
+
+    db.table("conversations").update({"title": title}).eq(
+        "id", conversation_id
+    ).execute()
+
+    return jsonify({"id": conversation_id, "title": title}), 200
+
+
 @chat_bp.route("/api/conversations/<conversation_id>/messages", methods=["GET"])
 @require_regular_user
 def get_messages(conversation_id):
