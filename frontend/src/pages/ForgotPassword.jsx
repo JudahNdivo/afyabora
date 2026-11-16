@@ -22,7 +22,7 @@ export default function ForgotPassword() {
         body: { email: email.trim() },
         auth: false,
       });
-      setNotice(data.message);
+      setNotice(`${data.message} If you can't see it, check your spam or junk folder.`);
     } catch (err) {
       setError(err.message);
     } finally {

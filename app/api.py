@@ -71,8 +71,12 @@ def api_signup():
             # true when Supabase is waiting for the email link to be clicked
             "needs_confirmation": result.session is None,
         }), 201
-    except Exception as e:
+    except ValueError as e:
+        # password rule messages are safe to show
         return jsonify({"error": str(e)}), 400
+    except Exception as e:
+        print(f"Signup failed: {type(e).__name__}: {e}")
+        return jsonify({"error": "Could not create the account, please try again"}), 400
 
 
 @app.route("/api/login", methods=["POST"])
@@ -185,7 +189,8 @@ def api_mfa_enroll():
     try:
         return jsonify(mfa_enroll(request.token, request.user)), 200
     except Exception as e:
-        return jsonify({"error": str(e)}), 502
+        print(f"Authenticator setup failed: {type(e).__name__}: {e}")
+        return jsonify({"error": "Could not start authenticator setup, please try again"}), 502
 
 
 @app.route("/api/mfa/disable", methods=["POST"])
@@ -200,7 +205,8 @@ def api_mfa_disable():
             mfa_unenroll(request.token, field_of(f, "id"))
         return jsonify({"message": "Authenticator login turned off"}), 200
     except Exception as e:
-        return jsonify({"error": str(e)}), 502
+        print(f"Authenticator turn-off failed: {type(e).__name__}: {e}")
+        return jsonify({"error": "Could not turn off the authenticator, please try again"}), 502
 
 
 @app.route("/api/me", methods=["GET"])
@@ -254,8 +260,12 @@ def api_reset_password():
     try:
         complete_password_reset(access_token, new_password)
         return jsonify({"message": "Password updated successfully"}), 200
-    except Exception as e:
+    except ValueError as e:
+        # password rule and expired link messages are safe to show
         return jsonify({"error": str(e)}), 400
+    except Exception as e:
+        print(f"Password reset failed: {type(e).__name__}: {e}")
+        return jsonify({"error": "Could not reset the password, please try again"}), 400
 
 
 @app.route("/health", methods=["GET"])
