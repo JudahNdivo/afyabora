@@ -91,7 +91,7 @@ export default function Login() {
           setMode("login");
           setUsername("");
           setPassword("");
-          setNotice("Check your inbox for a confirmation link. Clicking it signs you in.");
+          setNotice("Check your inbox for a confirmation link. If you can't see it, look in your spam or junk folder. Clicking the link signs you in.");
           return;
         }
       }

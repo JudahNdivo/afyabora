@@ -49,7 +49,8 @@ def validate_password(password: str) -> list:
 def signup(email: str, password: str, username: str, redirect_to: str = None):
     password_errors = validate_password(password)
     if password_errors:
-        raise Exception(f"Password needs: {', '.join(password_errors)}")
+        # ValueError marks a message that is safe to show the person
+        raise ValueError(f"Password needs: {', '.join(password_errors)}")
 
     credentials = {"email": email, "password": password}
     if redirect_to:
@@ -68,11 +69,15 @@ def signup(email: str, password: str, username: str, redirect_to: str = None):
     if getattr(result.user, "identities", None) == []:
         return result
 
-    db.table("users").insert({
+    # Signing up again with an address that never confirmed returns the same
+    # user id, whose profile already exists from the first attempt. The
+    # profile is created only if it is missing, so a repeat sign-up simply
+    # sends a new confirmation link.
+    db.table("users").upsert({
         "id": result.user.id,
         "username": username,
         "role": "user",
-    }).execute()
+    }, on_conflict="id", ignore_duplicates=True).execute()
 
     return result
 
@@ -109,7 +114,8 @@ def request_password_reset(email: str, redirect_to: str):
 def complete_password_reset(access_token: str, new_password: str):
     password_errors = validate_password(new_password)
     if password_errors:
-        raise Exception(f"Password needs: {', '.join(password_errors)}")
+        # ValueError marks a message that is safe to show the person
+        raise ValueError(f"Password needs: {', '.join(password_errors)}")
 
     # The recovery link gives the browser a short-lived access_token
     # that's valid specifically for this one password update. We call
@@ -127,7 +133,7 @@ def complete_password_reset(access_token: str, new_password: str):
         json={"password": new_password},
     )
     if resp.status_code != 200:
-        raise Exception("Reset link is invalid or has expired. Please request a new one.")
+        raise ValueError("Reset link is invalid or has expired. Please request a new one.")
     return resp.json()
 
 
